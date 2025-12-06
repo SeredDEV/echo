@@ -4,10 +4,10 @@ const Hero = () => {
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
     const videos = [
-        '/assets/video/hero/alexa.mp4',
-        '/assets/video/hero/google.mp4',
-        '/assets/video/hero/googlecam.mp4',
-        '/assets/video/hero/googlemini.mp4'
+        'assets/video/hero/alexa.mp4',
+        'assets/video/hero/google.mp4',
+        'assets/video/hero/googlecam.mp4',
+        'assets/video/hero/googlemini.mp4'
     ];
 
     // Cambiar video cada 10 segundos
@@ -90,8 +90,8 @@ const Hero = () => {
                                 key={index}
                                 onClick={() => setCurrentVideoIndex(index)}
                                 className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentVideoIndex
-                                        ? 'bg-white w-8'
-                                        : 'bg-white/50 hover:bg-white/75'
+                                    ? 'bg-white w-8'
+                                    : 'bg-white/50 hover:bg-white/75'
                                     }`}
                                 aria-label={`Ver video ${index + 1}`}
                             />

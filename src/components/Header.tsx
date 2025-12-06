@@ -22,7 +22,7 @@ const Header = () => {
                         <div className="flex items-center">
                             <a href="#inicio" className="flex items-center">
                                 <img
-                                    src="/assets/logo/logo.png"
+                                    src="assets/logo/logo.png"
                                     alt="Echo Tecnología"
                                     className="h-12 md:h-20 w-auto"
                                     style={{ mixBlendMode: 'multiply' }}

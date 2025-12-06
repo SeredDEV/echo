@@ -19,9 +19,9 @@ const carouselData: CarouselItem[] = [
             'En modo Hub, todos en tu hogar pueden controlar dispositivos inteligentes.'
         ],
         videos: [
-            '/assets/video/carrusel/alexa-echo/alexa.mp4',
-            '/assets/video/carrusel/alexa-echo/alexaecho.mp4',
-            '/assets/video/carrusel/alexa-echo/ZjM0Y2YxZjgt.mp4'
+            'assets/video/carrusel/alexa-echo/alexa.mp4',
+            'assets/video/carrusel/alexa-echo/alexaecho.mp4',
+            'assets/video/carrusel/alexa-echo/ZjM0Y2YxZjgt.mp4'
         ],
         buttonLabel: 'Alexa Echo'
     },
@@ -34,8 +34,8 @@ const carouselData: CarouselItem[] = [
             'Cámaras de seguridad, termostatos inteligentes y más para un hogar conectado.'
         ],
         videos: [
-            '/assets/video/carrusel/google-nest/bf8cb84a-c9d6-4e88-b36a-5b4405c7686a.mp4',
-            '/assets/video/carrusel/google-nest/nestmini.mp4'
+            'assets/video/carrusel/google-nest/bf8cb84a-c9d6-4e88-b36a-5b4405c7686a.mp4',
+            'assets/video/carrusel/google-nest/nestmini.mp4'
         ],
         buttonLabel: 'Google Nest'
     },
@@ -48,7 +48,7 @@ const carouselData: CarouselItem[] = [
             'Control por voz con Alexa integrado para una experiencia manos libres.'
         ],
         videos: [
-            '/assets/video/carrusel/amazon-fire/firetv.mp4'
+            'assets/video/carrusel/amazon-fire/firetv.mp4'
         ],
         buttonLabel: 'Amazon Fire TV'
     },
@@ -61,7 +61,7 @@ const carouselData: CarouselItem[] = [
             'Ve lo que está pasando en casa y administra tus dispositivos desde cualquier lugar.'
         ],
         videos: [
-            '/assets/video/carrusel/google-chromecast/chromecast.mp4'
+            'assets/video/carrusel/google-chromecast/chromecast.mp4'
         ],
         buttonLabel: 'Google Chromecast'
     },
@@ -74,7 +74,7 @@ const carouselData: CarouselItem[] = [
             'Crea ambientes personalizados con millones de colores disponibles.'
         ],
         videos: [
-            '/assets/video/carrusel/bombillas-RGB/f2cdd04dbf114786998e1647945ace50.HD-1080p-7.2Mbps-45550478.mp4'
+            'assets/video/carrusel/bombillas-RGB/f2cdd04dbf114786998e1647945ace50.HD-1080p-7.2Mbps-45550478.mp4'
         ],
         buttonLabel: 'Bombillas RGB'
     }
@@ -160,8 +160,8 @@ const ProductCarousel = () => {
                                             key={item.id}
                                             onClick={() => setActiveIndex(index)}
                                             className={`px-6 py-3 rounded-full font-semibold text-sm lg:text-base transition-all duration-300 ${activeIndex === index
-                                                    ? 'bg-primary-600 text-white shadow-lg scale-105'
-                                                    : 'bg-transparent text-gray-700 hover:bg-gray-100'
+                                                ? 'bg-primary-600 text-white shadow-lg scale-105'
+                                                : 'bg-transparent text-gray-700 hover:bg-gray-100'
                                                 }`}
                                         >
                                             {item.buttonLabel}
@@ -178,8 +178,8 @@ const ProductCarousel = () => {
                                     <div
                                         key={index}
                                         className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentVideoIndex
-                                                ? 'bg-white w-6'
-                                                : 'bg-white/50'
+                                            ? 'bg-white w-6'
+                                            : 'bg-white/50'
                                             }`}
                                     />
                                 ))}
@@ -196,8 +196,8 @@ const ProductCarousel = () => {
                                         key={item.id}
                                         onClick={() => setActiveIndex(index)}
                                         className={`px-4 py-2.5 rounded-full font-semibold text-xs transition-all duration-300 ${activeIndex === index
-                                                ? 'bg-primary-600 text-white shadow-lg'
-                                                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                            ? 'bg-primary-600 text-white shadow-lg'
+                                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                             }`}
                                     >
                                         {item.buttonLabel}
@@ -209,8 +209,8 @@ const ProductCarousel = () => {
                                     <button
                                         onClick={() => setActiveIndex(4)}
                                         className={`w-full px-4 py-2.5 rounded-full font-semibold text-xs transition-all duration-300 ${activeIndex === 4
-                                                ? 'bg-primary-600 text-white shadow-lg'
-                                                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                            ? 'bg-primary-600 text-white shadow-lg'
+                                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                             }`}
                                     >
                                         {carouselData[4].buttonLabel}
