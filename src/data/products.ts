@@ -352,6 +352,19 @@ export const products: Product[] = [
         stock: 15,
         destacado: true
     },
+    {
+        id: 'kasa-smart-dimmer-hs220',
+        nombre: 'Kasa Smart Dimmer Switch HS220',
+        precio: 169000,
+        precioOriginal: 209000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Apagadores',
+        marca: 'TP-Link',
+        imagen: 'https://m.media-amazon.com/images/I/61C3hsyi5HL._SL1500_.jpg',
+        descripcion: 'Interruptor dimmer inteligente WiFi con control de brillo 1%-100%, transiciones suaves y modo ausencia',
+        stock: 18,
+        destacado: true
+    },
 
 
     // Accesorios Inteligentes - Cintas LED
