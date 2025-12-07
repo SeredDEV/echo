@@ -52,7 +52,7 @@ const Header = () => {
                             <a href="#accesorios" className="px-4 py-2 text-gray-700 hover:text-primary-600 font-medium transition-all duration-300 rounded-lg hover:bg-gray-50">
                                 Accesorios Inteligentes
                             </a>
-                            <a href="about.html" className="px-5 py-2.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
+                            <a href="about.html" className="px-4 py-2 text-gray-700 hover:text-primary-600 font-medium transition-all duration-300 rounded-lg hover:bg-gray-50">
                                 Sobre nosotros
                             </a>
                             <a href="#contacto" className="px-4 py-2 text-gray-700 hover:text-primary-600 font-medium transition-all duration-300 rounded-lg hover:bg-gray-50">
@@ -104,7 +104,7 @@ const Header = () => {
                             <a href="#accesorios" className="block px-4 py-2.5 text-gray-700 hover:text-primary-600 hover:bg-gray-50 font-medium rounded-lg transition-all duration-300">
                                 Accesorios Inteligentes
                             </a>
-                            <a href="about.html" className="block px-4 py-2.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition-all duration-300 text-center">
+                            <a href="about.html" className="block px-4 py-2.5 text-gray-700 hover:text-primary-600 hover:bg-gray-50 font-medium rounded-lg transition-all duration-300">
                                 Sobre nosotros
                             </a>
                             <a href="#contacto" className="block px-4 py-2.5 text-gray-700 hover:text-primary-600 hover:bg-gray-50 font-medium rounded-lg transition-all duration-300">
