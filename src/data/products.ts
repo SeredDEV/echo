@@ -377,13 +377,13 @@ export const products: Product[] = [
     },
     {
         id: 'govee-led-strip',
-        nombre: 'Govee LED Strip 5m',
+        nombre: 'Govee Bombillos Inteligentes',
         precio: 119000,
         categoria: 'Accesorios Inteligentes',
-        subcategoria: 'Cintas LED',
+        subcategoria: 'Bombillos',
         marca: 'Govee',
-        imagen: 'https://images.unsplash.com/photo-1550985616-10810253b84d?w=400',
-        descripcion: 'Tira LED RGB WiFi con control por app',
+        imagen: 'https://m.media-amazon.com/images/I/51sixdfNb4L._AC_SL1500_.jpg',
+        descripcion: 'Bombillos LED RGB WiFi con 16 millones de colores, sincronización musical y control por voz',
         stock: 32
     },
 
