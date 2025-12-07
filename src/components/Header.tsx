@@ -44,7 +44,7 @@ const Header = () => {
                             <a href="index.html" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
                                 Inicio
                             </a>
-                            <a href="about.html" target="_blank" rel="noopener noreferrer" className="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                            <a href="about.html" className="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
                                 Sobre nosotros
                             </a>
                             <a href="#altavoces" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
@@ -93,7 +93,7 @@ const Header = () => {
                             <a href="index.html" className="block text-gray-700 hover:text-primary-600 font-medium py-2 transition-colors">
                                 Inicio
                             </a>
-                            <a href="about.html" target="_blank" rel="noopener noreferrer" className="block bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                            <a href="about.html" className="block bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
                                 Sobre nosotros
                             </a>
                             <a href="#altavoces" className="block text-gray-700 hover:text-primary-600 font-medium py-2 transition-colors">
