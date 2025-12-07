@@ -393,7 +393,7 @@ export const products: Product[] = [
     },
     {
         id: 'louysgen-smart-switch-white',
-        nombre: 'LOUYSGEN Smart Light Switch Blanco',
+        nombre: 'LOUYSGEN Smart Light Switch  Blanco Doble',
         precio: 119000,
         precioOriginal: 159000,
         categoria: 'Accesorios Inteligentes',
@@ -402,6 +402,19 @@ export const products: Product[] = [
         imagen: 'https://m.media-amazon.com/images/I/41MdJk9vRxL._SL1500_.jpg',
         descripcion: 'Interruptor inteligente WiFi blanco con control 3-way, certificación IP54, superficie de vidrio templado y control por voz',
         stock: 25,
+        destacado: true
+    },
+    {
+        id: 'louysgen-smart-switch-triple',
+        nombre: 'LOUYSGEN Smart Light Switch Triple',
+        precio: 139000,
+        precioOriginal: 179000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Apagadores',
+        marca: 'LOUYSGEN',
+        imagen: 'https://m.media-amazon.com/images/I/41mJ4fWKO9L._SL1500_.jpg',
+        descripcion: 'Interruptor inteligente WiFi triple con control 3-way, certificación IP54, superficie de vidrio templado y control por voz',
+        stock: 20,
         destacado: true
     },
 
