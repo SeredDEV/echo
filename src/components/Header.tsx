@@ -44,6 +44,9 @@ const Header = () => {
                             <a href="#inicio" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
                                 Inicio
                             </a>
+                            <a href="about.html" target="_blank" rel="noopener noreferrer" className="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                                Sobre nosotros
+                            </a>
                             <a href="#altavoces" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
                                 Altavoces Inteligentes
                             </a>
@@ -89,6 +92,9 @@ const Header = () => {
                         <div className="lg:hidden mt-4 pb-4 space-y-3 animate-slide-up">
                             <a href="#inicio" className="block text-gray-700 hover:text-primary-600 font-medium py-2 transition-colors">
                                 Inicio
+                            </a>
+                            <a href="about.html" target="_blank" rel="noopener noreferrer" className="block bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                                Sobre nosotros
                             </a>
                             <a href="#altavoces" className="block text-gray-700 hover:text-primary-600 font-medium py-2 transition-colors">
                                 Altavoces Inteligentes
