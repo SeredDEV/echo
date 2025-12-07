@@ -328,6 +328,15 @@ export const products: Product[] = [
     {
         id: 'tp-link-tapo-s500',
         nombre: 'TP-Link Tapo S500',
+        precio: 129000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Apagadores',
+        marca: 'TP-Link',
+        imagen: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400',
+        descripcion: 'Interruptor inteligente WiFi touch',
+        stock: 25
+    },
+    {
         id: 'sonoff-mini',
         nombre: 'Sonoff Mini R2',
         precio: 59000,
