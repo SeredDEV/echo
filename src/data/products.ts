@@ -171,6 +171,18 @@ export const products: Product[] = [
         destacado: true
     },
     {
+        id: 'fire-tv-stick-hd',
+        nombre: 'Amazon Fire TV Stick HD',
+        precio: 149000,
+        precioOriginal: 189000,
+        categoria: 'Dispositivos Streaming',
+        marca: 'Amazon',
+        imagen: 'https://m.media-amazon.com/images/I/61nyRfbgaLL._AC_SL1500_.jpg',
+        descripcion: 'Streaming HD con Alexa Voice Remote, 1080p y control por voz',
+        stock: 25,
+        destacado: true
+    },
+    {
         id: 'fire-tv-stick-lite',
         nombre: 'Amazon Fire TV Stick Lite',
         precio: 149000,
