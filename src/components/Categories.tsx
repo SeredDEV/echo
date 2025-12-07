@@ -47,23 +47,20 @@ const Categories = () => {
                                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                                 />
 
-                                {/* Subtle gradient always visible for readability */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-
                                 {/* Dark overlay - only on hover */}
-                                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             </div>
 
-                            {/* Title - always visible at bottom */}
-                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white z-10">
-                                <h3 className="text-2xl md:text-3xl font-bold mb-1 transform group-hover:translate-y-[-8px] transition-transform duration-300">
+                            {/* Title - always visible at TOP */}
+                            <div className="absolute top-6 left-6 right-6 z-10">
+                                <h3 className="text-2xl md:text-3xl font-bold text-white drop-shadow-lg">
                                     {category.name}
                                 </h3>
                             </div>
 
-                            {/* Description and button - only visible on hover, slides up */}
-                            <div className="absolute bottom-0 left-0 right-0 p-6 pt-16 text-white z-20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                <p className="text-white/90 mb-4 text-base">
+                            {/* Description and button - slides up from bottom on hover */}
+                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white z-20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <p className="text-white/95 mb-4 text-base drop-shadow-md">
                                     {category.description}
                                 </p>
                                 <button className="inline-flex items-center gap-2 bg-white text-gray-900 font-semibold px-6 py-3 rounded-full hover:bg-primary-600 hover:text-white transition-all duration-300 shadow-lg">
