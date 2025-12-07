@@ -25,7 +25,6 @@ const Header = () => {
                                     src="assets/logo/logo.png"
                                     alt="Echo Tecnología"
                                     className="h-12 md:h-20 w-auto"
-                                    style={{ mixBlendMode: 'multiply' }}
                                     onError={(e) => {
                                         e.currentTarget.style.display = 'none';
                                         const textLogo = e.currentTarget.nextElementSibling as HTMLElement;
