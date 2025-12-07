@@ -435,7 +435,7 @@ export const products: Product[] = [
     // Accesorios Inteligentes - Cintas LED
     {
         id: 'kasa-smart-led-strip',
-        nombre: 'Kasa Smart LED Light Strip',
+        nombre: 'Kasa Smart LED Light Strip Full Color',
         precio: 179000,
         precioOriginal: 229000,
         categoria: 'Accesorios Inteligentes',
@@ -444,6 +444,19 @@ export const products: Product[] = [
         imagen: 'https://m.media-amazon.com/images/I/61ul+J5L+FL._AC_SL1241_.jpg',
         descripcion: 'Tira LED RGB WiFi 16.4ft con 16 millones de colores, efectos animados y control por voz',
         stock: 30,
+        destacado: true
+    },
+    {
+        id: 'kasa-smart-led-strip-multicolor',
+        nombre: 'Kasa Smart LED Light Strip Multicolor',
+        precio: 199000,
+        precioOriginal: 259000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Cintas LED',
+        marca: 'TP-Link',
+        imagen: 'https://m.media-amazon.com/images/I/71N1ACuZ00L._AC_SL1500_.jpg',
+        descripcion: 'Tira LED RGB WiFi 16.4ft con 50 zonas de color, efectos animados, certificación IP44 y control por voz',
+        stock: 25,
         destacado: true
     },
     {
