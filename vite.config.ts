@@ -15,6 +15,7 @@ export default defineConfig({
                 login: resolve(__dirname, 'login.html'),
                 carrito: resolve(__dirname, 'carrito.html'),
                 registro: resolve(__dirname, 'registro.html'),
+                tienda: resolve(__dirname, 'tienda.html'),
             },
         },
     },
