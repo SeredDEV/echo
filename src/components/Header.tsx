@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <>
             {/* Top Banner */}
-            <div className="gradient-bg text-white py-2 text-center text-sm font-medium relative z-50">
+            <div className="gradient-bg text-white py-3 text-center text-sm font-medium relative z-50">
                 <div className="container mx-auto px-4 flex items-center justify-center gap-4">
                     <span>🚛 Envío gratis</span>
                     <span className="hidden sm:inline">•</span>
