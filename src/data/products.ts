@@ -259,6 +259,19 @@ export const products: Product[] = [
 
     // Accesorios Inteligentes - Tomacorrientes
     {
+        id: 'kasa-smart-plug-kp200',
+        nombre: 'Kasa Smart Plug KP200',
+        precio: 129000,
+        precioOriginal: 159000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Tomacorrientes',
+        marca: 'TP-Link',
+        imagen: 'https://m.media-amazon.com/images/I/61Cz57Vl0yL._SL1500_.jpg',
+        descripcion: 'Tomacorriente inteligente de pared con 2 enchufes controlables, control por voz y app Kasa',
+        stock: 25,
+        destacado: true
+    },
+    {
         id: 'tp-link-tapo-p100',
         nombre: 'TP-Link Tapo P100',
         precio: 49000,
