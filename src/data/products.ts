@@ -109,6 +109,18 @@ export const products: Product[] = [
         destacado: true
     },
     {
+        id: 'alexa-echo-show-21',
+        nombre: 'Amazon Echo Show 21',
+        precio: 1899000,
+        precioOriginal: 2399000,
+        categoria: 'Altavoces Inteligentes',
+        marca: 'Amazon',
+        imagen: 'https://m.media-amazon.com/images/I/61tzmVXXOWL._AC_SL1500_.jpg',
+        descripcion: 'Pantalla inteligente premium de 21" Full HD con cámara de 13MP, audio espacial de alta calidad y control total del hogar',
+        stock: 3,
+        destacado: true
+    },
+    {
         id: 'google-nest-mini',
         nombre: 'Google Nest Mini',
         precio: 159000,
