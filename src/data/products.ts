@@ -603,48 +603,6 @@ export const products: Product[] = [
         destacado: true
     },
 
-    // Más productos variados
-    {
-        id: 'ring-video-doorbell',
-        nombre: 'Ring Video Doorbell',
-        precio: 449000,
-        categoria: 'Accesorios Inteligentes',
-        marca: 'Ring',
-        imagen: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400',
-        descripcion: 'Timbre inteligente con video HD y detección de movimiento',
-        stock: 14
-    },
-    {
-        id: 'tp-link-kasa-cam',
-        nombre: 'TP-Link Kasa Spot KC100',
-        precio: 179000,
-        categoria: 'Accesorios Inteligentes',
-        marca: 'TP-Link',
-        imagen: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400',
-        descripcion: 'Cámara de seguridad WiFi 1080p',
-        stock: 22
-    },
-    {
-        id: 'nest-thermostat',
-        nombre: 'Google Nest Thermostat',
-        precio: 549000,
-        categoria: 'Accesorios Inteligentes',
-        marca: 'Google',
-        imagen: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400',
-        descripcion: 'Termostato inteligente programable',
-        stock: 12
-    },
-    {
-        id: 'ecobee-smartthermostat',
-        nombre: 'Ecobee SmartThermostat',
-        precio: 699000,
-        categoria: 'Accesorios Inteligentes',
-        marca: 'Ecobee',
-        imagen: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400',
-        descripcion: 'Termostato inteligente con Alexa integrado',
-        stock: 9
-    },
-
 
 ];
 
