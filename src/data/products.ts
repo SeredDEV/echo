@@ -319,49 +319,6 @@ export const products: Product[] = [
         subcategoria: 'Tomacorrientes',
         marca: 'GHome',
         imagen: 'https://m.media-amazon.com/images/I/51Ipo9YCEwL._SL1500_.jpg',
-        descripcion: 'Enchufe inteligente mini WiFi y Bluetooth, control por voz, diseño compacto y certificación ETL/FCC',
-        stock: 50,
-        destacado: true
-    },
-    {
-        id: 'tp-link-tapo-p100',
-        nombre: 'TP-Link Tapo P100',
-        precio: 49000,
-        categoria: 'Accesorios Inteligentes',
-        subcategoria: 'Tomacorrientes',
-        marca: 'TP-Link',
-        imagen: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400',
-        descripcion: 'Enchufe inteligente WiFi con control por app',
-        stock: 60
-    },
-    {
-        id: 'tp-link-tapo-p110',
-        nombre: 'TP-Link Tapo P110',
-        precio: 69000,
-        categoria: 'Accesorios Inteligentes',
-        subcategoria: 'Tomacorrientes',
-        marca: 'TP-Link',
-        imagen: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400',
-        descripcion: 'Enchufe inteligente con monitoreo de energía',
-        stock: 45,
-        destacado: true
-    },
-    {
-        id: 'amazon-smart-plug',
-        nombre: 'Amazon Smart Plug',
-        precio: 89000,
-        categoria: 'Accesorios Inteligentes',
-        subcategoria: 'Tomacorrientes',
-        marca: 'Amazon',
-        imagen: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400',
-        descripcion: 'Enchufe inteligente compatible con Alexa',
-        stock: 38
-    },
-
-    // Accesorios Inteligentes - Apagadores
-    {
-        id: 'tp-link-tapo-s500',
-        nombre: 'TP-Link Tapo S500',
         precio: 129000,
         categoria: 'Accesorios Inteligentes',
         subcategoria: 'Apagadores',
