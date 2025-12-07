@@ -346,7 +346,7 @@ const Header = () => {
                                     <div className="space-y-2">
                                         {mobileSubmenu === 'altavoces' && (
                                             <>
-                                                <a href="#altavoces" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
+                                                <a href="tienda.html?categoria=altavoces" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
                                                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                                                         <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                                                             <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
@@ -357,7 +357,7 @@ const Header = () => {
                                                         <div className="text-xs text-gray-500">Echo, Echo Dot, Echo Show</div>
                                                     </div>
                                                 </a>
-                                                <a href="#altavoces" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
+                                                <a href="tienda.html?categoria=altavoces" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
                                                     <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
                                                         <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                                                             <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
@@ -373,7 +373,7 @@ const Header = () => {
 
                                         {mobileSubmenu === 'streaming' && (
                                             <>
-                                                <a href="#streaming" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
+                                                <a href="tienda.html?categoria=streaming" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
                                                     <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
                                                         <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                                                             <path d="M21 3H3c-1.11 0-2 .89-2 2v12c0 1.1.89 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.11-.9-2-2-2zm0 14H3V5h18v12zm-5-6l-7 4V7z" />
@@ -400,7 +400,7 @@ const Header = () => {
 
                                         {mobileSubmenu === 'accesorios' && (
                                             <>
-                                                <a href="#accesorios" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
+                                                <a href="tienda.html?categoria=accesorios" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
                                                     <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
                                                         <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                                                             <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z" />
@@ -411,7 +411,7 @@ const Header = () => {
                                                         <div className="text-xs text-gray-500">LED RGB, Blanco ajustable</div>
                                                     </div>
                                                 </a>
-                                                <a href="#accesorios" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
+                                                <a href="tienda.html?categoria=accesorios" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
                                                     <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
                                                         <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                                                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
@@ -422,7 +422,7 @@ const Header = () => {
                                                         <div className="text-xs text-gray-500">Control remoto, WiFi</div>
                                                     </div>
                                                 </a>
-                                                <a href="#accesorios" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
+                                                <a href="tienda.html?categoria=accesorios" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
                                                     <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
                                                         <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                                                             <path d="M7 24h2v-2H7v2zm4 0h2v-2h-2v2zm2-22h-2v10h2V2zm3.56 2.44l-1.45 1.45C16.84 6.94 18 8.83 18 11c0 3.31-2.69 6-6 6s-6-2.69-6-6c0-2.17 1.16-4.06 2.88-5.12L7.44 4.44C5.36 5.88 4 8.28 4 11c0 4.42 3.58 8 8 8s8-3.58 8-8c0-2.72-1.36-5.12-3.44-6.56zM15 24h2v-2h-2v2z" />
@@ -433,7 +433,7 @@ const Header = () => {
                                                         <div className="text-xs text-gray-500">Touch, Control por voz</div>
                                                     </div>
                                                 </a>
-                                                <a href="#accesorios" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
+                                                <a href="tienda.html?categoria=accesorios" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
                                                     <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
                                                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
@@ -444,7 +444,7 @@ const Header = () => {
                                                         <div className="text-xs text-gray-500">RGB, Música sincronizada</div>
                                                     </div>
                                                 </a>
-                                                <a href="#accesorios" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
+                                                <a href="tienda.html?categoria=accesorios" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
                                                     <div className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg flex items-center justify-center flex-shrink-0">
                                                         <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                                                             <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
