@@ -85,7 +85,7 @@ const Footer = () => {
                                 </svg>
                                 <div>
                                     <p className="text-sm text-gray-500">WhatsApp</p>
-                                    <a href="https://wa.link/78epdb" className="hover:text-green-400 transition-colors">
+                                    <a href="https://wa.link/78epdb" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">
                                         +57 320 7548718
                                     </a>
                                 </div>
