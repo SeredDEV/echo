@@ -126,24 +126,43 @@ const Header = () => {
 
                     {/* Mobile Menu */}
                     {isMenuOpen && (
-                        <div className="lg:hidden mt-4 pb-4 space-y-2 animate-slide-up border-t border-gray-100 pt-4">
-                            <a href="index.html" className="block px-4 py-2.5 text-gray-700 hover:text-primary-600 hover:bg-gradient-to-r hover:from-primary-50 hover:to-accent-50 font-medium rounded-lg transition-all duration-300 hover:translate-x-1">
-                                Inicio
+                        <div className="lg:hidden mt-4 pb-4 space-y-1 animate-slide-up border-t border-gray-100 pt-4">
+                            <a href="index.html" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gradient-to-r hover:from-primary-50 hover:to-accent-50 font-medium rounded-xl transition-all duration-300">
+                                <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                                <span>Inicio</span>
                             </a>
-                            <a href="#altavoces" className="block px-4 py-2.5 text-gray-700 hover:text-primary-600 hover:bg-gradient-to-r hover:from-primary-50 hover:to-accent-50 font-medium rounded-lg transition-all duration-300 hover:translate-x-1">
-                                Altavoces Inteligentes
+                            <a href="#altavoces" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gradient-to-r hover:from-primary-50 hover:to-accent-50 font-medium rounded-xl transition-all duration-300">
+                                <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                                </svg>
+                                <span>Altavoces Inteligentes</span>
                             </a>
-                            <a href="#streaming" className="block px-4 py-2.5 text-gray-700 hover:text-primary-600 hover:bg-gradient-to-r hover:from-primary-50 hover:to-accent-50 font-medium rounded-lg transition-all duration-300 hover:translate-x-1">
-                                Dispositivos Streaming
+                            <a href="#streaming" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gradient-to-r hover:from-primary-50 hover:to-accent-50 font-medium rounded-xl transition-all duration-300">
+                                <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>Dispositivos Streaming</span>
                             </a>
-                            <a href="#accesorios" className="block px-4 py-2.5 text-gray-700 hover:text-primary-600 hover:bg-gradient-to-r hover:from-primary-50 hover:to-accent-50 font-medium rounded-lg transition-all duration-300 hover:translate-x-1">
-                                Accesorios Inteligentes
+                            <a href="#accesorios" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gradient-to-r hover:from-primary-50 hover:to-accent-50 font-medium rounded-xl transition-all duration-300">
+                                <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                </svg>
+                                <span>Accesorios Inteligentes</span>
                             </a>
-                            <a href="about.html" className="block px-4 py-2.5 text-gray-700 hover:text-primary-600 hover:bg-gradient-to-r hover:from-primary-50 hover:to-accent-50 font-medium rounded-lg transition-all duration-300 hover:translate-x-1">
-                                Sobre nosotros
+                            <a href="about.html" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gradient-to-r hover:from-primary-50 hover:to-accent-50 font-medium rounded-xl transition-all duration-300">
+                                <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>Sobre nosotros</span>
                             </a>
-                            <a href="contacto.html" className="block px-4 py-2.5 text-gray-700 hover:text-primary-600 hover:bg-gradient-to-r hover:from-primary-50 hover:to-accent-50 font-medium rounded-lg transition-all duration-300 hover:translate-x-1">
-                                Contacto
+                            <a href="contacto.html" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gradient-to-r hover:from-primary-50 hover:to-accent-50 font-medium rounded-xl transition-all duration-300">
+                                <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <span>Contacto</span>
                             </a>
                         </div>
                     )}
