@@ -365,6 +365,19 @@ export const products: Product[] = [
         stock: 18,
         destacado: true
     },
+    {
+        id: 'kasa-smart-motion-sensor-switch',
+        nombre: 'Kasa Smart Motion Sensor Switch',
+        precio: 199000,
+        precioOriginal: 249000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Apagadores',
+        marca: 'TP-Link',
+        imagen: 'https://m.media-amazon.com/images/I/51MWX3hAPqL._SL1500_.jpg',
+        descripcion: 'Interruptor inteligente con sensor de movimiento, detección de luz diurna y control de brillo 1%-100%',
+        stock: 12,
+        destacado: true
+    },
 
 
     // Accesorios Inteligentes - Cintas LED
