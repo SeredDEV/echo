@@ -72,6 +72,30 @@ export const products: Product[] = [
         stock: 5
     },
     {
+        id: 'alexa-echo-spot',
+        nombre: 'Amazon Echo Spot',
+        precio: 349000,
+        precioOriginal: 429000,
+        categoria: 'Altavoces Inteligentes',
+        marca: 'Amazon',
+        imagen: 'https://m.media-amazon.com/images/I/71-DxWvydgL._AC_SY879_.jpg',
+        descripcion: 'Reloj despertador inteligente con pantalla táctil de 2.83", Alexa integrado y audio de alta definición',
+        stock: 10,
+        destacado: true
+    },
+    {
+        id: 'alexa-echo-show-5',
+        nombre: 'Amazon Echo Show 5',
+        precio: 399000,
+        precioOriginal: 499000,
+        categoria: 'Altavoces Inteligentes',
+        marca: 'Amazon',
+        imagen: 'https://m.media-amazon.com/images/I/61ejdlU79CL._AC_SX679_.jpg',
+        descripcion: 'Pantalla inteligente compacta de 5.5" con Alexa, cámara de 2MP y control de hogar inteligente',
+        stock: 14,
+        destacado: true
+    },
+    {
         id: 'google-nest-mini',
         nombre: 'Google Nest Mini',
         precio: 159000,
