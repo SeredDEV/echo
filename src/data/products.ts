@@ -590,26 +590,17 @@ export const products: Product[] = [
         destacado: true
     },
     {
-        id: 'august-smart-lock',
-        nombre: 'August Smart Lock Pro',
-        precio: 749000,
+        id: 'philips-wifi-keypad-lock',
+        nombre: 'Philips WiFi Keypad Door Lock with Handle',
+        precio: 899000,
+        precioOriginal: 1199000,
         categoria: 'Accesorios Inteligentes',
         subcategoria: 'Cerraduras',
-        marca: 'August',
-        imagen: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400',
-        descripcion: 'Cerradura inteligente con WiFi integrado',
-        stock: 6
-    },
-    {
-        id: 'ultraloq-u-bolt',
-        nombre: 'Ultraloq U-Bolt Pro',
-        precio: 649000,
-        categoria: 'Accesorios Inteligentes',
-        subcategoria: 'Cerraduras',
-        marca: 'Ultraloq',
-        imagen: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400',
-        descripcion: 'Cerradura inteligente 6 en 1 con huella',
-        stock: 10
+        marca: 'Philips',
+        imagen: 'https://m.media-amazon.com/images/I/71Zf7Sa08SL._AC_SL1500_.jpg',
+        descripcion: 'Cerradura WiFi con teclado, lector de huellas 0.3s, manija incluida y control por voz',
+        stock: 8,
+        destacado: true
     },
 
     // Más productos variados
