@@ -39,6 +39,18 @@ export const products: Product[] = [
         destacado: true
     },
     {
+        id: 'alexa-echo-pop',
+        nombre: 'Amazon Echo Pop',
+        precio: 139000,
+        precioOriginal: 189000,
+        categoria: 'Altavoces Inteligentes',
+        marca: 'Amazon',
+        imagen: 'https://m.media-amazon.com/images/I/61V5FRUgX8L._AC_SX679_.jpg',
+        descripcion: 'Altavoz inteligente compacto con Alexa, diseño moderno y sonido direccional frontal',
+        stock: 25,
+        destacado: true
+    },
+    {
         id: 'alexa-echo-4',
         nombre: 'Amazon Echo (4ta Gen)',
         precio: 349000,
