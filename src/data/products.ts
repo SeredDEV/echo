@@ -399,6 +399,19 @@ export const products: Product[] = [
         stock: 40,
         destacado: true
     },
+    {
+        id: 'amazon-basics-smart-bulb',
+        nombre: 'Amazon Basics Bombillo Inteligente LED A19',
+        precio: 69000,
+        precioOriginal: 89000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Bombillos',
+        marca: 'Amazon',
+        imagen: 'https://m.media-amazon.com/images/I/71InrzITFhL._AC_SL1500_.jpg',
+        descripcion: 'Bombillo LED inteligente con control por voz Alexa, 16 colores preestablecidos y configuración simple',
+        stock: 50,
+        destacado: true
+    },
 
     // Accesorios Inteligentes - Cerraduras
     {
