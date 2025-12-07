@@ -239,16 +239,6 @@ export const products: Product[] = [
         stock: 18,
         destacado: true
     },
-    {
-        id: 'chromecast-hd',
-        nombre: 'Chromecast HD',
-        precio: 179000,
-        categoria: 'Dispositivos Streaming',
-        marca: 'Google',
-        imagen: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=400',
-        descripcion: 'Streaming Full HD con Google TV',
-        stock: 22
-    },
 
     // Accesorios Inteligentes - Bombillos
     {
