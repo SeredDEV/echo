@@ -425,6 +425,19 @@ export const products: Product[] = [
         stock: 45,
         destacado: true
     },
+    {
+        id: 'philips-hue-essential',
+        nombre: 'Philips Hue Essential Bombillo LED A19',
+        precio: 95000,
+        precioOriginal: 129000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Bombillos',
+        marca: 'Philips',
+        imagen: 'https://m.media-amazon.com/images/I/719V8HYaMgL._AC_SL1500_.jpg',
+        descripcion: 'Bombillo LED inteligente con millones de colores, control por voz y compatibilidad con Alexa, Google y Apple Home',
+        stock: 30,
+        destacado: true
+    },
 
     // Accesorios Inteligentes - Cerraduras
     {
