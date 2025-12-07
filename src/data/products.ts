@@ -285,6 +285,19 @@ export const products: Product[] = [
         destacado: true
     },
     {
+        id: 'govee-smart-plug',
+        nombre: 'Govee Smart Plug',
+        precio: 79000,
+        precioOriginal: 99000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Tomacorrientes',
+        marca: 'Govee',
+        imagen: 'https://m.media-amazon.com/images/I/51wdsa8jwnL._SL1500_.jpg',
+        descripcion: 'Enchufe inteligente WiFi y Bluetooth, control por voz, programación y control grupal',
+        stock: 45,
+        destacado: true
+    },
+    {
         id: 'tp-link-tapo-p100',
         nombre: 'TP-Link Tapo P100',
         precio: 49000,
