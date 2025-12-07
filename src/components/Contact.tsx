@@ -19,30 +19,40 @@ const Contact = () => {
                         <h3 className="text-2xl font-bold text-gray-900 mb-6">Envíanos un mensaje</h3>
 
                         <form onSubmit={handleFormSubmit} className="space-y-4">
-                            <div>
-                                <input
-                                    type="text"
-                                    required
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
-                                    placeholder="Nombre"
-                                />
+                            <div className="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <input
+                                        type="text"
+                                        required
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+                                        placeholder="Nombre"
+                                    />
+                                </div>
+
+                                <div>
+                                    <input
+                                        type="email"
+                                        required
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+                                        placeholder="Correo electrónico *"
+                                    />
+                                </div>
                             </div>
 
                             <div>
                                 <input
-                                    type="email"
-                                    required
+                                    type="tel"
                                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
-                                    placeholder="Email"
+                                    placeholder="Número de teléfono"
                                 />
                             </div>
 
                             <div>
                                 <textarea
                                     required
-                                    rows={4}
+                                    rows={5}
                                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none resize-none"
-                                    placeholder="Mensaje"
+                                    placeholder="Comentario"
                                 ></textarea>
                             </div>
 
