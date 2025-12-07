@@ -165,8 +165,8 @@ export const products: Product[] = [
         precioOriginal: 279000,
         categoria: 'Dispositivos Streaming',
         marca: 'Amazon',
-        imagen: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=400',
-        descripcion: 'Streaming 4K HDR con Alexa Voice Remote',
+        imagen: 'https://m.media-amazon.com/images/I/61r3G3vAhBL._AC_SL1500_.jpg',
+        descripcion: 'Streaming 4K Ultra HD con Alexa Voice Remote, Dolby Vision y HDR10+',
         stock: 25,
         destacado: true
     },
