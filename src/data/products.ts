@@ -12,7 +12,7 @@ export interface Product {
     destacado?: boolean;
 }
 
-// Force rebuild - timestamp: 2025-12-07T16:29
+// Force rebuild - timestamp: 2025-12-07T16:34:30 - UPDATED
 
 export const products: Product[] = [
     // Altavoces Inteligentes
