@@ -18,52 +18,55 @@ const ProductCard = ({ product }: ProductCardProps) => {
     };
 
     return (
-        <div className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+        <div className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-primary-200 hover:-translate-y-2">
             {/* Image Container */}
-            <div className="relative overflow-hidden bg-gray-50 aspect-square">
+            <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 aspect-square">
                 <img
                     src={product.imagen}
                     alt={product.nombre}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
 
+                {/* Overlay Gradient on Hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                 {/* Badges */}
-                <div className="absolute top-3 left-3 flex flex-col gap-2">
+                <div className="absolute top-4 left-4 flex flex-col gap-2">
                     {descuento > 0 && (
-                        <span className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-lg">
-                            -{descuento}%
+                        <span className="bg-gradient-to-r from-red-500 to-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-lg animate-pulse">
+                            -{descuento}% OFF
                         </span>
                     )}
                     {product.destacado && (
-                        <span className="bg-gradient-to-r from-primary-600 to-accent-600 text-white text-xs font-bold px-2 py-1 rounded-lg">
+                        <span className="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-lg">
                             ⭐ Destacado
                         </span>
                     )}
                 </div>
 
                 {/* Favorite Button */}
-                <button className="absolute top-3 right-3 w-9 h-9 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white hover:scale-110">
-                    <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button className="absolute top-4 right-4 w-10 h-10 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-red-50 hover:scale-110 shadow-lg">
+                    <svg className="w-5 h-5 text-gray-700 hover:text-red-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                 </button>
             </div>
 
             {/* Content */}
-            <div className="p-4">
-                {/* Category */}
-                <p className="text-xs text-primary-600 font-medium mb-1">{product.categoria}</p>
-
-                {/* Brand */}
-                <p className="text-xs text-gray-500 mb-2">{product.marca}</p>
+            <div className="p-5">
+                {/* Category & Brand */}
+                <div className="flex items-center justify-between mb-2">
+                    <p className="text-xs text-primary-600 font-bold uppercase tracking-wide">{product.categoria}</p>
+                    <p className="text-xs text-gray-500 font-semibold">{product.marca}</p>
+                </div>
 
                 {/* Title */}
-                <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2 min-h-[3rem]">
+                <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 min-h-[3rem] text-lg group-hover:text-primary-600 transition-colors">
                     {product.nombre}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                <p className="text-sm text-gray-600 mb-4 line-clamp-2">
                     {product.descripcion}
                 </p>
 
@@ -74,7 +77,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
                             {formatPrice(product.precioOriginal)}
                         </p>
                     )}
-                    <p className="text-2xl font-bold text-gray-900">
+                    <p className="text-3xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
                         {formatPrice(product.precio)}
                     </p>
                 </div>
@@ -82,20 +85,35 @@ const ProductCard = ({ product }: ProductCardProps) => {
                 {/* Stock */}
                 <div className="mb-4">
                     {product.stock > 10 ? (
-                        <p className="text-xs text-green-600 font-medium">✓ En stock</p>
+                        <div className="flex items-center gap-2 text-xs text-green-600 font-bold bg-green-50 px-3 py-2 rounded-lg">
+                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
+                            En stock
+                        </div>
                     ) : product.stock > 0 ? (
-                        <p className="text-xs text-orange-600 font-medium">⚠ Últimas {product.stock} unidades</p>
+                        <div className="flex items-center gap-2 text-xs text-orange-600 font-bold bg-orange-50 px-3 py-2 rounded-lg">
+                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                            </svg>
+                            Últimas {product.stock} unidades
+                        </div>
                     ) : (
-                        <p className="text-xs text-red-600 font-medium">✗ Agotado</p>
+                        <div className="flex items-center gap-2 text-xs text-red-600 font-bold bg-red-50 px-3 py-2 rounded-lg">
+                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                            </svg>
+                            Agotado
+                        </div>
                     )}
                 </div>
 
                 {/* Add to Cart Button */}
                 <button
                     disabled={product.stock === 0}
-                    className="w-full bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 disabled:from-gray-300 disabled:to-gray-400 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:shadow-lg disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 disabled:from-gray-300 disabled:to-gray-400 text-white font-bold py-4 rounded-xl transition-all duration-300 hover:shadow-xl disabled:cursor-not-allowed flex items-center justify-center gap-2 group/btn"
                 >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 group-hover/btn:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                     {product.stock === 0 ? 'Agotado' : 'Agregar al carrito'}
