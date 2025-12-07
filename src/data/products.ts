@@ -298,6 +298,19 @@ export const products: Product[] = [
         destacado: true
     },
     {
+        id: 'tp-link-tapo-p210m',
+        nombre: 'TP-Link Tapo Smart Plug P210M',
+        precio: 89000,
+        precioOriginal: 119000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Tomacorrientes',
+        marca: 'TP-Link',
+        imagen: 'https://m.media-amazon.com/images/I/61PHxUzYs9L._AC_SL1500_.jpg',
+        descripcion: 'Tomacorriente inteligente de pared con certificación Matter, monitoreo de energía y prevención de sobrecarga',
+        stock: 30,
+        destacado: true
+    },
+    {
         id: 'tp-link-tapo-p100',
         nombre: 'TP-Link Tapo P100',
         precio: 49000,
