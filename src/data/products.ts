@@ -207,16 +207,6 @@ export const products: Product[] = [
         destacado: true
     },
     {
-        id: 'fire-tv-stick-lite',
-        nombre: 'Amazon Fire TV Stick Lite',
-        precio: 149000,
-        categoria: 'Dispositivos Streaming',
-        marca: 'Amazon',
-        imagen: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=400',
-        descripcion: 'Streaming Full HD con control remoto Alexa Lite',
-        stock: 30
-    },
-    {
         id: 'fire-tv-cube',
         nombre: 'Amazon Fire TV Cube',
         precio: 449000,
