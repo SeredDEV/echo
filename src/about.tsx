@@ -2,7 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Header from './components/Header'
 import AboutUs from './components/AboutUs'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import Header from './components/Header'
+import AboutUs from './components/AboutUs'
 import Footer from './components/Footer'
+import FloatingButtons from './components/FloatingButtons'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -13,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <AboutUs />
             </main>
             <Footer />
+            <FloatingButtons />
         </div>
     </React.StrictMode>,
 )

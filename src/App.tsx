@@ -4,6 +4,7 @@ import ProductCarousel from './components/ProductCarousel'
 import Categories from './components/Categories'
 import Features from './components/Features'
 import Footer from './components/Footer'
+import FloatingButtons from './components/FloatingButtons'
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Features />
             </main>
             <Footer />
+            <FloatingButtons />
         </div>
     )
 }
