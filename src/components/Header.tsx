@@ -60,7 +60,7 @@ const Header = () => {
                                 <span className="relative z-10">Sobre nosotros</span>
                                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-accent-600 group-hover:w-full transition-all duration-300"></span>
                             </a>
-                            <a href="#contacto" className="group relative px-4 py-2 text-gray-700 font-medium transition-all duration-300">
+                            <a href="contacto.html" className="group relative px-4 py-2 text-gray-700 font-medium transition-all duration-300">
                                 <span className="relative z-10">Contacto</span>
                                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-accent-600 group-hover:w-full transition-all duration-300"></span>
                             </a>
@@ -113,7 +113,7 @@ const Header = () => {
                             <a href="about.html" className="block px-4 py-2.5 text-gray-700 hover:text-primary-600 hover:bg-gradient-to-r hover:from-primary-50 hover:to-accent-50 font-medium rounded-lg transition-all duration-300 hover:translate-x-1">
                                 Sobre nosotros
                             </a>
-                            <a href="#contacto" className="block px-4 py-2.5 text-gray-700 hover:text-primary-600 hover:bg-gradient-to-r hover:from-primary-50 hover:to-accent-50 font-medium rounded-lg transition-all duration-300 hover:translate-x-1">
+                            <a href="contacto.html" className="block px-4 py-2.5 text-gray-700 hover:text-primary-600 hover:bg-gradient-to-r hover:from-primary-50 hover:to-accent-50 font-medium rounded-lg transition-all duration-300 hover:translate-x-1">
                                 Contacto
                             </a>
                             <div className="pt-4 space-y-2 border-t border-gray-100 mt-2">
