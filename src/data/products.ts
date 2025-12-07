@@ -337,6 +337,19 @@ export const products: Product[] = [
         stock: 25
     },
     {
+        id: 'kasa-smart-switch-hs200p3',
+        nombre: 'Kasa Smart Light Switch HS200P3',
+        precio: 149000,
+        precioOriginal: 189000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Apagadores',
+        marca: 'TP-Link',
+        imagen: 'https://m.media-amazon.com/images/I/61Du7b9kpxL._SL1500_.jpg',
+        descripcion: 'Interruptor inteligente WiFi con control por voz, programación y modo ausencia',
+        stock: 20,
+        destacado: true
+    },
+    {
         id: 'sonoff-mini',
         nombre: 'Sonoff Mini R2',
         precio: 59000,
