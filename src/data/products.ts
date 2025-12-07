@@ -434,28 +434,17 @@ export const products: Product[] = [
 
     // Accesorios Inteligentes - Cintas LED
     {
-        id: 'philips-hue-lightstrip',
-        nombre: 'Philips Hue Lightstrip Plus',
-        precio: 299000,
-        categoria: 'Accesorios Inteligentes',
-        subcategoria: 'Cintas LED',
-        marca: 'Philips',
-        imagen: 'https://images.unsplash.com/photo-1550985616-10810253b84d?w=400',
-        descripcion: 'Tira LED RGB inteligente 2m, extensible',
-        stock: 15,
-        destacado: true
-    },
-    {
-        id: 'tp-link-tapo-l900',
-        nombre: 'TP-Link Tapo L900-5',
-        precio: 149000,
-        precioOriginal: 189000,
+        id: 'kasa-smart-led-strip',
+        nombre: 'Kasa Smart LED Light Strip',
+        precio: 179000,
+        precioOriginal: 229000,
         categoria: 'Accesorios Inteligentes',
         subcategoria: 'Cintas LED',
         marca: 'TP-Link',
-        imagen: 'https://images.unsplash.com/photo-1550985616-10810253b84d?w=400',
-        descripcion: 'Tira LED RGB WiFi 5m con sincronización musical',
-        stock: 28
+        imagen: 'https://m.media-amazon.com/images/I/61ul+J5L+FL._AC_SL1241_.jpg',
+        descripcion: 'Tira LED RGB WiFi 16.4ft con 16 millones de colores, efectos animados y control por voz',
+        stock: 30,
+        destacado: true
     },
     {
         id: 'govee-led-strip',
