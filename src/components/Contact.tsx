@@ -31,19 +31,19 @@ const Contact = () => {
 
                                 <div>
                                     <input
-                                        type="email"
-                                        required
+                                        type="tel"
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
-                                        placeholder="Correo electrónico *"
+                                        placeholder="Número de teléfono"
                                     />
                                 </div>
                             </div>
 
                             <div>
                                 <input
-                                    type="tel"
+                                    type="email"
+                                    required
                                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
-                                    placeholder="Número de teléfono"
+                                    placeholder="Correo electrónico *"
                                 />
                             </div>
 
@@ -118,7 +118,7 @@ const Contact = () => {
                         <div className="bg-gradient-to-br from-primary-600 to-accent-600 rounded-xl shadow-lg p-6 text-white">
                             <h4 className="font-bold mb-4">Información</h4>
                             <div className="space-y-2 text-sm">
-                                <p>📍 Bogotá, Colombia</p>
+                                <p>📍 Medellín, Colombia</p>
                                 <p>🕐 Lun - Sáb: 9:00 AM - 6:00 PM</p>
                             </div>
                         </div>
