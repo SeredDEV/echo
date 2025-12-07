@@ -20,11 +20,11 @@ const Header = () => {
                     <div className="flex items-center justify-between">
                         {/* Logo */}
                         <div className="flex items-center">
-                            <a href="index.html" className="flex items-center hover:opacity-80 transition-opacity">
+                            <a href="index.html" className="flex items-center hover:opacity-80 transition-opacity bg-white rounded-lg">
                                 <img
                                     src="assets/logo/logo.png"
                                     alt="Echo Tecnología"
-                                    className="h-12 md:h-20 w-auto"
+                                    className="h-12 md:h-20 w-auto bg-white"
                                     onError={(e) => {
                                         e.currentTarget.style.display = 'none';
                                         const textLogo = e.currentTarget.nextElementSibling as HTMLElement;
