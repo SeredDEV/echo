@@ -311,6 +311,19 @@ export const products: Product[] = [
         destacado: true
     },
     {
+        id: 'ghome-smart-plug-mini',
+        nombre: 'GHome Smart Plug Mini',
+        precio: 59000,
+        precioOriginal: 79000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Tomacorrientes',
+        marca: 'GHome',
+        imagen: 'https://m.media-amazon.com/images/I/51Ipo9YCEwL._SL1500_.jpg',
+        descripcion: 'Enchufe inteligente mini WiFi y Bluetooth, control por voz, diseño compacto y certificación ETL/FCC',
+        stock: 50,
+        destacado: true
+    },
+    {
         id: 'tp-link-tapo-p100',
         nombre: 'TP-Link Tapo P100',
         precio: 49000,
