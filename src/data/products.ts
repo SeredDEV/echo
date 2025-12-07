@@ -171,6 +171,18 @@ export const products: Product[] = [
         destacado: true
     },
     {
+        id: 'fire-tv-stick-4k-plus',
+        nombre: 'Amazon Fire TV Stick 4K Plus',
+        precio: 279000,
+        precioOriginal: 349000,
+        categoria: 'Dispositivos Streaming',
+        marca: 'Amazon',
+        imagen: 'https://m.media-amazon.com/images/I/51WtNy0OxLL._AC_SL1500_.jpg',
+        descripcion: 'Streaming 4K Ultra HD premium con WiFi 6, Dolby Atmos y control remoto Alexa Voice mejorado',
+        stock: 15,
+        destacado: true
+    },
+    {
         id: 'fire-tv-stick-hd',
         nombre: 'Amazon Fire TV Stick HD',
         precio: 149000,
