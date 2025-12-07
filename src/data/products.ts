@@ -350,6 +350,19 @@ export const products: Product[] = [
         destacado: true
     },
     {
+        id: 'kasa-smart-switch-2gang',
+        nombre: 'Kasa Smart Switch 2-Gang HS200-2',
+        precio: 189000,
+        precioOriginal: 239000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Apagadores',
+        marca: 'TP-Link',
+        imagen: 'https://m.media-amazon.com/images/I/61VngqZKsTL._SL1500_.jpg',
+        descripcion: 'Interruptor inteligente 2-Gang WiFi, control de 2 circuitos independientes con voz y app',
+        stock: 15,
+        destacado: true
+    },
+    {
         id: 'sonoff-mini',
         nombre: 'Sonoff Mini R2',
         precio: 59000,
