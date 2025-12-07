@@ -156,6 +156,18 @@ export const products: Product[] = [
         stock: 8,
         destacado: true
     },
+    {
+        id: 'alexa-echo-auto',
+        nombre: 'Amazon Echo Auto',
+        precio: 199000,
+        precioOriginal: 249000,
+        categoria: 'Altavoces Inteligentes',
+        marca: 'Amazon',
+        imagen: 'https://m.media-amazon.com/images/I/41MD7quzjPL._AC_SL1000_.jpg',
+        descripcion: 'Alexa para tu auto con 5 micrófonos, conexión Bluetooth y carga rápida',
+        stock: 15,
+        destacado: true
+    },
 
     // Dispositivos Streaming
     {
