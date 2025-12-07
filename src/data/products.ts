@@ -603,6 +603,59 @@ export const products: Product[] = [
         destacado: true
     },
 
+    // Accesorios Inteligentes - Cámaras
+    {
+        id: 'ring-video-doorbell-pro',
+        nombre: 'Ring Video Doorbell Pro 2',
+        precio: 899000,
+        precioOriginal: 1199000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Cámaras',
+        marca: 'Ring',
+        imagen: 'https://m.media-amazon.com/images/I/51P0IcBbZPL._AC_SL1000_.jpg',
+        descripcion: 'Timbre con cámara HD 1536p, vista previa de paquetes, detección de movimiento 3D y audio bidireccional',
+        stock: 15,
+        destacado: true
+    },
+    {
+        id: 'blink-outdoor-4',
+        nombre: 'Blink Outdoor 4',
+        precio: 349000,
+        precioOriginal: 449000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Cámaras',
+        marca: 'Blink',
+        imagen: 'https://m.media-amazon.com/images/I/51W0vQFNMDL._AC_SL1000_.jpg',
+        descripcion: 'Cámara de seguridad inalámbrica HD, batería de 2 años, visión nocturna y detección de movimiento',
+        stock: 25,
+        destacado: true
+    },
+    {
+        id: 'wyze-cam-v3',
+        nombre: 'Wyze Cam v3',
+        precio: 129000,
+        precioOriginal: 169000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Cámaras',
+        marca: 'Wyze',
+        imagen: 'https://m.media-amazon.com/images/I/51cpRcWhB+L._AC_SL1500_.jpg',
+        descripcion: 'Cámara de seguridad 1080p con visión nocturna a color, resistente al clima y audio bidireccional',
+        stock: 40,
+        destacado: true
+    },
+    {
+        id: 'ring-stick-up-cam',
+        nombre: 'Ring Stick Up Cam Battery',
+        precio: 449000,
+        precioOriginal: 599000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Cámaras',
+        marca: 'Ring',
+        imagen: 'https://m.media-amazon.com/images/I/51EqL9h0AFL._AC_SL1000_.jpg',
+        descripcion: 'Cámara de seguridad versátil HD con batería recargable, visión nocturna y audio bidireccional',
+        stock: 18,
+        destacado: true
+    },
 
 ];
 
