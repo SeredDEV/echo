@@ -473,6 +473,19 @@ export const products: Product[] = [
         destacado: true
     },
     {
+        id: 'govee-cob-led-strip-pro',
+        nombre: 'Govee COB LED Strip Light Pro',
+        precio: 249000,
+        precioOriginal: 319000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Cintas LED',
+        marca: 'Govee',
+        imagen: 'https://m.media-amazon.com/images/I/71a6EtPXZFL._AC_SL1500_.jpg',
+        descripcion: 'Tira LED COB con tecnología de 1260 LEDs/m, iluminación sin puntos, certificación Matter y control por voz',
+        stock: 20,
+        destacado: true
+    },
+    {
         id: 'govee-led-strip',
         nombre: 'Govee Bombillos Inteligentes',
         precio: 119000,
