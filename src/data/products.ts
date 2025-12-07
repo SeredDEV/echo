@@ -129,8 +129,8 @@ export const products: Product[] = [
         precioOriginal: 199000,
         categoria: 'Altavoces Inteligentes',
         marca: 'Google',
-        imagen: 'https://images.unsplash.com/photo-1507646871582-1f3be8a0b78e?w=400',
-        descripcion: 'Altavoz inteligente compacto con Google Assistant',
+        imagen: 'https://m.media-amazon.com/images/I/71TeLBggnwL._AC_SX679_.jpg',
+        descripcion: 'Altavoz inteligente compacto con Google Assistant, sonido mejorado y control por voz',
         stock: 20,
         destacado: true
     },
