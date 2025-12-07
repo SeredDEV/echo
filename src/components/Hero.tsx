@@ -59,9 +59,9 @@ const Hero = () => {
                         Encuentra asistentes de voz, dispositivos de domótica y más para hacer tu vida más fácil.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up">
-                        <button className="btn-primary bg-primary-600 text-white hover:bg-primary-700 px-8 py-4 text-lg font-bold shadow-2xl border-2 border-primary-600">
+                        <a href="tienda.html" className="btn-primary bg-primary-600 text-white hover:bg-primary-700 px-8 py-4 text-lg font-bold shadow-2xl border-2 border-primary-600 rounded-xl inline-block transition-all">
                             Explorar Productos
-                        </button>
+                        </a>
                         <a href="contacto.html" className="btn-secondary bg-white/10 text-white border-2 border-white hover:bg-white hover:text-primary-600 px-8 py-4 text-lg font-bold backdrop-blur-md shadow-2xl transition-all rounded-xl inline-block">
                             Contáctanos
                         </a>
