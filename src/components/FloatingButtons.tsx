@@ -96,8 +96,8 @@ const FloatingButtons = () => {
                                 <div className={`max-w-[80%] ${message.type === 'user' ? 'order-2' : 'order-1'}`}>
                                     <div
                                         className={`rounded-2xl px-4 py-2 ${message.type === 'user'
-                                                ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white'
-                                                : 'bg-white text-gray-800 shadow-sm'
+                                            ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white'
+                                            : 'bg-white text-gray-800 shadow-sm'
                                             }`}
                                     >
                                         <p className="text-sm">{message.text}</p>
@@ -110,19 +110,20 @@ const FloatingButtons = () => {
 
                     {/* Chat Input */}
                     <form onSubmit={handleSendMessage} className="p-4 bg-white border-t border-gray-200 rounded-b-2xl">
-                        <div className="flex gap-2">
+                        <div className="flex gap-2 items-center">
                             <input
                                 type="text"
                                 value={inputMessage}
                                 onChange={(e) => setInputMessage(e.target.value)}
                                 placeholder="Escribe tu mensaje..."
-                                className="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                className="flex-1 px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm"
                             />
                             <button
                                 type="submit"
-                                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white p-2 rounded-full transition-all duration-300 hover:scale-110"
+                                disabled={!inputMessage.trim()}
+                                className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-full transition-all duration-300 hover:scale-110 flex items-center justify-center"
                             >
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                                 </svg>
                             </button>
