@@ -46,18 +46,88 @@ const Header = () => {
                                 <span className="relative z-10">Inicio</span>
                                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-accent-600 group-hover:w-full transition-all duration-300"></span>
                             </a>
-                            <a href="#altavoces" className="group relative px-4 py-2 text-gray-700 font-medium transition-all duration-300">
-                                <span className="relative z-10">Altavoces Inteligentes</span>
-                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-accent-600 group-hover:w-full transition-all duration-300"></span>
-                            </a>
-                            <a href="#streaming" className="group relative px-4 py-2 text-gray-700 font-medium transition-all duration-300">
-                                <span className="relative z-10">Dispositivos Streaming</span>
-                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-accent-600 group-hover:w-full transition-all duration-300"></span>
-                            </a>
-                            <a href="#accesorios" className="group relative px-4 py-2 text-gray-700 font-medium transition-all duration-300">
-                                <span className="relative z-10">Accesorios Inteligentes</span>
-                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-accent-600 group-hover:w-full transition-all duration-300"></span>
-                            </a>
+
+                            {/* Altavoces Inteligentes Dropdown */}
+                            <div className="group relative">
+                                <a href="#altavoces" className="flex items-center gap-1 px-4 py-2 text-gray-700 font-medium transition-all duration-300">
+                                    <span className="relative z-10">Altavoces Inteligentes</span>
+                                    <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-accent-600 group-hover:w-full transition-all duration-300"></span>
+                                </a>
+                                <div className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                    <div className="py-2">
+                                        <a href="#altavoces" className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">
+                                            <div className="font-semibold">Amazon Alexa</div>
+                                            <div className="text-xs text-gray-500">Echo, Echo Dot, Echo Show</div>
+                                        </a>
+                                        <a href="#altavoces" className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">
+                                            <div className="font-semibold">Google Home</div>
+                                            <div className="text-xs text-gray-500">Nest Audio, Nest Mini</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Dispositivos Streaming Dropdown */}
+                            <div className="group relative">
+                                <a href="#streaming" className="flex items-center gap-1 px-4 py-2 text-gray-700 font-medium transition-all duration-300">
+                                    <span className="relative z-10">Dispositivos Streaming</span>
+                                    <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-accent-600 group-hover:w-full transition-all duration-300"></span>
+                                </a>
+                                <div className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                    <div className="py-2">
+                                        <a href="#streaming" className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">
+                                            <div className="font-semibold">Amazon Fire TV</div>
+                                            <div className="text-xs text-gray-500">Fire TV Stick, Fire TV Cube</div>
+                                        </a>
+                                        <a href="#streaming" className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">
+                                            <div className="font-semibold">Google Chromecast</div>
+                                            <div className="text-xs text-gray-500">Chromecast con Google TV</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Accesorios Inteligentes Dropdown */}
+                            <div className="group relative">
+                                <a href="#accesorios" className="flex items-center gap-1 px-4 py-2 text-gray-700 font-medium transition-all duration-300">
+                                    <span className="relative z-10">Accesorios Inteligentes</span>
+                                    <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-accent-600 group-hover:w-full transition-all duration-300"></span>
+                                </a>
+                                <div className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                    <div className="py-2">
+                                        <a href="#accesorios" className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">
+                                            <div className="font-semibold">Bombillos Inteligentes</div>
+                                            <div className="text-xs text-gray-500">LED RGB, Blanco ajustable</div>
+                                        </a>
+                                        <a href="#accesorios" className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">
+                                            <div className="font-semibold">Tomacorrientes</div>
+                                            <div className="text-xs text-gray-500">Control remoto, WiFi</div>
+                                        </a>
+                                        <a href="#accesorios" className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">
+                                            <div className="font-semibold">Apagadores Inteligentes</div>
+                                            <div className="text-xs text-gray-500">Touch, Control por voz</div>
+                                        </a>
+                                        <a href="#accesorios" className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">
+                                            <div className="font-semibold">Cintas LED</div>
+                                            <div className="text-xs text-gray-500">RGB, Música sincronizada</div>
+                                        </a>
+                                        <a href="#accesorios" className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">
+                                            <div className="font-semibold">Cerraduras Inteligentes</div>
+                                            <div className="text-xs text-gray-500">Huella, PIN, App</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
                             <a href="about.html" className="group relative px-4 py-2 text-gray-700 font-medium transition-all duration-300">
                                 <span className="relative z-10">Sobre nosotros</span>
                                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-accent-600 group-hover:w-full transition-all duration-300"></span>
