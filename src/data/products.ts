@@ -67,8 +67,8 @@ export const products: Product[] = [
         precio: 549000,
         categoria: 'Altavoces Inteligentes',
         marca: 'Amazon',
-        imagen: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400',
-        descripcion: 'Pantalla inteligente de 8" con Alexa, cámara HD y control de hogar',
+        imagen: 'https://m.media-amazon.com/images/I/511tpdYUF5L._AC_SY879_.jpg',
+        descripcion: 'Pantalla inteligente de 8" HD con Alexa, cámara de 13MP con auto-framing y audio espacial',
         stock: 5
     },
     {
