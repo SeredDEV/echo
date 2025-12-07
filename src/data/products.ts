@@ -51,17 +51,6 @@ export const products: Product[] = [
         destacado: true
     },
     {
-        id: 'alexa-echo-4',
-        nombre: 'Amazon Echo (4ta Gen)',
-        precio: 349000,
-        categoria: 'Altavoces Inteligentes',
-        marca: 'Amazon',
-        imagen: 'https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=400',
-        descripcion: 'Altavoz inteligente premium con sonido de alta calidad y Alexa integrado',
-        stock: 8,
-        destacado: true
-    },
-    {
         id: 'alexa-echo-show-8',
         nombre: 'Amazon Echo Show 8',
         precio: 549000,
@@ -93,6 +82,30 @@ export const products: Product[] = [
         imagen: 'https://m.media-amazon.com/images/I/61ejdlU79CL._AC_SX679_.jpg',
         descripcion: 'Pantalla inteligente compacta de 5.5" con Alexa, cámara de 2MP y control de hogar inteligente',
         stock: 14,
+        destacado: true
+    },
+    {
+        id: 'alexa-echo-show-11',
+        nombre: 'Amazon Echo Show 11',
+        precio: 1299000,
+        precioOriginal: 1599000,
+        categoria: 'Altavoces Inteligentes',
+        marca: 'Amazon',
+        imagen: 'https://m.media-amazon.com/images/I/61CJ-NSuTxL._AC_SL1500_.jpg',
+        descripcion: 'Pantalla inteligente premium de 10.95" Full HD con cámara de 13MP, auto-framing y audio espacial de alta calidad',
+        stock: 6,
+        destacado: true
+    },
+    {
+        id: 'alexa-echo-show-15',
+        nombre: 'Amazon Echo Show 15',
+        precio: 1499000,
+        precioOriginal: 1899000,
+        categoria: 'Altavoces Inteligentes',
+        marca: 'Amazon',
+        imagen: 'https://m.media-amazon.com/images/I/61xQl81iYQL._AC_SY879_.jpg',
+        descripcion: 'Pantalla inteligente de 15.6" Full HD con orientación ajustable, cámara de 13MP y audio premium para toda la familia',
+        stock: 4,
         destacado: true
     },
     {
