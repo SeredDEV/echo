@@ -417,6 +417,19 @@ export const products: Product[] = [
         stock: 20,
         destacado: true
     },
+    {
+        id: 'louysgen-smart-dimmer',
+        nombre: 'LOUYSGEN Smart Dimmer Switch',
+        precio: 129000,
+        precioOriginal: 169000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Apagadores',
+        marca: 'LOUYSGEN',
+        imagen: 'https://m.media-amazon.com/images/I/41aj3o7CcfL._SL1500_.jpg',
+        descripcion: 'Interruptor dimmer inteligente WiFi con control de brillo, temporizador y certificación FCC',
+        stock: 22,
+        destacado: true
+    },
 
 
     // Accesorios Inteligentes - Cintas LED
