@@ -577,15 +577,16 @@ export const products: Product[] = [
 
     // Accesorios Inteligentes - Cerraduras
     {
-        id: 'yale-assure-lock',
-        nombre: 'Yale Assure Lock SL',
-        precio: 899000,
+        id: 'yale-smart-lock-matter',
+        nombre: 'Yale Matte Black Keyed Deadbolt Smart Lock',
+        precio: 1299000,
+        precioOriginal: 1599000,
         categoria: 'Accesorios Inteligentes',
         subcategoria: 'Cerraduras',
         marca: 'Yale',
-        imagen: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400',
-        descripcion: 'Cerradura inteligente con teclado táctil',
-        stock: 8,
+        imagen: 'https://m.media-amazon.com/images/I/61Klu1LH1EL._AC_SL1500_.jpg',
+        descripcion: 'Cerradura inteligente con certificación Matter, control por voz Google Assistant, códigos de acceso y llave física',
+        stock: 6,
         destacado: true
     },
     {
