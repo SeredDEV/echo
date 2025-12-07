@@ -217,6 +217,18 @@ export const products: Product[] = [
         stock: 6
     },
     {
+        id: 'google-tv-streamer-4k',
+        nombre: 'Google TV Streamer 4K',
+        precio: 379000,
+        precioOriginal: 459000,
+        categoria: 'Dispositivos Streaming',
+        marca: 'Google',
+        imagen: 'https://m.media-amazon.com/images/I/510wm50VDHL._AC_SL1500_.jpg',
+        descripcion: 'Streaming 4K con Google Assistant, rendimiento rápido y recomendaciones personalizadas',
+        stock: 10,
+        destacado: true
+    },
+    {
         id: 'chromecast-google-tv',
         nombre: 'Chromecast con Google TV',
         precio: 269000,
