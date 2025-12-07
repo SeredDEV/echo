@@ -451,6 +451,19 @@ export const products: Product[] = [
         stock: 60,
         destacado: true
     },
+    {
+        id: 'ge-cync-smart-bulbs',
+        nombre: 'GE Cync Bombillos Inteligentes LED A19',
+        precio: 85000,
+        precioOriginal: 109000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Bombillos',
+        marca: 'GE',
+        imagen: 'https://m.media-amazon.com/images/I/71qdF1Tjp6L._AC_SL1500_.jpg',
+        descripcion: 'Bombillos LED con millones de colores, certificación Matter y control por voz con Alexa, Google y Apple Home',
+        stock: 35,
+        destacado: true
+    },
 
     // Accesorios Inteligentes - Cerraduras
     {
