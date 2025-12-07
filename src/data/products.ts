@@ -21,8 +21,8 @@ export const products: Product[] = [
         precioOriginal: 249000,
         categoria: 'Altavoces Inteligentes',
         marca: 'Amazon',
-        imagen: 'https://images.unsplash.com/photo-1543512214-318c7553f230?w=400',
-        descripcion: 'Altavoz inteligente con Alexa, sonido mejorado y control de hogar inteligente',
+        imagen: 'https://m.media-amazon.com/images/I/71hNp8d9WvL._AC_SY879_.jpg',
+        descripcion: 'Altavoz inteligente compacto con Alexa, sonido mejorado y control de hogar inteligente',
         stock: 15,
         destacado: true
     },
