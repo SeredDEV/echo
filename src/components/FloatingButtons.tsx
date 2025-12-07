@@ -62,7 +62,7 @@ const FloatingButtons = () => {
         <>
             {/* Chat Popup */}
             {isChatOpen && (
-                <div className="fixed bottom-28 right-6 w-96 max-w-[calc(100vw-3rem)] h-[480px] max-h-[calc(100vh-12rem)] bg-white rounded-2xl shadow-2xl z-[60] flex flex-col animate-slide-up">
+                <div className="fixed top-20 right-6 w-96 max-w-[calc(100vw-3rem)] h-[550px] max-h-[calc(100vh-8rem)] bg-white rounded-2xl shadow-2xl z-[60] flex flex-col animate-slide-up">
                     {/* Chat Header */}
                     <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-t-2xl flex items-center justify-between">
                         <div className="flex items-center gap-3">
