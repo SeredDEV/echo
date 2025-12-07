@@ -62,9 +62,9 @@ const Hero = () => {
                         <button className="btn-primary bg-primary-600 text-white hover:bg-primary-700 px-8 py-4 text-lg font-bold shadow-2xl border-2 border-primary-600">
                             Explorar Productos
                         </button>
-                        <button className="btn-secondary bg-white/10 text-white border-2 border-white hover:bg-white hover:text-primary-600 px-8 py-4 text-lg font-bold backdrop-blur-md shadow-2xl transition-all">
+                        <a href="contacto.html" className="btn-secondary bg-white/10 text-white border-2 border-white hover:bg-white hover:text-primary-600 px-8 py-4 text-lg font-bold backdrop-blur-md shadow-2xl transition-all rounded-xl inline-block">
                             Contáctanos
-                        </button>
+                        </a>
                     </div>
 
                     {/* Stats */}
