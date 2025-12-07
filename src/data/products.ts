@@ -27,6 +27,18 @@ export const products: Product[] = [
         destacado: true
     },
     {
+        id: 'alexa-echo-dot-max',
+        nombre: 'Amazon Echo Dot Max',
+        precio: 259000,
+        precioOriginal: 319000,
+        categoria: 'Altavoces Inteligentes',
+        marca: 'Amazon',
+        imagen: 'https://m.media-amazon.com/images/I/71L5oPwxV7L._AC_SY879_.jpg',
+        descripcion: 'Echo Dot con audio mejorado, sensor de temperatura y luz ambiental, control de hogar inteligente con Alexa',
+        stock: 12,
+        destacado: true
+    },
+    {
         id: 'alexa-echo-4',
         nombre: 'Amazon Echo (4ta Gen)',
         precio: 349000,
@@ -68,6 +80,18 @@ export const products: Product[] = [
         imagen: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400',
         descripcion: 'Altavoz inteligente con sonido potente y Google Assistant',
         stock: 12
+    },
+    {
+        id: 'alexa-echo-studio',
+        nombre: 'Amazon Echo Studio',
+        precio: 899000,
+        precioOriginal: 1099000,
+        categoria: 'Altavoces Inteligentes',
+        marca: 'Amazon',
+        imagen: 'https://m.media-amazon.com/images/I/71DklMv-8+L._AC_SL1500_.jpg',
+        descripcion: 'Altavoz inteligente premium con audio espacial 3D, Dolby Atmos, y 5 altavoces direccionales para sonido inmersivo de alta fidelidad',
+        stock: 8,
+        destacado: true
     },
 
     // Dispositivos Streaming
