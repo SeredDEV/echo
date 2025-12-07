@@ -253,42 +253,9 @@ export const products: Product[] = [
     },
 
     // Accesorios Inteligentes - Bombillos
-    {
-        id: 'philips-hue-color',
-        nombre: 'Philips Hue Color A19',
-        precio: 189000,
-        categoria: 'Accesorios Inteligentes',
-        subcategoria: 'Bombillos',
-        marca: 'Philips',
-        imagen: 'https://images.unsplash.com/photo-1550985616-10810253b84d?w=400',
-        descripcion: 'Bombillo LED RGB inteligente, 16 millones de colores',
-        stock: 40,
-        destacado: true
-    },
-    {
-        id: 'philips-hue-white',
-        nombre: 'Philips Hue White A19',
-        precio: 89000,
-        categoria: 'Accesorios Inteligentes',
-        subcategoria: 'Bombillos',
-        marca: 'Philips',
-        imagen: 'https://images.unsplash.com/photo-1550985616-10810253b84d?w=400',
-        descripcion: 'Bombillo LED blanco inteligente regulable',
-        stock: 50
-    },
-    {
-        id: 'tp-link-tapo-l530',
-        nombre: 'TP-Link Tapo L530E',
-        precio: 79000,
-        precioOriginal: 99000,
-        categoria: 'Accesorios Inteligentes',
-        subcategoria: 'Bombillos',
-        marca: 'TP-Link',
-        imagen: 'https://images.unsplash.com/photo-1550985616-10810253b84d?w=400',
-        descripcion: 'Bombillo LED RGB WiFi multicolor',
-        stock: 35,
-        destacado: true
-    },
+
+
+
 
     // Accesorios Inteligentes - Tomacorrientes
     {
@@ -542,28 +509,8 @@ export const products: Product[] = [
         descripcion: 'Termostato inteligente con Alexa integrado',
         stock: 9
     },
-    {
-        id: 'sengled-smart-bulb',
-        nombre: 'Sengled Smart Bulb A19',
-        precio: 49000,
-        categoria: 'Accesorios Inteligentes',
-        subcategoria: 'Bombillos',
-        marca: 'Sengled',
-        imagen: 'https://images.unsplash.com/photo-1550985616-10810253b84d?w=400',
-        descripcion: 'Bombillo LED blanco inteligente económico',
-        stock: 55
-    },
-    {
-        id: 'wyze-bulb-color',
-        nombre: 'Wyze Bulb Color',
-        precio: 69000,
-        categoria: 'Accesorios Inteligentes',
-        subcategoria: 'Bombillos',
-        marca: 'Wyze',
-        imagen: 'https://images.unsplash.com/photo-1550985616-10810253b84d?w=400',
-        descripcion: 'Bombillo LED RGB WiFi económico',
-        stock: 48
-    }
+
+
 ];
 
 export const categorias = ['Altavoces Inteligentes', 'Dispositivos Streaming', 'Accesorios Inteligentes'] as const;
