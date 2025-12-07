@@ -412,6 +412,19 @@ export const products: Product[] = [
         stock: 50,
         destacado: true
     },
+    {
+        id: 'kasa-smart-bulb',
+        nombre: 'Kasa Bombillo Inteligente',
+        precio: 79000,
+        precioOriginal: 99000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Bombillos',
+        marca: 'TP-Link',
+        imagen: 'https://m.media-amazon.com/images/I/51rE9Q2r6AL._AC_SL1000_.jpg',
+        descripcion: 'Bombillo LED multicolor con 16 millones de colores, monitoreo de energía y control por voz',
+        stock: 45,
+        destacado: true
+    },
 
     // Accesorios Inteligentes - Cerraduras
     {
