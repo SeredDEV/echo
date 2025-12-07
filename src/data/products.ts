@@ -140,8 +140,8 @@ export const products: Product[] = [
         precio: 329000,
         categoria: 'Altavoces Inteligentes',
         marca: 'Google',
-        imagen: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400',
-        descripcion: 'Altavoz inteligente con sonido potente y Google Assistant',
+        imagen: 'https://m.media-amazon.com/images/I/41Puf30CmvL._AC_.jpg',
+        descripcion: 'Altavoz inteligente con sonido potente, woofer y tweeter, Google Assistant integrado',
         stock: 12
     },
     {
