@@ -378,6 +378,19 @@ export const products: Product[] = [
         stock: 12,
         destacado: true
     },
+    {
+        id: 'louysgen-smart-switch',
+        nombre: 'LOUYSGEN Smart Light Switch',
+        precio: 119000,
+        precioOriginal: 159000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Apagadores',
+        marca: 'LOUYSGEN',
+        imagen: 'https://m.media-amazon.com/images/I/41d6gQvhgIL._SL1500_.jpg',
+        descripcion: 'Interruptor inteligente WiFi con control 3-way, certificación IP54, superficie de vidrio templado y control por voz',
+        stock: 25,
+        destacado: true
+    },
 
 
     // Accesorios Inteligentes - Cintas LED
