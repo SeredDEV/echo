@@ -669,6 +669,19 @@ export const products: Product[] = [
         stock: 20,
         destacado: true
     },
+    {
+        id: 'google-nest-doorbell',
+        nombre: 'Google Nest Doorbell',
+        precio: 749000,
+        precioOriginal: 999000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Cámaras',
+        marca: 'Google',
+        imagen: 'https://m.media-amazon.com/images/I/51z4-jHiLuL._AC_SL1500_.jpg',
+        descripcion: 'Timbre inteligente con video 2K HDR, Gemini AI, visión nocturna y campo de visión de 166°',
+        stock: 12,
+        destacado: true
+    },
 
 ];
 
