@@ -4,27 +4,24 @@ const categories = [
         name: 'Altavoces Inteligentes',
         description: 'Controla tu hogar con tu voz',
         image: 'assets/images/categories/altavoces.jpg',
-        gradient: 'from-blue-600 to-cyan-600',
     },
     {
         id: 2,
         name: 'Dispositivos Streaming',
         description: 'Entretenimiento sin límites',
         image: 'assets/images/categories/streaming.jpg',
-        gradient: 'from-purple-600 to-pink-600',
     },
     {
         id: 3,
         name: 'Accesorios Inteligentes',
         description: 'Complementa tu hogar inteligente',
         image: 'assets/images/categories/accesorios.jpg',
-        gradient: 'from-amber-600 to-orange-600',
     },
 ];
 
 const Categories = () => {
     return (
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
@@ -39,36 +36,38 @@ const Categories = () => {
                     {categories.map((category, index) => (
                         <div
                             key={category.id}
-                            className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer h-96"
+                            className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
                             style={{ animationDelay: `${index * 150}ms` }}
                         >
                             {/* Background Image */}
-                            <div className="absolute inset-0">
+                            <div className="aspect-[4/3] relative overflow-hidden">
                                 <img
                                     src={category.image}
                                     alt={category.name}
-                                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                                 />
-                                {/* Gradient Overlay */}
-                                <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-80 group-hover:opacity-70 transition-opacity duration-300`}></div>
+                                {/* Dark gradient overlay at bottom only */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                             </div>
 
-                            {/* Content */}
-                            <div className="relative z-10 h-full flex flex-col justify-end p-8 text-white">
-                                <h3 className="text-3xl font-bold mb-3">
+                            {/* Content - positioned at bottom */}
+                            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white z-10">
+                                <h3 className="text-2xl md:text-3xl font-bold mb-2 transform group-hover:translate-y-[-4px] transition-transform duration-300">
                                     {category.name}
                                 </h3>
-                                <p className="text-white/90 mb-6 text-lg">
+                                <p className="text-white/90 mb-4 text-sm md:text-base">
                                     {category.description}
                                 </p>
-                                <button className="w-full bg-white text-gray-900 font-semibold py-3 rounded-lg hover:bg-gray-100 transition-colors transform group-hover:scale-105 duration-300">
-                                    Explorar →
+                                <button className="inline-flex items-center gap-2 bg-white text-gray-900 font-semibold px-6 py-3 rounded-full hover:bg-primary-600 hover:text-white transition-all duration-300 transform group-hover:scale-105">
+                                    Explorar
+                                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
                                 </button>
                             </div>
 
-                            {/* Decorative elements */}
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
-                            <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+                            {/* Shine effect on hover */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                         </div>
                     ))}
                 </div>
