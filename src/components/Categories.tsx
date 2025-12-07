@@ -4,18 +4,21 @@ const categories = [
         name: 'Altavoces Inteligentes',
         description: 'Controla tu hogar con tu voz',
         image: 'assets/images/categories/altavoces.jpg',
+        link: 'tienda.html?categoria=altavoces',
     },
     {
         id: 2,
         name: 'Dispositivos Streaming',
         description: 'Entretenimiento sin límites',
         image: 'assets/images/categories/streaming.jpg',
+        link: 'tienda.html?categoria=streaming',
     },
     {
         id: 3,
         name: 'Accesorios Inteligentes',
         description: 'Complementa tu hogar inteligente',
         image: 'assets/images/categories/accesorios.jpg',
+        link: 'tienda.html?categoria=accesorios',
     },
 ];
 
@@ -63,12 +66,12 @@ const Categories = () => {
                                 <p className="text-white/95 mb-4 text-base drop-shadow-md">
                                     {category.description}
                                 </p>
-                                <button className="inline-flex items-center gap-2 bg-white text-gray-900 font-semibold px-6 py-3 rounded-full hover:bg-primary-600 hover:text-white transition-all duration-300 shadow-lg">
+                                <a href={category.link} className="inline-flex items-center gap-2 bg-white text-gray-900 font-semibold px-6 py-3 rounded-full hover:bg-primary-600 hover:text-white transition-all duration-300 shadow-lg">
                                     Explorar
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
-                                </button>
+                                </a>
                             </div>
 
                             {/* Shine effect on hover */}
