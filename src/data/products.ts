@@ -234,8 +234,8 @@ export const products: Product[] = [
         precio: 269000,
         categoria: 'Dispositivos Streaming',
         marca: 'Google',
-        imagen: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=400',
-        descripcion: 'Streaming 4K HDR con Google TV y control remoto',
+        imagen: 'https://m.media-amazon.com/images/I/514iHiICOOL._AC_SL1000_.jpg',
+        descripcion: 'Streaming 4K HDR con Google TV, control remoto y recomendaciones personalizadas',
         stock: 18,
         destacado: true
     },
