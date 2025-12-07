@@ -460,6 +460,19 @@ export const products: Product[] = [
         destacado: true
     },
     {
+        id: 'govee-rgbic-led-strip-100ft',
+        nombre: 'Govee 100ft RGBIC LED Strip Lights',
+        precio: 289000,
+        precioOriginal: 359000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Cintas LED',
+        marca: 'Govee',
+        imagen: 'https://m.media-amazon.com/images/I/71N76hGMHVL._AC_SL1500_.jpg',
+        descripcion: 'Tira LED RGBIC 100ft con colores segmentados, sincronización musical mejorada y control por voz',
+        stock: 15,
+        destacado: true
+    },
+    {
         id: 'govee-led-strip',
         nombre: 'Govee Bombillos Inteligentes',
         precio: 119000,
