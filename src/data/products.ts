@@ -272,6 +272,19 @@ export const products: Product[] = [
         destacado: true
     },
     {
+        id: 'govee-smart-plug-energy',
+        nombre: 'Govee Smart Plug con Monitoreo de Energía',
+        precio: 99000,
+        precioOriginal: 129000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Tomacorrientes',
+        marca: 'Govee',
+        imagen: 'https://m.media-amazon.com/images/I/61xNTXtJ30L._SL1500_.jpg',
+        descripcion: 'Enchufe inteligente con monitoreo de energía en tiempo real, WiFi y Bluetooth, control por voz',
+        stock: 35,
+        destacado: true
+    },
+    {
         id: 'tp-link-tapo-p100',
         nombre: 'TP-Link Tapo P100',
         precio: 49000,
