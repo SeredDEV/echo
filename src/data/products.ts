@@ -438,6 +438,19 @@ export const products: Product[] = [
         stock: 30,
         destacado: true
     },
+    {
+        id: 'linkind-smart-bulbs',
+        nombre: 'Linkind Bombillos Inteligentes WiFi',
+        precio: 55000,
+        precioOriginal: 75000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Bombillos',
+        marca: 'Linkind',
+        imagen: 'https://m.media-amazon.com/images/I/51ZR2lB0Q1L._AC_SL1500_.jpg',
+        descripcion: 'Bombillos LED WiFi con 16 millones de colores, modo despertar y control por voz con Alexa y Google',
+        stock: 60,
+        destacado: true
+    },
 
     // Accesorios Inteligentes - Cerraduras
     {
