@@ -212,8 +212,8 @@ export const products: Product[] = [
         precio: 449000,
         categoria: 'Dispositivos Streaming',
         marca: 'Amazon',
-        imagen: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=400',
-        descripcion: 'Streaming 4K con control por voz manos libres',
+        imagen: 'https://m.media-amazon.com/images/I/61CvilMENWL._AC_SL1500_.jpg',
+        descripcion: 'Streaming 4K Ultra HD con control por voz manos libres, procesador octa-core y WiFi 6E',
         stock: 6
     },
     {
