@@ -66,17 +66,26 @@ const Header = () => {
                             </a>
                         </div>
 
-                        {/* CTA Buttons */}
-                        <div className="hidden lg:flex items-center gap-3">
-                            <button className="px-4 py-2 text-primary-600 hover:text-primary-700 font-semibold transition-all duration-300 hover:scale-105">
-                                Iniciar sesión
-                            </button>
-                            <button className="px-5 py-2.5 bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl hover:scale-105 flex items-center gap-2">
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        {/* CTA Icons */}
+                        <div className="hidden lg:flex items-center gap-2">
+                            <a
+                                href="login.html"
+                                className="p-2.5 text-gray-700 hover:text-primary-600 hover:bg-gray-100 rounded-lg transition-all duration-300"
+                                aria-label="Iniciar sesión"
+                            >
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                            </a>
+                            <a
+                                href="carrito.html"
+                                className="p-2.5 text-gray-700 hover:text-primary-600 hover:bg-gray-100 rounded-lg transition-all duration-300 relative"
+                                aria-label="Carrito"
+                            >
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                                 </svg>
-                                Carrito
-                            </button>
+                            </a>
                         </div>
 
                         {/* Mobile Menu Button */}
