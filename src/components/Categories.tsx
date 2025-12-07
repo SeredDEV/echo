@@ -40,42 +40,42 @@ const Categories = () => {
                             style={{ animationDelay: `${index * 150}ms` }}
                         >
                             {/* Background Image */}
-                            <div className="aspect-[4/3] relative overflow-hidden">
+                            <div className="aspect-[4/3] relative overflow-hidden bg-gray-200">
                                 <img
                                     src={category.image}
                                     alt={category.name}
                                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                                 />
 
-                                {/* Overlay - only visible on hover */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                {/* Subtle gradient always visible for readability */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+
+                                {/* Dark overlay - only on hover */}
+                                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             </div>
 
-                            {/* Content - slides up on hover */}
-                            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white z-10 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                            {/* Title - always visible at bottom */}
+                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white z-10">
+                                <h3 className="text-2xl md:text-3xl font-bold mb-1 transform group-hover:translate-y-[-8px] transition-transform duration-300">
                                     {category.name}
                                 </h3>
-                                <p className="text-white/90 mb-4 text-sm md:text-base">
+                            </div>
+
+                            {/* Description and button - only visible on hover, slides up */}
+                            <div className="absolute bottom-0 left-0 right-0 p-6 pt-16 text-white z-20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <p className="text-white/90 mb-4 text-base">
                                     {category.description}
                                 </p>
-                                <button className="inline-flex items-center gap-2 bg-white text-gray-900 font-semibold px-6 py-3 rounded-full hover:bg-primary-600 hover:text-white transition-all duration-300">
+                                <button className="inline-flex items-center gap-2 bg-white text-gray-900 font-semibold px-6 py-3 rounded-full hover:bg-primary-600 hover:text-white transition-all duration-300 shadow-lg">
                                     Explorar
-                                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
                                 </button>
                             </div>
 
-                            {/* Title badge - always visible */}
-                            <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                                <h3 className="text-sm md:text-base font-bold text-gray-900">
-                                    {category.name}
-                                </h3>
-                            </div>
-
                             {/* Shine effect on hover */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none"></div>
                         </div>
                     ))}
                 </div>
