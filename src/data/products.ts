@@ -183,6 +183,18 @@ export const products: Product[] = [
         destacado: true
     },
     {
+        id: 'fire-tv-stick-4k-max',
+        nombre: 'Amazon Fire TV Stick 4K Max',
+        precio: 319000,
+        precioOriginal: 399000,
+        categoria: 'Dispositivos Streaming',
+        marca: 'Amazon',
+        imagen: 'https://m.media-amazon.com/images/I/61KoIgcXSKL._AC_SL1500_.jpg',
+        descripcion: 'Streaming 4K Ultra HD de alto rendimiento con WiFi 6E, procesador quad-core y Alexa Voice Remote Enhanced',
+        stock: 12,
+        destacado: true
+    },
+    {
         id: 'fire-tv-stick-hd',
         nombre: 'Amazon Fire TV Stick HD',
         precio: 149000,
