@@ -656,6 +656,19 @@ export const products: Product[] = [
         stock: 18,
         destacado: true
     },
+    {
+        id: 'google-nest-cam',
+        nombre: 'Google Nest Cam Outdoor or Indoor',
+        precio: 599000,
+        precioOriginal: 799000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Cámaras',
+        marca: 'Google',
+        imagen: 'https://m.media-amazon.com/images/I/31750hI5MLL._AC_SL1080_.jpg',
+        descripcion: 'Cámara inteligente 1080p HDR con batería, detección de personas/animales/vehículos y 3 horas de historial gratis',
+        stock: 20,
+        destacado: true
+    },
 
 ];
 
