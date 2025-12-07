@@ -386,6 +386,19 @@ export const products: Product[] = [
         descripcion: 'Bombillos LED RGB WiFi con 16 millones de colores, sincronización musical y control por voz',
         stock: 32
     },
+    {
+        id: 'wiz-smart-bulbs',
+        nombre: 'WiZ Bombillos Inteligentes LED',
+        precio: 89000,
+        precioOriginal: 119000,
+        categoria: 'Accesorios Inteligentes',
+        subcategoria: 'Bombillos',
+        marca: 'WiZ',
+        imagen: 'https://m.media-amazon.com/images/I/71zYZwRnoxL._AC_SL1500_.jpg',
+        descripcion: 'Bombillos LED WiFi con 16 millones de colores, compatible con Alexa y Google Home, certificación Matter',
+        stock: 40,
+        destacado: true
+    },
 
     // Accesorios Inteligentes - Cerraduras
     {
