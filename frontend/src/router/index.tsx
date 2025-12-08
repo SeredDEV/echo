@@ -4,6 +4,8 @@ import AboutUs from "../pages/AboutUs";
 import Contact from "../pages/Contact";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import ForgotPassword from "../pages/ForgotPassword";
+import ResetPassword from "../pages/ResetPassword";
 import Shop from "../components/shop/Shop";
 import Cart from "../components/cart/Cart";
 import Layout from "../components/layout/Layout";
@@ -43,6 +45,14 @@ export const router = createBrowserRouter(
         {
           path: "registro",
           element: <Register />,
+        },
+        {
+          path: "forgot-password",
+          element: <ForgotPassword />,
+        },
+        {
+          path: "reset-password",
+          element: <ResetPassword />,
         },
         {
           path: "*",

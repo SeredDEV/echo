@@ -70,7 +70,16 @@ export const authController = {
   async resetPassword(req: Request, res: Response) {
     try {
       const { password } = req.body;
-      await authService.changePassword(password);
+      const token = req.headers.authorization?.replace("Bearer ", "");
+
+      if (!token) {
+        return res.status(400).json({
+          success: false,
+          error: "Token de recuperación requerido",
+        });
+      }
+
+      await authService.resetPassword(password, token);
       res.json({
         success: true,
         message: "Contraseña actualizada exitosamente",

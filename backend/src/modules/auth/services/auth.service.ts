@@ -86,6 +86,32 @@ export const authService = {
     if (error) throw error;
   },
 
+  // Restablecer contraseña con token de recuperación
+  async resetPassword(newPassword: string, token: string) {
+    // Primero verificar que el token sea válido obteniendo el usuario
+    const { createClient } = require("@supabase/supabase-js");
+    const supabaseTemp = createClient(
+      process.env.SUPABASE_URL!,
+      process.env.SUPABASE_ANON_KEY!
+    );
+
+    const {
+      data: { user },
+      error: userError,
+    } = await supabaseTemp.auth.getUser(token);
+
+    if (userError || !user) {
+      throw new Error("Token inválido o expirado");
+    }
+
+    // Usar el admin client para actualizar la contraseña
+    const { error } = await supabaseAdmin.auth.admin.updateUserById(user.id, {
+      password: newPassword,
+    });
+
+    if (error) throw error;
+  },
+
   // Cambiar contraseña
   async changePassword(newPassword: string) {
     const { error } = await supabase.auth.updateUser({

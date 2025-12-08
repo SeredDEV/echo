@@ -153,12 +153,12 @@ const Login = () => {
                 />
                 <span className="text-gray-600">Recordarme</span>
               </label>
-              <a
-                href="#"
+              <Link
+                to="/forgot-password"
                 className="text-primary-600 hover:text-primary-700 font-medium"
               >
                 ¿Olvidaste tu contraseña?
-              </a>
+              </Link>
             </div>
 
             <button
