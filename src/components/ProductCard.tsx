@@ -1,6 +1,5 @@
 import { Product } from '../data/products';
 import { useState } from 'react';
-import { useCart } from '../context/CartContext';
 
 interface ProductCardProps {
     product: Product;
