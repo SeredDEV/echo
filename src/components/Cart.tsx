@@ -46,17 +46,17 @@ const Cart = () => {
                     {/* Cart Items List */}
                     <div className="lg:col-span-2 space-y-4">
                         {items.map((item) => (
-                            <div key={`${item.id}-${item.selectedColor || 'default'}`} className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex gap-4 md:gap-6 items-center group transition-all hover:shadow-md">
+                            <div key={`${item.id}-${item.selectedColor || 'default'}`} className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col sm:flex-row gap-4 items-start sm:items-center group transition-all hover:shadow-md">
                                 {/* Product Image */}
-                                <div className="w-24 h-24 flex-shrink-0 bg-gray-50 rounded-xl p-2">
+                                <div className="w-full sm:w-24 h-32 sm:h-24 flex-shrink-0 bg-gray-50 rounded-xl p-2">
                                     <img src={item.imagen} alt={item.nombre} className="w-full h-full object-contain mix-blend-multiply" />
                                 </div>
 
                                 {/* Product Info */}
-                                <div className="flex-1 min-w-0">
-                                    <div className="flex justify-between items-start mb-1">
+                                <div className="flex-1 w-full min-w-0">
+                                    <div className="flex flex-col sm:flex-row justify-between items-start gap-2 mb-3">
                                         <div>
-                                            <h3 className="font-bold text-gray-900 text-lg leading-tight truncate pr-4">{item.nombre}</h3>
+                                            <h3 className="font-bold text-gray-900 text-lg leading-tight line-clamp-2 pr-0 sm:pr-4">{item.nombre}</h3>
                                             <div className="flex flex-wrap gap-2 text-sm text-gray-500 mt-1">
                                                 <span>{item.marca}</span>
                                                 {item.selectedColor && (
@@ -70,19 +70,19 @@ const Cart = () => {
                                                 )}
                                             </div>
                                         </div>
-                                        <p className="font-bold text-lg text-primary-600 whitespace-nowrap">
+                                        <p className="font-bold text-lg text-primary-600 whitespace-nowrap self-end sm:self-auto">
                                             {formatPrice(item.precio * item.quantity)}
                                         </p>
                                     </div>
 
                                     {/* Actions Row */}
-                                    <div className="flex items-center justify-between mt-4">
-                                        <div className="flex items-center gap-4">
+                                    <div className="flex items-center justify-between mt-auto">
+                                        <div className="flex items-center gap-3 sm:gap-4">
                                             {/* Quantity Controls */}
                                             <div className="flex items-center bg-gray-50 rounded-lg border border-gray-200">
                                                 <button
                                                     onClick={() => updateQuantity(item.id, item.quantity - 1, item.selectedColor)}
-                                                    className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary-600 transition-colors"
+                                                    className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary-600 transition-colors active:bg-gray-200"
                                                     disabled={item.quantity <= 1}
                                                 >
                                                     -
@@ -90,13 +90,13 @@ const Cart = () => {
                                                 <span className="w-8 text-center font-bold text-gray-900 text-sm">{item.quantity}</span>
                                                 <button
                                                     onClick={() => updateQuantity(item.id, item.quantity + 1, item.selectedColor)}
-                                                    className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary-600 transition-colors"
+                                                    className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary-600 transition-colors active:bg-gray-200"
                                                     disabled={item.quantity >= item.stock}
                                                 >
                                                     +
                                                 </button>
                                             </div>
-                                            <span className="text-xs text-gray-400">
+                                            <span className="text-xs text-gray-400 hidden sm:inline-block">
                                                 {formatPrice(item.precio)} c/u
                                             </span>
                                         </div>
@@ -126,7 +126,7 @@ const Cart = () => {
 
                     {/* Order Summary */}
                     <div className="lg:col-span-1">
-                        <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-gray-100 sticky top-24">
+                        <div className="bg-white p-5 sm:p-6 md:p-8 rounded-3xl shadow-lg border border-gray-100 sticky top-24">
                             <h3 className="text-xl font-bold text-gray-900 mb-6">Resumen de compra</h3>
 
                             <div className="space-y-4 mb-8">
