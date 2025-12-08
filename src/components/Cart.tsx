@@ -26,7 +26,7 @@ const Cart = () => {
                         <p className="text-gray-500 mb-8">Parece que aún no has agregado productos.</p>
                         <a
                             href="tienda.html"
-                            className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-bold px-8 py-3 rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                            className="inline-flex items-center gap-2 bg-[#0FA6D1] hover:bg-[#0d8bb5] text-white font-bold px-8 py-3 rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                         >
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
                             Explorar Tienda
@@ -70,7 +70,7 @@ const Cart = () => {
                                                 )}
                                             </div>
                                         </div>
-                                        <p className="font-bold text-lg text-primary-600 whitespace-nowrap self-end sm:self-auto">
+                                        <p className="font-bold text-lg text-[#0FA6D1] whitespace-nowrap self-end sm:self-auto">
                                             {formatPrice(item.precio * item.quantity)}
                                         </p>
                                     </div>
@@ -82,7 +82,7 @@ const Cart = () => {
                                             <div className="flex items-center bg-gray-50 rounded-lg border border-gray-200">
                                                 <button
                                                     onClick={() => updateQuantity(item.id, item.quantity - 1, item.selectedColor)}
-                                                    className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary-600 transition-colors active:bg-gray-200"
+                                                    className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-[#0FA6D1] transition-colors active:bg-gray-200"
                                                     disabled={item.quantity <= 1}
                                                 >
                                                     -
@@ -90,7 +90,7 @@ const Cart = () => {
                                                 <span className="w-8 text-center font-bold text-gray-900 text-sm">{item.quantity}</span>
                                                 <button
                                                     onClick={() => updateQuantity(item.id, item.quantity + 1, item.selectedColor)}
-                                                    className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary-600 transition-colors active:bg-gray-200"
+                                                    className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-[#0FA6D1] transition-colors active:bg-gray-200"
                                                     disabled={item.quantity >= item.stock}
                                                 >
                                                     +
@@ -140,11 +140,11 @@ const Cart = () => {
                                 </div>
                                 <div className="border-t border-gray-100 pt-4 flex justify-between items-center">
                                     <span className="font-bold text-gray-900 text-lg">Total</span>
-                                    <span className="font-bold text-2xl text-primary-600">{formatPrice(totalAmount)}</span>
+                                    <span className="font-bold text-2xl text-[#0FA6D1]">{formatPrice(totalAmount)}</span>
                                 </div>
                             </div>
 
-                            <button className="w-full bg-gradient-to-r from-primary-600 to-accent-600 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 group">
+                            <button className="w-full bg-gradient-to-r from-[#0FA6D1] to-[#5EA4CF] hover:from-[#0d8bb5] hover:to-[#4d8fb8] text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 group">
                                 <span>Iniciar Pago Seguro</span>
                                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                             </button>
