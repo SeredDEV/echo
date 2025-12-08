@@ -9,6 +9,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setMobileSubmenu(null);
+  };
+
   return (
     <>
       {/* Top Banner Dinámico */}
@@ -503,6 +508,7 @@ const Header = () => {
                 <div className="space-y-1.5">
                   <Link
                     to="/"
+                    onClick={closeMenu}
                     className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:text-primary-600 bg-white hover:bg-gray-50 font-medium rounded-xl transition-all duration-300 shadow-sm hover:shadow-md"
                   >
                     <div className="w-9 h-9 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -642,6 +648,7 @@ const Header = () => {
 
                   <Link
                     to="/about"
+                    onClick={closeMenu}
                     className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:text-primary-600 bg-white hover:bg-gray-50 font-medium rounded-xl transition-all duration-300 shadow-sm hover:shadow-md"
                   >
                     <div className="w-9 h-9 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -664,6 +671,7 @@ const Header = () => {
 
                   <Link
                     to="/contacto"
+                    onClick={closeMenu}
                     className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:text-primary-600 bg-white hover:bg-gray-50 font-medium rounded-xl transition-all duration-300 shadow-sm hover:shadow-md"
                   >
                     <div className="w-9 h-9 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -725,6 +733,7 @@ const Header = () => {
                       <>
                         <Link
                           to="/tienda?categoria=altavoces&marca=Amazon"
+                          onClick={closeMenu}
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -747,6 +756,7 @@ const Header = () => {
                         </Link>
                         <Link
                           to="/tienda?categoria=altavoces&marca=Google"
+                          onClick={closeMenu}
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -774,6 +784,7 @@ const Header = () => {
                       <>
                         <Link
                           to="/tienda?categoria=streaming&marca=Amazon"
+                          onClick={closeMenu}
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -796,6 +807,7 @@ const Header = () => {
                         </Link>
                         <Link
                           to="/tienda?categoria=streaming&marca=Google"
+                          onClick={closeMenu}
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -823,6 +835,7 @@ const Header = () => {
                       <>
                         <Link
                           to="/tienda?categoria=accesorios&subcategoria=Bombillos"
+                          onClick={closeMenu}
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -845,6 +858,7 @@ const Header = () => {
                         </Link>
                         <Link
                           to="/tienda?categoria=accesorios&subcategoria=Tomacorrientes"
+                          onClick={closeMenu}
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -867,6 +881,7 @@ const Header = () => {
                         </Link>
                         <Link
                           to="/tienda?categoria=accesorios&subcategoria=Apagadores"
+                          onClick={closeMenu}
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-accent-400 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -889,6 +904,7 @@ const Header = () => {
                         </Link>
                         <Link
                           to="/tienda?categoria=accesorios&subcategoria=Cintas LED"
+                          onClick={closeMenu}
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-accent-400 to-accent-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -917,6 +933,7 @@ const Header = () => {
                         </Link>
                         <Link
                           to="/tienda?categoria=accesorios&subcategoria=Cerraduras"
+                          onClick={closeMenu}
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -939,6 +956,7 @@ const Header = () => {
                         </Link>
                         <Link
                           to="/tienda?categoria=accesorios&subcategoria=Cámaras"
+                          onClick={closeMenu}
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center flex-shrink-0">
