@@ -6,6 +6,13 @@ import { resolve } from "path";
 export default defineConfig({
   plugins: [react()],
   base: "./",
+  root: "pages",
+  publicDir: resolve(__dirname, "public"),
+  resolve: {
+    alias: {
+      "/src": resolve(__dirname, "src"),
+    },
+  },
   server: {
     host: "0.0.0.0",
     port: 5173,
@@ -15,15 +22,17 @@ export default defineConfig({
     },
   },
   build: {
+    outDir: resolve(__dirname, "dist"),
+    emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        about: resolve(__dirname, "about.html"),
-        contacto: resolve(__dirname, "contacto.html"),
-        login: resolve(__dirname, "login.html"),
-        carrito: resolve(__dirname, "carrito.html"),
-        registro: resolve(__dirname, "registro.html"),
-        tienda: resolve(__dirname, "tienda.html"),
+        main: resolve(__dirname, "pages/index.html"),
+        about: resolve(__dirname, "pages/about.html"),
+        contacto: resolve(__dirname, "pages/contacto.html"),
+        login: resolve(__dirname, "pages/login.html"),
+        carrito: resolve(__dirname, "pages/carrito.html"),
+        registro: resolve(__dirname, "pages/registro.html"),
+        tienda: resolve(__dirname, "pages/tienda.html"),
       },
     },
   },
