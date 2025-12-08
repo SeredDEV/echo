@@ -168,14 +168,11 @@ const ProductCard = ({ product }: ProductCardProps) => {
                                     <button
                                         key={color}
                                         onClick={() => setSelectedColor(color)}
-                                        className={`group/color relative flex items-center justify-center p-1 rounded-full border-2 transition-all ${isSelected ? 'border-primary-600 scale-110' : 'border-transparent hover:border-gray-300'
+                                        className={`group/color relative flex items-center justify-center p-0.5 rounded-full border-2 transition-all w-8 h-8 ${isSelected ? 'border-primary-600 scale-110' : 'border-transparent hover:border-gray-200'
                                             }`}
                                         title={`Seleccionar color ${color}`}
                                     >
-                                        <div className={`w-6 h-6 rounded-full border border-black/10 shadow-sm ${colors.bg}`}></div>
-                                        <span className={`static ml-2 text-xs font-medium text-gray-600 ${isSelected ? 'text-gray-900 font-bold' : ''}`}>
-                                            {color}
-                                        </span>
+                                        <div className={`w-full h-full rounded-full border border-black/10 shadow-sm ${colors.bg}`}></div>
                                     </button>
                                 );
                             })}
