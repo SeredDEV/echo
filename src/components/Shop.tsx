@@ -112,6 +112,11 @@ const Shop = () => {
         setCurrentPage(1);
     }, [searchQuery, selectedCategories, selectedBrands, priceRange, sortBy]);
 
+    // Scroll to top when page changes
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [currentPage]);
+
     const handleCategoryChange = (category: string) => {
         setSelectedCategories(prev =>
             prev.includes(category)
