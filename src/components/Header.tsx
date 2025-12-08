@@ -63,7 +63,7 @@ const Header = () => {
                                     <div className="p-6">
                                         <div className="grid grid-cols-2 gap-4">
                                             <a href="tienda.html?categoria=altavoces&marca=Amazon" className="flex flex-col items-center p-4 rounded-lg hover:bg-primary-50 transition-all group/item">
-                                                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-3 group-hover/item:scale-110 transition-transform">
+                                                <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-3 group-hover/item:scale-110 transition-transform">
                                                     <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
                                                         <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
                                                     </svg>
@@ -107,7 +107,7 @@ const Header = () => {
                                                 <div className="text-xs text-gray-500 text-center mt-1">Fire TV Stick, Fire TV Cube</div>
                                             </a>
                                             <a href="tienda.html?categoria=streaming&marca=Google" className="flex flex-col items-center p-4 rounded-lg hover:bg-primary-50 transition-all group/item">
-                                                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mb-3 group-hover/item:scale-110 transition-transform">
+                                                <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mb-3 group-hover/item:scale-110 transition-transform">
                                                     <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
                                                         <path d="M21 3H3c-1.11 0-2 .89-2 2v12c0 1.1.89 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.11-.9-2-2-2zm0 14H3V5h18v12zm-5-6l-7 4V7z" />
                                                     </svg>
@@ -151,7 +151,7 @@ const Header = () => {
                                                 <div className="text-xs text-gray-500 text-center">WiFi</div>
                                             </a>
                                             <a href="tienda.html?categoria=accesorios&subcategoria=Apagadores" className="flex flex-col items-center p-3 rounded-lg hover:bg-primary-50 transition-all group/item">
-                                                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-2 group-hover/item:scale-110 transition-transform">
+                                                <div className="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-400 rounded-xl flex items-center justify-center mb-2 group-hover/item:scale-110 transition-transform">
                                                     <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                                                         <path d="M7 24h2v-2H7v2zm4 0h2v-2h-2v2zm2-22h-2v10h2V2zm3.56 2.44l-1.45 1.45C16.84 6.94 18 8.83 18 11c0 3.31-2.69 6-6 6s-6-2.69-6-6c0-2.17 1.16-4.06 2.88-5.12L7.44 4.44C5.36 5.88 4 8.28 4 11c0 4.42 3.58 8 8 8s8-3.58 8-8c0-2.72-1.36-5.12-3.44-6.56zM15 24h2v-2h-2v2z" />
                                                     </svg>
@@ -160,7 +160,7 @@ const Header = () => {
                                                 <div className="text-xs text-gray-500 text-center">Touch</div>
                                             </a>
                                             <a href="tienda.html?categoria=accesorios&subcategoria=Cintas LED" className="flex flex-col items-center p-3 rounded-lg hover:bg-primary-50 transition-all group/item">
-                                                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-xl flex items-center justify-center mb-2 group-hover/item:scale-110 transition-transform">
+                                                <div className="w-16 h-16 bg-gradient-to-br from-accent-400 to-accent-600 rounded-xl flex items-center justify-center mb-2 group-hover/item:scale-110 transition-transform">
                                                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                                                     </svg>
@@ -178,7 +178,7 @@ const Header = () => {
                                                 <div className="text-xs text-gray-500 text-center">Huella</div>
                                             </a>
                                             <a href="tienda.html?categoria=accesorios&subcategoria=Cámaras" className="flex flex-col items-center p-3 rounded-lg hover:bg-primary-50 transition-all group/item">
-                                                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-2 group-hover/item:scale-110 transition-transform">
+                                                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center mb-2 group-hover/item:scale-110 transition-transform">
                                                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                                                     </svg>
@@ -372,7 +372,7 @@ const Header = () => {
                                         {mobileSubmenu === 'altavoces' && (
                                             <>
                                                 <a href="tienda.html?categoria=altavoces&marca=Amazon" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
-                                                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                    <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
                                                         <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                                                             <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
                                                         </svg>
@@ -410,7 +410,7 @@ const Header = () => {
                                                     </div>
                                                 </a>
                                                 <a href="tienda.html?categoria=streaming&marca=Google" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
-                                                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                    <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center flex-shrink-0">
                                                         <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                                                             <path d="M21 3H3c-1.11 0-2 .89-2 2v12c0 1.1.89 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.11-.9-2-2-2zm0 14H3V5h18v12zm-5-6l-7 4V7z" />
                                                         </svg>
@@ -448,7 +448,7 @@ const Header = () => {
                                                     </div>
                                                 </a>
                                                 <a href="tienda.html?categoria=accesorios&subcategoria=Apagadores" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
-                                                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                    <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-accent-400 rounded-lg flex items-center justify-center flex-shrink-0">
                                                         <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                                                             <path d="M7 24h2v-2H7v2zm4 0h2v-2h-2v2zm2-22h-2v10h2V2zm3.56 2.44l-1.45 1.45C16.84 6.94 18 8.83 18 11c0 3.31-2.69 6-6 6s-6-2.69-6-6c0-2.17 1.16-4.06 2.88-5.12L7.44 4.44C5.36 5.88 4 8.28 4 11c0 4.42 3.58 8 8 8s8-3.58 8-8c0-2.72-1.36-5.12-3.44-6.56zM15 24h2v-2h-2v2z" />
                                                         </svg>
@@ -459,7 +459,7 @@ const Header = () => {
                                                     </div>
                                                 </a>
                                                 <a href="tienda.html?categoria=accesorios&subcategoria=Cintas LED" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
-                                                    <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                    <div className="w-12 h-12 bg-gradient-to-br from-accent-400 to-accent-600 rounded-lg flex items-center justify-center flex-shrink-0">
                                                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                                                         </svg>
@@ -481,7 +481,7 @@ const Header = () => {
                                                     </div>
                                                 </a>
                                                 <a href="tienda.html?categoria=accesorios&subcategoria=Cámaras" className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm">
-                                                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                    <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center flex-shrink-0">
                                                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                                                         </svg>
