@@ -154,16 +154,6 @@ const Shop = () => {
                     isOpen={!!selectedProduct}
                     onClose={() => setSelectedProduct(null)}
                 />
-                {/* Elegant Header */}
-                <div className="mb-12 text-center">
-                    <h1 className="text-5xl font-bold bg-gradient-to-r from-cyan-600 via-teal-600 to-blue-600 bg-clip-text text-transparent mb-4">
-                        Nuestra Tienda
-                    </h1>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Descubre la mejor selección de productos inteligentes para transformar tu hogar
-                    </p>
-                </div>
-
                 {/* Search and Controls Bar */}
                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-6 mb-8">
                     <div className="flex flex-col lg:flex-row gap-4 items-stretch lg:items-center">
@@ -175,9 +165,9 @@ const Shop = () => {
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
                                     placeholder="Buscar productos por nombre, marca o descripción..."
-                                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-gray-700 placeholder-gray-400"
+                                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0FA6D1] focus:border-[#0FA6D1] transition-all text-gray-700 placeholder-gray-400"
                                 />
-                                <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400 group-focus-within:text-primary-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400 group-focus-within:text-[#0FA6D1] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg>
                             </div>
@@ -187,7 +177,7 @@ const Shop = () => {
                         <select
                             value={sortBy}
                             onChange={(e) => setSortBy(e.target.value as SortOption)}
-                            className="px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white text-gray-700 font-medium cursor-pointer transition-all hover:border-primary-300"
+                            className="px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0FA6D1] focus:border-[#0FA6D1] bg-white text-gray-700 font-medium cursor-pointer transition-all hover:border-[#0FA6D1]/50"
                         >
                             <option value="default">⭐ Destacados</option>
                             <option value="price-asc">💰 Precio: Menor a Mayor</option>
@@ -200,7 +190,7 @@ const Shop = () => {
                         <div className="hidden lg:flex items-center gap-2 bg-gray-100 rounded-xl p-1.5">
                             <button
                                 onClick={() => setViewMode('grid-2')}
-                                className={`p-3 rounded-lg transition-all ${viewMode === 'grid-2' ? 'bg-white shadow-md text-primary-600' : 'hover:bg-gray-200 text-gray-600'}`}
+                                className={`p-3 rounded-lg transition-all ${viewMode === 'grid-2' ? 'bg-white shadow-md text-[#0FA6D1]' : 'hover:bg-gray-200 text-gray-600'}`}
                                 title="2 columnas"
                             >
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -212,7 +202,7 @@ const Shop = () => {
                             </button>
                             <button
                                 onClick={() => setViewMode('grid-3')}
-                                className={`p-3 rounded-lg transition-all ${viewMode === 'grid-3' ? 'bg-white shadow-md text-primary-600' : 'hover:bg-gray-200 text-gray-600'}`}
+                                className={`p-3 rounded-lg transition-all ${viewMode === 'grid-3' ? 'bg-white shadow-md text-[#0FA6D1]' : 'hover:bg-gray-200 text-gray-600'}`}
                                 title="3 columnas"
                             >
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -226,7 +216,7 @@ const Shop = () => {
                             </button>
                             <button
                                 onClick={() => setViewMode('grid-4')}
-                                className={`p-3 rounded-lg transition-all ${viewMode === 'grid-4' ? 'bg-white shadow-md text-primary-600' : 'hover:bg-gray-200 text-gray-600'}`}
+                                className={`p-3 rounded-lg transition-all ${viewMode === 'grid-4' ? 'bg-white shadow-md text-[#0FA6D1]' : 'hover:bg-gray-200 text-gray-600'}`}
                                 title="4 columnas"
                             >
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -245,14 +235,14 @@ const Shop = () => {
                         {/* Mobile Filter Toggle */}
                         <button
                             onClick={() => setShowFilters(!showFilters)}
-                            className="lg:hidden px-6 py-4 bg-gradient-to-r from-primary-600 to-accent-600 text-white rounded-xl font-semibold flex items-center justify-center gap-2 hover:shadow-lg transition-all"
+                            className="lg:hidden px-6 py-4 bg-gradient-to-r from-[#0FA6D1] to-[#5EA4CF] text-white rounded-xl font-semibold flex items-center justify-center gap-2 hover:shadow-lg transition-all"
                         >
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
                             </svg>
                             Filtros
                             {(selectedCategories.length + selectedBrands.length) > 0 && (
-                                <span className="bg-white text-primary-600 text-xs font-bold px-2 py-0.5 rounded-full">
+                                <span className="bg-white text-[#0FA6D1] text-xs font-bold px-2 py-0.5 rounded-full">
                                     {selectedCategories.length + selectedBrands.length}
                                 </span>
                             )}
@@ -263,13 +253,13 @@ const Shop = () => {
                 {/* Results Count */}
                 <div className="mb-6 flex items-center justify-between">
                     <p className="text-gray-600 font-medium">
-                        Mostrando <span className="text-primary-600 font-bold">{paginatedProducts.length}</span> de{' '}
-                        <span className="text-primary-600 font-bold">{filteredAndSortedProducts.length}</span> productos
+                        Mostrando <span className="text-[#0FA6D1] font-bold">{paginatedProducts.length}</span> de{' '}
+                        <span className="text-[#0FA6D1] font-bold">{filteredAndSortedProducts.length}</span> productos
                     </p>
                     {(selectedCategories.length > 0 || selectedBrands.length > 0 || selectedSubcategory || searchQuery) && (
                         <button
                             onClick={handleClearFilters}
-                            className="text-sm text-gray-600 hover:text-primary-600 font-medium flex items-center gap-1 transition-colors"
+                            className="text-sm text-gray-600 hover:text-[#0FA6D1] font-medium flex items-center gap-1 transition-colors"
                         >
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -345,7 +335,7 @@ const Shop = () => {
                                         <button
                                             onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                                             disabled={currentPage === 1}
-                                            className="px-5 py-3 border-2 border-gray-200 rounded-xl hover:border-primary-500 hover:text-primary-600 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-gray-200 transition-all font-medium"
+                                            className="px-5 py-3 border-2 border-gray-200 rounded-xl hover:border-[#0FA6D1] hover:text-[#0FA6D1] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-gray-200 transition-all font-medium"
                                         >
                                             ← Anterior
                                         </button>
@@ -367,8 +357,8 @@ const Shop = () => {
                                                         key={page}
                                                         onClick={() => setCurrentPage(page)}
                                                         className={`w-12 h-12 rounded-xl font-semibold transition-all ${currentPage === page
-                                                            ? 'bg-gradient-to-r from-primary-600 to-accent-600 text-white shadow-lg scale-110'
-                                                            : 'border-2 border-gray-200 hover:border-primary-500 hover:text-primary-600'
+                                                            ? 'bg-gradient-to-r from-[#0FA6D1] to-[#5EA4CF] text-white shadow-lg scale-110'
+                                                            : 'border-2 border-gray-200 hover:border-[#0FA6D1] hover:text-[#0FA6D1]'
                                                             }`}
                                                     >
                                                         {page}
@@ -380,7 +370,7 @@ const Shop = () => {
                                         <button
                                             onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
                                             disabled={currentPage === totalPages}
-                                            className="px-5 py-3 border-2 border-gray-200 rounded-xl hover:border-primary-500 hover:text-primary-600 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-gray-200 transition-all font-medium"
+                                            className="px-5 py-3 border-2 border-gray-200 rounded-xl hover:border-[#0FA6D1] hover:text-[#0FA6D1] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-gray-200 transition-all font-medium"
                                         >
                                             Siguiente →
                                         </button>
@@ -398,7 +388,7 @@ const Shop = () => {
                                 <p className="text-gray-600 mb-6">Intenta ajustar tus filtros o búsqueda</p>
                                 <button
                                     onClick={handleClearFilters}
-                                    className="px-8 py-3 bg-gradient-to-r from-primary-600 to-accent-600 text-white rounded-xl hover:shadow-lg transition-all font-semibold"
+                                    className="px-8 py-3 bg-gradient-to-r from-[#0FA6D1] to-[#5EA4CF] text-white rounded-xl hover:shadow-lg transition-all font-semibold"
                                 >
                                     Limpiar todos los filtros
                                 </button>
