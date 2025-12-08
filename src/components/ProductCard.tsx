@@ -4,96 +4,23 @@ import { useCart } from '../context/CartContext';
 
 interface ProductCardProps {
     product: Product;
+    onClick?: () => void;
 }
 
-const ProductCard = ({ product }: ProductCardProps) => {
+const ProductCard = ({ product, onClick }: ProductCardProps) => {
     const { addToCart } = useCart();
     const [selectedColor, setSelectedColor] = useState<string | null>(
         product.coloresDisponibles?.[0] || null
     );
     const [isFavorite, setIsFavorite] = useState(false);
 
-    const descuento = product.precioOriginal
-        ? Math.round(((product.precioOriginal - product.precio) / product.precioOriginal) * 100)
-        : 0;
-
-    const formatPrice = (price: number) => {
-        return new Intl.NumberFormat('es-CO', {
-            style: 'currency',
-            currency: 'COP',
-            minimumFractionDigits: 0
-        }).format(price);
-    };
-
-    // Mapeo de colores a clases de Tailwind
-    const getColorClasses = (color: string, isSelected: boolean) => {
-        const colorMap: { [key: string]: { bg: string; border: string; text: string } } = {
-            'Negro': {
-                bg: isSelected ? 'bg-gray-900' : 'bg-gray-800',
-                border: 'border-gray-900',
-                text: 'text-white'
-            },
-            'Blanco': {
-                bg: isSelected ? 'bg-white' : 'bg-gray-50',
-                border: 'border-gray-300',
-                text: 'text-gray-900'
-            },
-            'Azul': {
-                bg: isSelected ? 'bg-blue-600' : 'bg-blue-500',
-                border: 'border-blue-600',
-                text: 'text-white'
-            },
-            'Gris Carbón': {
-                bg: isSelected ? 'bg-gray-700' : 'bg-gray-600',
-                border: 'border-gray-700',
-                text: 'text-white'
-            },
-            'Lavanda': {
-                bg: isSelected ? 'bg-purple-400' : 'bg-purple-300',
-                border: 'border-purple-400',
-                text: 'text-white'
-            },
-            'Verde Azulado': {
-                bg: isSelected ? 'bg-teal-500' : 'bg-teal-400',
-                border: 'border-teal-500',
-                text: 'text-white'
-            },
-            'Gris Tiza': {
-                bg: isSelected ? 'bg-gray-300' : 'bg-gray-200',
-                border: 'border-gray-400',
-                text: 'text-gray-900'
-            },
-            'Coral': {
-                bg: isSelected ? 'bg-orange-400' : 'bg-orange-300',
-                border: 'border-orange-400',
-                text: 'text-white'
-            },
-            'Azul Cielo': {
-                bg: isSelected ? 'bg-sky-400' : 'bg-sky-300',
-                border: 'border-sky-400',
-                text: 'text-white'
-            },
-            'Rosa Arena': {
-                bg: isSelected ? 'bg-rose-300' : 'bg-rose-200',
-                border: 'border-rose-300',
-                text: 'text-gray-900'
-            },
-            'Salvia': {
-                bg: isSelected ? 'bg-green-500' : 'bg-green-400',
-                border: 'border-green-500',
-                text: 'text-white'
-            },
-        };
-
-        return colorMap[color] || {
-            bg: isSelected ? 'bg-gray-200' : 'bg-gray-100',
-            border: 'border-gray-300',
-            text: 'text-gray-900'
-        };
-    };
+    // ... (rest of the code)
 
     return (
-        <div className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-primary-200 hover:-translate-y-2">
+        <div
+            onClick={onClick}
+            className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-primary-200 hover:-translate-y-2 cursor-pointer"
+        >
             {/* Image Container */}
             <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 aspect-square">
                 <img
@@ -121,7 +48,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
                 {/* Favorite Button */}
                 <button
-                    onClick={() => setIsFavorite(!isFavorite)}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        setIsFavorite(!isFavorite);
+                    }}
                     className={`absolute top-4 right-4 w-10 h-10 backdrop-blur-sm rounded-full flex items-center justify-center transition-all shadow-lg hover:scale-110 z-10 ${isFavorite ? 'bg-red-50 opacity-100' : 'bg-white/95 opacity-0 group-hover:opacity-100 hover:bg-red-50'
                         }`}
                 >
@@ -179,7 +109,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
                                 return (
                                     <button
                                         key={color}
-                                        onClick={() => setSelectedColor(color)}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSelectedColor(color);
+                                        }}
                                         className={`group/color relative flex items-center justify-center p-0.5 rounded-full border-2 transition-all w-8 h-8 ${isSelected ? 'border-primary-600 scale-110' : 'border-transparent hover:border-gray-200'
                                             }`}
                                         title={`Seleccionar color ${color}`}
@@ -224,7 +157,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
                 {/* Add to Cart Button */}
                 <button
                     disabled={product.stock === 0}
-                    onClick={() => addToCart(product, selectedColor)}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        addToCart(product, selectedColor);
+                    }}
                     className="w-full bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 disabled:from-gray-300 disabled:to-gray-400 text-white font-bold py-4 rounded-xl transition-all duration-300 hover:shadow-xl disabled:cursor-not-allowed flex items-center justify-center gap-2 group/btn active:scale-95"
                 >
                     <svg className="w-5 h-5 group-hover/btn:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
