@@ -23,6 +23,7 @@ En Supabase → **SQL Editor**, ejecuta:
 ```
 
 Esto creará:
+
 - ✅ Tabla `profiles` con campos: id, email, full_name, avatar_url, phone, role
 - ✅ Row Level Security (RLS) habilitado
 - ✅ Políticas de seguridad configuradas
@@ -38,21 +39,24 @@ Después de registrar tu primer usuario:
 4. Ejecuta `scripts/make_user_admin.sql` reemplazando el ID
 
 **O directamente:**
+
 ```sql
-update public.profiles 
-set role = 'admin' 
+update public.profiles
+set role = 'admin'
 where email = 'tu-email@ejemplo.com';
 ```
 
 ## 🔐 Roles y Permisos
 
 ### User (role: 'user')
+
 - Puede ver todos los perfiles
 - Puede actualizar su propio perfil (excepto role)
 - **NO** puede cambiar su rol
 - **NO** puede crear otros usuarios
 
 ### Admin (role: 'admin')
+
 - Puede hacer todo lo que un user
 - Puede actualizar cualquier perfil (incluyendo roles)
 - Puede crear usuarios vía API: `POST /api/auth/create-user`

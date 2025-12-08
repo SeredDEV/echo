@@ -55,6 +55,89 @@ router.post("/logout", async (req: Request, res: Response) => {
   }
 });
 
+// POST - Solicitar recuperación de contraseña
+router.post("/forgot-password", async (req: Request, res: Response) => {
+  try {
+    const { email } = req.body;
+
+    // Supabase enviará un correo con un link tipo:
+    // https://tu-frontend.com/reset-password?token=xxxxx
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `http://localhost:5173/reset-password`,
+    });
+
+    if (error) throw error;
+
+    res.json({ 
+      success: true, 
+      message: "Se ha enviado un correo para recuperar tu contraseña. Revisa tu bandeja de entrada." 
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, error: (error as Error).message });
+  }
+});
+
+// POST - Cambiar contraseña con token de recuperación
+router.post("/reset-password", async (req: Request, res: Response) => {
+  try {
+    const { token, password } = req.body;
+
+    if (!token || !password) {
+      return res
+        .status(400)
+        .json({ success: false, error: "Token y contraseña son requeridos" });
+    }
+
+    // Verificar el token y actualizar la contraseña
+    const { error } = await supabase.auth.updateUser({
+      password: password,
+    });
+
+    if (error) throw error;
+
+    res.json({ 
+      success: true, 
+      message: "Contraseña actualizada exitosamente" 
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, error: (error as Error).message });
+  }
+});
+
+// PUT - Cambiar contraseña (usuario autenticado)
+router.put("/change-password", async (req: Request, res: Response) => {
+  try {
+    const { newPassword } = req.body;
+    const token = req.headers.authorization?.replace("Bearer ", "");
+
+    if (!token) {
+      return res
+        .status(401)
+        .json({ success: false, error: "No token provided" });
+    }
+
+    const {
+      data: { user },
+      error: authError,
+    } = await supabase.auth.getUser(token);
+
+    if (authError) throw authError;
+
+    const { error } = await supabase.auth.updateUser({
+      password: newPassword,
+    });
+
+    if (error) throw error;
+
+    res.json({ 
+      success: true, 
+      message: "Contraseña actualizada exitosamente" 
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, error: (error as Error).message });
+  }
+});
+
 // GET - Obtener usuario actual
 router.get("/user", async (req: Request, res: Response) => {
   try {
@@ -284,9 +367,7 @@ router.put("/users/:id/role", async (req: Request, res: Response) => {
     const { role } = req.body;
 
     if (!["admin", "user"].includes(role)) {
-      return res
-        .status(400)
-        .json({ success: false, error: "Invalid role" });
+      return res.status(400).json({ success: false, error: "Invalid role" });
     }
 
     const { data, error } = await supabase
