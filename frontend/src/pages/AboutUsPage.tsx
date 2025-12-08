@@ -1,11 +1,11 @@
-import AboutUs from '../components/AboutUs';
+import AboutUs from "./AboutUs";
 
 const AboutUsPage = () => {
-    return (
-        <div className="min-h-screen">
-            <AboutUs />
-        </div>
-    );
+  return (
+    <div className="min-h-screen">
+      <AboutUs />
+    </div>
+  );
 };
 
 export default AboutUsPage;
