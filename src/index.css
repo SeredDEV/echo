@@ -63,4 +63,21 @@
     scrollbar-width: none;
     /* Firefox */
   }
+
+  /* Estilos para el dropdown select */
+  select option {
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  select option:checked {
+    background: linear-gradient(90deg, #0FA6D1 0%, #5EA4CF 100%);
+    color: white;
+  }
+
+  select option:hover {
+    background-color: #f0f9ff;
+    color: #0FA6D1;
+  }
 }

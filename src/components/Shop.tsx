@@ -370,12 +370,12 @@ const Shop = () => {
                                         <button
                                             onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                                             disabled={currentPage === 1}
-                                            className="px-5 py-3 border-2 border-gray-200 rounded-xl hover:border-[#0FA6D1] hover:text-[#0FA6D1] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-gray-200 transition-all font-medium"
+                                            className="px-4 py-2.5 bg-white border border-gray-300 rounded-lg hover:bg-[#0FA6D1] hover:text-white hover:border-[#0FA6D1] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-gray-900 transition-all font-medium text-sm shadow-sm"
                                         >
-                                            ← Anterior
+                                            Anterior
                                         </button>
 
-                                        <div className="flex gap-2">
+                                        <div className="flex gap-1.5">
                                             {Array.from({ length: Math.min(totalPages, 5) }, (_, i) => {
                                                 let page;
                                                 if (totalPages <= 5) {
@@ -391,9 +391,9 @@ const Shop = () => {
                                                     <button
                                                         key={page}
                                                         onClick={() => setCurrentPage(page)}
-                                                        className={`w-12 h-12 rounded-xl font-semibold transition-all ${currentPage === page
-                                                            ? 'bg-gradient-to-r from-[#0FA6D1] to-[#5EA4CF] text-white shadow-lg scale-110'
-                                                            : 'border-2 border-gray-200 hover:border-[#0FA6D1] hover:text-[#0FA6D1]'
+                                                        className={`w-10 h-10 rounded-lg font-semibold transition-all text-sm shadow-sm ${currentPage === page
+                                                            ? 'bg-[#0FA6D1] text-white border border-[#0FA6D1]'
+                                                            : 'bg-white border border-gray-300 hover:bg-gray-50 hover:border-[#0FA6D1] hover:text-[#0FA6D1]'
                                                             }`}
                                                     >
                                                         {page}
@@ -405,9 +405,9 @@ const Shop = () => {
                                         <button
                                             onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
                                             disabled={currentPage === totalPages}
-                                            className="px-5 py-3 border-2 border-gray-200 rounded-xl hover:border-[#0FA6D1] hover:text-[#0FA6D1] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-gray-200 transition-all font-medium"
+                                            className="px-4 py-2.5 bg-white border border-gray-300 rounded-lg hover:bg-[#0FA6D1] hover:text-white hover:border-[#0FA6D1] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-gray-900 transition-all font-medium text-sm shadow-sm"
                                         >
-                                            Siguiente →
+                                            Siguiente
                                         </button>
                                     </div>
                                 )}
