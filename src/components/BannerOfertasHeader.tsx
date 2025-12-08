@@ -3,23 +3,23 @@ import React, { useState, useEffect } from "react";
 const offers = [
   {
     icon: "🚚 ",
-    text: "Envío GRATIS en todos los pedidos - Compra sin preocupaciones",
+    text: "Envío GRATIS en todos los pedidos",
   },
   {
     icon: "💰 ",
-    text: "Paga al recibir - Seguridad total en tu compra",
+    text: "Paga al recibir - Seguridad total",
   },
   {
     icon: "🎁 ",
-    text: "Descuentos especiales en productos seleccionados - Hasta 30% OFF",
+    text: "Descuentos hasta 30% OFF",
   },
   {
     icon: "🔄 ",
-    text: "Devolución GRATIS hasta 30 días - Garantía de satisfacción",
+    text: "Devolución GRATIS 30 días",
   },
   {
     icon: "⚡ ",
-    text: "Ofertas relámpago disponibles - No te las pierdas",
+    text: "Ofertas relámpago disponibles",
   },
 ];
 
@@ -43,13 +43,13 @@ const BannerOfertasHeader: React.FC = () => {
 
   return (
     <div
-      className="gradient-bg text-white py-3 text-center text-sm font-medium relative z-50 min-h-[44px]"
-      style={{ minHeight: '44px' }}
+      className="gradient-bg text-white py-3 text-center text-xs sm:text-sm font-medium relative z-50 overflow-hidden"
+      style={{ minHeight: '44px', maxHeight: '44px', height: '44px' }}
     >
-      <div className="container mx-auto px-4 flex items-center justify-center gap-4 h-full">
+      <div className="container mx-auto px-2 sm:px-4 flex items-center justify-center h-full">
         <span 
           key={active}
-          className="inline-block"
+          className="inline-block px-2 whitespace-nowrap overflow-hidden text-ellipsis max-w-full"
           style={{ animation: `${effects[active % effects.length]} 1s ease-in-out` }}
         >
           {offers[active].icon}{offers[active].text}
