@@ -8,28 +8,40 @@ export default {
         extend: {
             colors: {
                 primary: {
-                    50: '#f0f9ff',
-                    100: '#e0f2fe',
-                    200: '#bae6fd',
-                    300: '#7dd3fc',
-                    400: '#38bdf8',
-                    500: '#0ea5e9',
-                    600: '#0284c7',
-                    700: '#0369a1',
-                    800: '#075985',
-                    900: '#0c4a6e',
+                    50: '#f0fbfe',
+                    100: '#e0f6fc',
+                    200: '#b8ebf9',
+                    300: '#94d6ea', // Secundario 2
+                    400: '#4de2e5', // Secundario 1
+                    500: '#0fa6d1', // Principal 1 - Color referente de marca
+                    600: '#0c89ad',
+                    700: '#096c8a',
+                    800: '#075066',
+                    900: '#043343',
                 },
                 accent: {
-                    50: '#fdf4ff',
-                    100: '#fae8ff',
-                    200: '#f5d0fe',
-                    300: '#f0abfc',
-                    400: '#e879f9',
-                    500: '#d946ef',
-                    600: '#c026d3',
-                    700: '#a21caf',
-                    800: '#86198f',
-                    900: '#701a75',
+                    50: '#fff5f5',
+                    100: '#ffebeb',
+                    200: '#ffd6d6',
+                    300: '#ffb8b8',
+                    400: '#ff8787',
+                    500: '#ff5757', // Secundario 4
+                    600: '#ff2929',
+                    700: '#fa0000',
+                    800: '#cc0000',
+                    900: '#990000',
+                },
+                gray: {
+                    50: '#f7f5f2',  // Principal 3 - Background claro
+                    100: '#f3f4f6',
+                    200: '#e5e7eb',
+                    300: '#d1d5db',
+                    400: '#9ca3af',
+                    500: '#959595', // Principal 2 - Gris de marca
+                    600: '#6b7280',
+                    700: '#4b5563',
+                    800: '#1f2937',
+                    900: '#090808', // Secundario 3 - Negro
                 },
             },
             fontFamily: {
