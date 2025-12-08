@@ -9,14 +9,24 @@ RUN apt-get update && apt-get install -y \
     vim \
     nano \
     bash-completion \
+    tree \
+    htop \
     && rm -rf /var/lib/apt/lists/*
 
-# Configurar usuario node
+# Configurar como root
+USER root
+
+# Copiar configuración de bash personalizada
+COPY .bashrc /root/.bashrc
+COPY .bashrc /home/node/.bashrc
+RUN chown node:node /home/node/.bashrc
+
+# Configurar permisos del workspace
+RUN mkdir -p /workspace && chown -R node:node /workspace
+
+# Cambiar a usuario node por defecto
 USER node
 WORKDIR /workspace
-
-# Configurar bash para el usuario node
-RUN echo 'export PS1="\[\e[36m\]\u@\h:\[\e[32m\]\w\[\e[0m\]\$ "' >> ~/.bashrc
 
 # Exponer puertos
 EXPOSE 5173 3000
