@@ -36,7 +36,7 @@ const Footer = () => {
                         {/* Company Info */}
                         <div className="md:col-span-1">
                             <img
-                                src="assets/logo/logo.png"
+                                src="/assets/logo/logo.png"
                                 alt="Echo Tecnología"
                                 className="h-16 md:h-28 w-auto mb-3 md:mb-6"
                                 onError={(e) => {

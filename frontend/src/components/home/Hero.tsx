@@ -5,10 +5,10 @@ const Hero = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
   const videos = [
-    "assets/video/hero/alexa.mp4",
-    "assets/video/hero/google.mp4",
-    "assets/video/hero/googlecam.mp4",
-    "assets/video/hero/googlemini.mp4",
+    "/assets/video/hero/alexa.mp4",
+    "/assets/video/hero/google.mp4",
+    "/assets/video/hero/googlecam.mp4",
+    "/assets/video/hero/googlemini.mp4",
   ];
 
   // Cambiar video cada 10 segundos

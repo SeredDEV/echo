@@ -24,7 +24,7 @@ const Header = () => {
                 className="flex items-center hover:opacity-80 transition-opacity bg-white rounded-lg"
               >
                 <img
-                  src="assets/logo/logo.png"
+                  src="/assets/logo/logo.png"
                   alt="Echo Tecnología"
                   className="h-12 md:h-20 w-auto bg-white"
                   onError={(e) => {
