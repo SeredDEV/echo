@@ -1,6 +1,65 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useState, FormEvent, useEffect } from "react";
+import { authService } from "../services/authService";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    remember: false,
+  });
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const successMessage = (location.state as any)?.message;
+
+  // Cargar email recordado al montar el componente
+  useEffect(() => {
+    const rememberedEmail = authService.getRememberedEmail();
+    if (rememberedEmail) {
+      setFormData((prev) => ({
+        ...prev,
+        email: rememberedEmail,
+        remember: true,
+      }));
+    }
+  }, []);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value =
+      e.target.type === "checkbox" ? e.target.checked : e.target.value;
+    setFormData({
+      ...formData,
+      [e.target.name]: value,
+    });
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
+
+    try {
+      const result = await authService.login({
+        email: formData.email,
+        password: formData.password,
+        remember: formData.remember,
+      });
+
+      if (result.success) {
+        // Redirigir a la página principal o dashboard
+        navigate("/");
+      } else {
+        setError(result.error || "Error al iniciar sesión");
+      }
+    } catch (err) {
+      setError("Error al conectar con el servidor");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="relative py-20 bg-gray-50 min-h-[80vh] flex items-center justify-center">
       {/* Wave Divider Top */}
@@ -40,14 +99,29 @@ const Login = () => {
             <p className="text-gray-600 mt-2">Accede a tu cuenta</p>
           </div>
 
-          <form className="space-y-5">
+          {successMessage && (
+            <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg mb-4">
+              {successMessage}
+            </div>
+          )}
+
+          {error && (
+            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-4">
+              {error}
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
                 Correo electrónico
               </label>
               <input
                 type="email"
+                name="email"
                 required
+                value={formData.email}
+                onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
                 placeholder="tu@email.com"
               />
@@ -59,7 +133,10 @@ const Login = () => {
               </label>
               <input
                 type="password"
+                name="password"
                 required
+                value={formData.password}
+                onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
                 placeholder="••••••••"
               />
@@ -67,7 +144,13 @@ const Login = () => {
 
             <div className="flex items-center justify-between text-sm">
               <label className="flex items-center">
-                <input type="checkbox" className="mr-2" />
+                <input
+                  type="checkbox"
+                  name="remember"
+                  checked={formData.remember}
+                  onChange={handleChange}
+                  className="mr-2"
+                />
                 <span className="text-gray-600">Recordarme</span>
               </label>
               <a
@@ -80,9 +163,10 @@ const Login = () => {
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:shadow-lg"
+              disabled={loading}
+              className="w-full bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Iniciar sesión
+              {loading ? "Iniciando sesión..." : "Iniciar sesión"}
             </button>
           </form>
 

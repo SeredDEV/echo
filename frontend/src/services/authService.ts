@@ -10,6 +10,7 @@ interface RegisterData {
 interface LoginData {
   email: string;
   password: string;
+  remember?: boolean;
 }
 
 interface AuthResponse {
@@ -60,9 +61,15 @@ export const authService = {
         throw new Error(result.error || "Error al iniciar sesión");
       }
 
-      // Guardar token en localStorage
+      // Guardar token y email si se seleccionó "recordarme"
       if (result.data?.session?.access_token) {
         localStorage.setItem("access_token", result.data.session.access_token);
+
+        if (data.remember) {
+          localStorage.setItem("remembered_email", data.email);
+        } else {
+          localStorage.removeItem("remembered_email");
+        }
       }
 
       return result;
@@ -101,5 +108,9 @@ export const authService = {
 
   isAuthenticated(): boolean {
     return !!this.getToken();
+  },
+
+  getRememberedEmail(): string | null {
+    return localStorage.getItem("remembered_email");
   },
 };
