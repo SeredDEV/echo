@@ -1,25 +1,26 @@
 import { Link } from "react-router-dom";
+import { getAssetUrl } from "../../utils/assets";
 
 const categories = [
   {
     id: 1,
     name: "Altavoces Inteligentes",
     description: "Controla tu hogar con tu voz",
-    image: "/assets/images/categories/altavoces.jpg",
+    image: getAssetUrl("assets/images/categories/altavoces.jpg"),
     link: "/tienda?categoria=altavoces",
   },
   {
     id: 2,
     name: "Dispositivos Streaming",
     description: "Entretenimiento sin límites",
-    image: "/assets/images/categories/streaming.jpg",
+    image: getAssetUrl("assets/images/categories/streaming.jpg"),
     link: "/tienda?categoria=streaming",
   },
   {
     id: 3,
     name: "Accesorios Inteligentes",
     description: "Complementa tu hogar inteligente",
-    image: "/assets/images/categories/accesorios.jpg",
+    image: getAssetUrl("assets/images/categories/accesorios.jpg"),
     link: "/tienda?categoria=accesorios",
   },
 ];

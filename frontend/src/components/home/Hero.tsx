@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { getAssetUrl } from "../../utils/assets";
 
 const Hero = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
   const videos = [
-    "/assets/video/hero/alexa.mp4",
-    "/assets/video/hero/google.mp4",
-    "/assets/video/hero/googlecam.mp4",
-    "/assets/video/hero/googlemini.mp4",
+    getAssetUrl("assets/video/hero/alexa.mp4"),
+    getAssetUrl("assets/video/hero/google.mp4"),
+    getAssetUrl("assets/video/hero/googlecam.mp4"),
+    getAssetUrl("assets/video/hero/googlemini.mp4"),
   ];
 
   // Cambiar video cada 10 segundos

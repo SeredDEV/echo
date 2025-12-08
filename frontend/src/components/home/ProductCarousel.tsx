@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { getAssetUrl } from "../../utils/assets";
 
 interface CarouselItem {
   id: number;
@@ -19,9 +20,9 @@ const carouselData: CarouselItem[] = [
       "En modo Hub, todos en tu hogar pueden controlar dispositivos inteligentes.",
     ],
     videos: [
-      "/assets/video/carrusel/alexa-echo/alexa.mp4",
-      "/assets/video/carrusel/alexa-echo/alexaecho.mp4",
-      "/assets/video/carrusel/alexa-echo/ZjM0Y2YxZjgt.mp4",
+      getAssetUrl("assets/video/carrusel/alexa-echo/alexa.mp4"),
+      getAssetUrl("assets/video/carrusel/alexa-echo/alexaecho.mp4"),
+      getAssetUrl("assets/video/carrusel/alexa-echo/ZjM0Y2YxZjgt.mp4"),
     ],
     buttonLabel: "Alexa Echo",
   },
@@ -34,8 +35,8 @@ const carouselData: CarouselItem[] = [
       "Cámaras de seguridad, termostatos inteligentes y más para un hogar conectado.",
     ],
     videos: [
-      "/assets/video/carrusel/google-nest/bf8cb84a-c9d6-4e88-b36a-5b4405c7686a.mp4",
-      "/assets/video/carrusel/google-nest/nestmini.mp4",
+      getAssetUrl("assets/video/carrusel/google-nest/bf8cb84a-c9d6-4e88-b36a-5b4405c7686a.mp4"),
+      getAssetUrl("assets/video/carrusel/google-nest/nestmini.mp4"),
     ],
     buttonLabel: "Google Nest",
   },
@@ -47,7 +48,7 @@ const carouselData: CarouselItem[] = [
       "Accede a todas tus plataformas de streaming favoritas en un solo lugar.",
       "Control por voz con Alexa integrado para una experiencia manos libres.",
     ],
-    videos: ["/assets/video/carrusel/amazon-fire/firetv.mp4"],
+    videos: [getAssetUrl("assets/video/carrusel/amazon-fire/firetv.mp4")],
     buttonLabel: "Amazon Fire TV",
   },
   {
@@ -58,7 +59,7 @@ const carouselData: CarouselItem[] = [
       "Disfruta de acceso rápido a tus dispositivos inteligentes compatibles con el widget de favoritos.",
       "Ve lo que está pasando en casa y administra tus dispositivos desde cualquier lugar.",
     ],
-    videos: ["/assets/video/carrusel/google-chromecast/chromecast.mp4"],
+    videos: [getAssetUrl("assets/video/carrusel/google-chromecast/chromecast.mp4")],
     buttonLabel: "Google Chromecast",
   },
   {
@@ -70,7 +71,7 @@ const carouselData: CarouselItem[] = [
       "Crea ambientes personalizados con millones de colores disponibles.",
     ],
     videos: [
-      "/assets/video/carrusel/bombillas-RGB/f2cdd04dbf114786998e1647945ace50.HD-1080p-7.2Mbps-45550478.mp4",
+      getAssetUrl("assets/video/carrusel/bombillas-RGB/f2cdd04dbf114786998e1647945ace50.HD-1080p-7.2Mbps-45550478.mp4"),
     ],
     buttonLabel: "Bombillas RGB",
   },

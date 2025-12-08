@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import BannerOfertasHeader from "../common/BannerOfertasHeader";
 import { useCart } from "../../context/CartContext";
+import { getAssetUrl } from "../../utils/assets";
 
 const Header = () => {
   const { totalItems } = useCart();
@@ -24,7 +25,7 @@ const Header = () => {
                 className="flex items-center hover:opacity-80 transition-opacity bg-white rounded-lg"
               >
                 <img
-                  src="/assets/logo/logo.png"
+                  src={getAssetUrl("assets/logo/logo.png")}
                   alt="Echo Tecnología"
                   className="h-12 md:h-20 w-auto bg-white"
                   onError={(e) => {

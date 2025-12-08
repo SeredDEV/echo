@@ -1,3 +1,5 @@
+import { getAssetUrl } from "../../utils/assets";
+
 const Footer = () => {
   return (
     <footer className="bg-white text-gray-900">
