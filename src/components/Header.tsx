@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import BannerOfertasHeader from './BannerOfertasHeader';
 import { useCart } from '../context/CartContext';
 
 const Header = () => {
@@ -8,17 +9,8 @@ const Header = () => {
 
     return (
         <>
-            {/* Top Banner */}
-            <div
-                className="gradient-bg text-white py-3 text-center text-sm font-medium relative z-50 min-h-[44px]"
-                style={{ minHeight: '44px' }}
-            >
-                <div className="container mx-auto px-4 flex items-center justify-center gap-4 h-full">
-                    <span>🚛 Envío gratis</span>
-                    <span className="hidden sm:inline">•</span>
-                    <span>💸 Paga al recibir</span>
-                </div>
-            </div>
+            {/* Top Banner Dinámico */}
+            <BannerOfertasHeader />
 
             {/* Main Header */}
             <header className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-100">
