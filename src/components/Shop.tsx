@@ -3,6 +3,7 @@ import { products } from '../data/products';
 import ProductCard from './ProductCard';
 import ProductFilters from './ProductFilters';
 import ProductModal from './ProductModal';
+import CustomDropdown from './CustomDropdown';
 import { Product } from '../data/products';
 
 type SortOption = 'default' | 'price-asc' | 'price-desc' | 'name-asc' | 'name-desc';
@@ -161,75 +162,64 @@ const Shop = () => {
                 />
                 {/* Compact Search and Controls Bar */}
                 <div className="bg-white rounded-xl shadow-md border border-gray-100 p-3 sm:p-4 mb-6">
-                    {/* Search */}
-                    <div className="relative mb-2">
-                        <input
-                            type="text"
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            placeholder="Buscar productos por nombre, marca..."
-                            className="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0FA6D1] focus:border-[#0FA6D1] transition-all text-sm"
-                        />
-                        <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </div>
-
-                    {/* Controls Row */}
-                    <div className="flex items-center gap-2">
-                        {/* Sort Dropdown */}
-                        <select
-                            value={sortBy}
-                            onChange={(e) => setSortBy(e.target.value as SortOption)}
-                            className="flex-1 px-3 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0FA6D1] focus:border-[#0FA6D1] bg-white text-sm font-medium cursor-pointer hover:border-[#0FA6D1] transition-all appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20stroke%3D%22%230FA6D1%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22M6%208l4%204%204-4%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1.5em_1.5em] bg-[right_0.5rem_center] bg-no-repeat pr-10"
-                        >
-                            <option value="default">⭐ Destacados</option>
-                            <option value="price-asc">💰 Menor precio</option>
-                            <option value="price-desc">💎 Mayor precio</option>
-                            <option value="name-asc">🔤 A-Z</option>
-                            <option value="name-desc">🔤 Z-A</option>
-                        </select>
-
-                        {/* View Mode Toggle */}
-                        <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
+                    {/* Desktop: Todo en una fila | Mobile: dos filas */}
+                    <div className="flex flex-col gap-2 md:flex-row md:items-center">
+                        {/* Search */}
+                        <div className="relative md:flex-1 mb-2 md:mb-0">
+                            <input
+                                type="text"
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                placeholder="Buscar productos por nombre, marca..."
+                                className="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0FA6D1] focus:border-[#0FA6D1] transition-all text-sm"
+                            />
+                            <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                        {/* Segunda fila en móvil: dropdown + vista + filtros */}
+                        <div className="flex flex-row gap-2 items-center w-full md:w-auto">
+                            <CustomDropdown value={sortBy} onChange={v => setSortBy(v)} />
+                            {/* View Mode Toggle (solo móvil) */}
+                            <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1 md:hidden">
+                                <button
+                                    onClick={() => setViewMode('grid-2')}
+                                    className={`p-2 rounded-md transition-all ${viewMode === 'grid-2' ? 'bg-white shadow-sm text-[#0FA6D1]' : 'text-gray-600'}`}
+                                    title="Cuadrícula"
+                                >
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <rect x="3" y="3" width="8" height="8" rx="1" />
+                                        <rect x="13" y="3" width="8" height="8" rx="1" />
+                                        <rect x="3" y="13" width="8" height="8" rx="1" />
+                                        <rect x="13" y="13" width="8" height="8" rx="1" />
+                                    </svg>
+                                </button>
+                                <button
+                                    onClick={() => setViewMode('list')}
+                                    className={`p-2 rounded-md transition-all ${viewMode === 'list' ? 'bg-white shadow-sm text-[#0FA6D1]' : 'text-gray-600'}`}
+                                    title="Lista"
+                                >
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                                    </svg>
+                                </button>
+                            </div>
+                            {/* Filtros (solo móvil) */}
                             <button
-                                onClick={() => setViewMode('grid-2')}
-                                className={`p-2 rounded-md transition-all ${viewMode === 'grid-2' ? 'bg-white shadow-sm text-[#0FA6D1]' : 'text-gray-600'}`}
-                                title="Cuadrícula"
-                            >
-                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <rect x="3" y="3" width="8" height="8" rx="1" />
-                                    <rect x="13" y="3" width="8" height="8" rx="1" />
-                                    <rect x="3" y="13" width="8" height="8" rx="1" />
-                                    <rect x="13" y="13" width="8" height="8" rx="1" />
-                                </svg>
-                            </button>
-                            <button
-                                onClick={() => setViewMode('list')}
-                                className={`p-2 rounded-md transition-all ${viewMode === 'list' ? 'bg-white shadow-sm text-[#0FA6D1]' : 'text-gray-600'}`}
-                                title="Lista"
+                                onClick={() => setShowFilters(!showFilters)}
+                                className="md:hidden px-3 py-2.5 bg-[#0FA6D1] text-white rounded-lg font-medium flex items-center gap-1.5 text-sm whitespace-nowrap"
                             >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
                                 </svg>
+                                Filtros
+                                {(selectedCategories.length + selectedBrands.length) > 0 && (
+                                    <span className="bg-white text-[#0FA6D1] text-xs font-bold px-1.5 py-0.5 rounded-full min-w-[18px] text-center">
+                                        {selectedCategories.length + selectedBrands.length}
+                                    </span>
+                                )}
                             </button>
                         </div>
-
-                        {/* Filters Button */}
-                        <button
-                            onClick={() => setShowFilters(!showFilters)}
-                            className="lg:hidden px-3 py-2.5 bg-[#0FA6D1] text-white rounded-lg font-medium flex items-center gap-1.5 text-sm whitespace-nowrap"
-                        >
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-                            </svg>
-                            Filtros
-                            {(selectedCategories.length + selectedBrands.length) > 0 && (
-                                <span className="bg-white text-[#0FA6D1] text-xs font-bold px-1.5 py-0.5 rounded-full min-w-[18px] text-center">
-                                    {selectedCategories.length + selectedBrands.length}
-                                </span>
-                            )}
-                        </button>
                     </div>
                 </div>
 
