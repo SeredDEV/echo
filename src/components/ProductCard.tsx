@@ -1,10 +1,15 @@
 import { Product } from '../data/products';
+import { useState } from 'react';
 
 interface ProductCardProps {
     product: Product;
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
+    const [selectedColor, setSelectedColor] = useState<string | null>(
+        product.coloresDisponibles?.[0] || null
+    );
+
     const descuento = product.precioOriginal
         ? Math.round(((product.precioOriginal - product.precio) / product.precioOriginal) * 100)
         : 0;
@@ -15,6 +20,73 @@ const ProductCard = ({ product }: ProductCardProps) => {
             currency: 'COP',
             minimumFractionDigits: 0
         }).format(price);
+    };
+
+    // Mapeo de colores a clases de Tailwind
+    const getColorClasses = (color: string, isSelected: boolean) => {
+        const colorMap: { [key: string]: { bg: string; border: string; text: string } } = {
+            'Negro': {
+                bg: isSelected ? 'bg-gray-900' : 'bg-gray-800',
+                border: 'border-gray-900',
+                text: 'text-white'
+            },
+            'Blanco': {
+                bg: isSelected ? 'bg-white' : 'bg-gray-50',
+                border: 'border-gray-300',
+                text: 'text-gray-900'
+            },
+            'Azul': {
+                bg: isSelected ? 'bg-blue-600' : 'bg-blue-500',
+                border: 'border-blue-600',
+                text: 'text-white'
+            },
+            'Gris Carbón': {
+                bg: isSelected ? 'bg-gray-700' : 'bg-gray-600',
+                border: 'border-gray-700',
+                text: 'text-white'
+            },
+            'Lavanda': {
+                bg: isSelected ? 'bg-purple-400' : 'bg-purple-300',
+                border: 'border-purple-400',
+                text: 'text-white'
+            },
+            'Verde Azulado': {
+                bg: isSelected ? 'bg-teal-500' : 'bg-teal-400',
+                border: 'border-teal-500',
+                text: 'text-white'
+            },
+            'Gris Tiza': {
+                bg: isSelected ? 'bg-gray-300' : 'bg-gray-200',
+                border: 'border-gray-400',
+                text: 'text-gray-900'
+            },
+            'Coral': {
+                bg: isSelected ? 'bg-orange-400' : 'bg-orange-300',
+                border: 'border-orange-400',
+                text: 'text-white'
+            },
+            'Azul Cielo': {
+                bg: isSelected ? 'bg-sky-400' : 'bg-sky-300',
+                border: 'border-sky-400',
+                text: 'text-white'
+            },
+            'Rosa Arena': {
+                bg: isSelected ? 'bg-rose-300' : 'bg-rose-200',
+                border: 'border-rose-300',
+                text: 'text-gray-900'
+            },
+            'Salvia': {
+                bg: isSelected ? 'bg-green-500' : 'bg-green-400',
+                border: 'border-green-500',
+                text: 'text-white'
+            },
+        };
+
+        return colorMap[color] || {
+            bg: isSelected ? 'bg-gray-200' : 'bg-gray-100',
+            border: 'border-gray-300',
+            text: 'text-gray-900'
+        };
     };
 
     return (
