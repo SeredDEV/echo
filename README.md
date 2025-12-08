@@ -1,73 +1,36 @@
-# Echo Tecnología - Proyecto Full Stack
+# Echo Tecnología
+
+Proyecto de e-commerce para productos de tecnología inteligente.
 
 ## 📁 Estructura del Proyecto
 
 ```
 echo/
-├── backend/              # Backend (API - Futuro)
-│   └── README.md
-│
-├── src/                  # Frontend (React + Vite)
-│   ├── components/
-│   ├── App.tsx
-│   └── main.tsx
-│
-├── public/              # Assets públicos
-│   └── assets/
-│       ├── logo/
-│       ├── images/
-│       └── video/
-│
-├── .github/             # GitHub Actions
-│   └── workflows/
-│
-├── index.html
-├── package.json
-├── vite.config.ts
-└── tailwind.config.js
+├── frontend/          # Aplicación React + Vite + TypeScript + Tailwind
+├── backend/           # API REST (pendiente de desarrollo)
+└── README.md
 ```
 
-## 🚀 Frontend (Actual)
+## 🚀 Frontend
 
-**Tecnologías:**
-- React 18
-- Vite
-- Tailwind CSS
-- TypeScript
+El frontend está construido con:
+- **React 18** + **TypeScript**
+- **Vite** (build tool)
+- **Tailwind CSS** (estilos)
 
-**Ejecutar:**
+### Iniciar el Frontend
+
 ```bash
+cd frontend
 npm install
 npm run dev
 ```
 
-**Despliegue:**
-- GitHub Pages: https://sereddev.github.io/echo/
+## 🔧 Backend
 
-## 🔧 Backend (Futuro)
+La carpeta backend está lista para cuando necesites implementar la API.
 
-La carpeta `backend/` está preparada para desarrollo futuro.
+## 📝 Notas
 
-**Tecnologías sugeridas:**
-- Node.js + Express
-- MongoDB / PostgreSQL
-- JWT para autenticación
-
-## 📦 Repositorio
-
-- **GitHub**: https://github.com/SeredDEV/echo
-- **Live Site**: https://sereddev.github.io/echo/
-
-## 👨‍💻 Desarrollo
-
-```bash
-# Frontend
-npm run dev          # Desarrollo
-npm run build        # Producción
-npm run preview      # Preview de build
-
-# Backend (futuro)
-cd backend
-npm run dev          # Desarrollo
-npm start            # Producción
-```
+- El frontend está completamente funcional
+- El backend se desarrollará según las necesidades del proyecto
