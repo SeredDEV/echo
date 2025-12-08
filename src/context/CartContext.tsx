@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Product } from '../data/products';
 
 export interface CartItem extends Product {
@@ -8,7 +8,7 @@ export interface CartItem extends Product {
 
 interface CartContextType {
     items: CartItem[];
-    addToCart: (product: Product, color?: string | null) => void;
+    addToCart: (product: Product, color?: string | null, quantity?: number) => void;
     removeFromCart: (productId: string, color?: string) => void;
     updateQuantity: (productId: string, quantity: number, color?: string) => void;
     clearCart: () => void;
@@ -21,27 +21,26 @@ interface CartContextType {
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
-    const [items, setItems] = useState<CartItem[]>([]);
-    const [isCartOpen, setIsCartOpen] = useState(false);
-
-    // Load from localStorage on mount
-    useEffect(() => {
-        const savedCart = localStorage.getItem('echo_cart');
-        if (savedCart) {
-            try {
-                setItems(JSON.parse(savedCart));
-            } catch (e) {
-                console.error('Error loading cart:', e);
-            }
+    // Lazy initialization to read from localStorage immediately
+    const [items, setItems] = useState<CartItem[]>(() => {
+        if (typeof window === 'undefined') return [];
+        try {
+            const savedCart = localStorage.getItem('echo_cart_v2');
+            return savedCart ? JSON.parse(savedCart) : [];
+        } catch (e) {
+            console.error('Error loading cart:', e);
+            return [];
         }
-    }, []);
+    });
+
+    const [isCartOpen, setIsCartOpen] = useState(false);
 
     // Save to localStorage whenever items change
     useEffect(() => {
-        localStorage.setItem('echo_cart', JSON.stringify(items));
+        localStorage.setItem('echo_cart_v2', JSON.stringify(items));
     }, [items]);
 
-    const addToCart = (product: Product, color?: string | null) => {
+    const addToCart = (product: Product, color?: string | null, quantity: number = 1) => {
         setItems(currentItems => {
             const existingItemIndex = currentItems.findIndex(
                 item => item.id === product.id && item.selectedColor === color
@@ -49,17 +48,17 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
             if (existingItemIndex > -1) {
                 const newItems = [...currentItems];
-                newItems[existingItemIndex].quantity += 1;
+                newItems[existingItemIndex].quantity += quantity;
                 return newItems;
             } else {
                 return [...currentItems, {
                     ...product,
-                    quantity: 1,
+                    quantity: quantity,
                     selectedColor: color || undefined
                 }];
             }
         });
-        // Optional: Open cart or show toast
+        setIsCartOpen(true);
     };
 
     const removeFromCart = (productId: string, color?: string) => {
