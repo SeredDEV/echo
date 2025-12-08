@@ -24,7 +24,7 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         required
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0FA6D1] focus:border-transparent outline-none"
                                         placeholder="Nombre"
                                     />
                                 </div>
@@ -32,7 +32,7 @@ const Contact = () => {
                                 <div>
                                     <input
                                         type="tel"
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0FA6D1] focus:border-transparent outline-none"
                                         placeholder="Número de teléfono"
                                     />
                                 </div>
@@ -42,7 +42,7 @@ const Contact = () => {
                                 <input
                                     type="email"
                                     required
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0FA6D1] focus:border-transparent outline-none"
                                     placeholder="Correo electrónico *"
                                 />
                             </div>
@@ -51,14 +51,14 @@ const Contact = () => {
                                 <textarea
                                     required
                                     rows={5}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none resize-none"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0FA6D1] focus:border-transparent outline-none resize-none"
                                     placeholder="Comentario"
                                 ></textarea>
                             </div>
 
                             <button
                                 type="submit"
-                                className="w-full bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:shadow-lg"
+                                className="w-full bg-gradient-to-r from-[#0FA6D1] to-[#5EA4CF] hover:from-[#0d8bb5] hover:to-[#4d8fb8] text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:shadow-lg"
                             >
                                 Enviar
                             </button>
@@ -70,7 +70,7 @@ const Contact = () => {
                         {/* AI Chat */}
                         <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
                             <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <div className="w-12 h-12 bg-gradient-to-br from-[#0FA6D1] to-[#5EA4CF] rounded-lg flex items-center justify-center flex-shrink-0">
                                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                                     </svg>
@@ -115,7 +115,7 @@ const Contact = () => {
                         </div>
 
                         {/* Info */}
-                        <div className="bg-gradient-to-br from-primary-600 to-accent-600 rounded-xl shadow-lg p-6 text-white">
+                        <div className="bg-gradient-to-br from-[#0FA6D1] to-[#5EA4CF] rounded-xl shadow-lg p-6 text-white">
                             <h4 className="font-bold mb-4">Información</h4>
                             <div className="space-y-2 text-sm">
                                 <p>📍 Medellín, Colombia</p>
