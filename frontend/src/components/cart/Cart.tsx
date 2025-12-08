@@ -1,4 +1,5 @@
 import { useCart } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { items, removeFromCart, updateQuantity, totalAmount, clearCart } =
@@ -56,8 +57,8 @@ const Cart = () => {
             <p className="text-gray-500 mb-8">
               Parece que aún no has agregado productos.
             </p>
-            <a
-              href="tienda.html"
+            <Link
+              to="/tienda"
               className="inline-flex items-center gap-2 bg-[#0FA6D1] hover:bg-[#0d8bb5] text-white font-bold px-8 py-3 rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               <svg
@@ -74,7 +75,7 @@ const Cart = () => {
                 />
               </svg>
               Explorar Tienda
-            </a>
+            </Link>
           </div>
         </div>
 

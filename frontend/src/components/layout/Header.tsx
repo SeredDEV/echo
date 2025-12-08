@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import BannerOfertasHeader from "../common/BannerOfertasHeader";
 import { useCart } from "../../context/CartContext";
 
@@ -18,8 +19,8 @@ const Header = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <a
-                href="index.html"
+              <Link
+                to="/"
                 className="flex items-center hover:opacity-80 transition-opacity bg-white rounded-lg"
               >
                 <img
@@ -36,23 +37,23 @@ const Header = () => {
                 <h1 className="text-2xl md:text-3xl font-display font-bold text-gradient hidden">
                   Echo Tecnología
                 </h1>
-              </a>
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-1">
-              <a
-                href="index.html"
+              <Link
+                to="/"
                 className="group relative px-4 py-2 text-gray-700 font-medium transition-all duration-300"
               >
                 <span className="relative z-10">Inicio</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0FA6D1] group-hover:w-full transition-all duration-300"></span>
-              </a>
+              </Link>
 
               {/* Altavoces Inteligentes Dropdown */}
               <div className="group relative">
-                <a
-                  href="tienda.html?categoria=altavoces"
+                <Link
+                  to="/tienda?categoria=altavoces"
                   className="flex items-center gap-1 px-4 py-2 text-gray-700 font-medium transition-all duration-300"
                 >
                   <span className="relative z-10">Altavoces Inteligentes</span>
@@ -70,12 +71,12 @@ const Header = () => {
                     />
                   </svg>
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0FA6D1] group-hover:w-full transition-all duration-300"></span>
-                </a>
+                </Link>
                 <div className="absolute left-0 mt-2 w-[400px] bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
                   <div className="p-6">
                     <div className="grid grid-cols-2 gap-4">
-                      <a
-                        href="tienda.html?categoria=altavoces&marca=Amazon"
+                      <Link
+                        to="/tienda?categoria=altavoces&marca=Amazon"
                         className="flex flex-col items-center p-4 rounded-lg hover:bg-[#0FA6D1]/5 transition-all group/item"
                       >
                         <div className="w-20 h-20 bg-gradient-to-br from-[#0FA6D1] to-[#5EA4CF] rounded-2xl flex items-center justify-center mb-3 group-hover/item:scale-110 transition-transform">
@@ -93,9 +94,9 @@ const Header = () => {
                         <div className="text-xs text-gray-500 text-center mt-1">
                           Echo, Echo Dot, Echo Show
                         </div>
-                      </a>
-                      <a
-                        href="tienda.html?categoria=altavoces&marca=Google"
+                      </Link>
+                      <Link
+                        to="/tienda?categoria=altavoces&marca=Google"
                         className="flex flex-col items-center p-4 rounded-lg hover:bg-[#0FA6D1]/5 transition-all group/item"
                       >
                         <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-3 group-hover/item:scale-110 transition-transform">
@@ -113,7 +114,7 @@ const Header = () => {
                         <div className="text-xs text-gray-500 text-center mt-1">
                           Nest Audio, Nest Mini
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -121,8 +122,8 @@ const Header = () => {
 
               {/* Dispositivos Streaming Dropdown */}
               <div className="group relative">
-                <a
-                  href="tienda.html?categoria=streaming"
+                <Link
+                  to="/tienda?categoria=streaming"
                   className="flex items-center gap-1 px-4 py-2 text-gray-700 font-medium transition-all duration-300"
                 >
                   <span className="relative z-10">Dispositivos Streaming</span>
@@ -140,12 +141,12 @@ const Header = () => {
                     />
                   </svg>
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0FA6D1] group-hover:w-full transition-all duration-300"></span>
-                </a>
+                </Link>
                 <div className="absolute left-0 mt-2 w-[400px] bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
                   <div className="p-6">
                     <div className="grid grid-cols-2 gap-4">
-                      <a
-                        href="tienda.html?categoria=streaming&marca=Amazon"
+                      <Link
+                        to="/tienda?categoria=streaming&marca=Amazon"
                         className="flex flex-col items-center p-4 rounded-lg hover:bg-[#0FA6D1]/5 transition-all group/item"
                       >
                         <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-3 group-hover/item:scale-110 transition-transform">
@@ -163,9 +164,9 @@ const Header = () => {
                         <div className="text-xs text-gray-500 text-center mt-1">
                           Fire TV Stick, Fire TV Cube
                         </div>
-                      </a>
-                      <a
-                        href="tienda.html?categoria=streaming&marca=Google"
+                      </Link>
+                      <Link
+                        to="/tienda?categoria=streaming&marca=Google"
                         className="flex flex-col items-center p-4 rounded-lg hover:bg-[#0FA6D1]/5 transition-all group/item"
                       >
                         <div className="w-20 h-20 bg-gradient-to-br from-[#0FA6D1] to-[#5EA4CF] rounded-2xl flex items-center justify-center mb-3 group-hover/item:scale-110 transition-transform">
@@ -183,7 +184,7 @@ const Header = () => {
                         <div className="text-xs text-gray-500 text-center mt-1">
                           Chromecast con Google TV
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -191,8 +192,8 @@ const Header = () => {
 
               {/* Accesorios Inteligentes Dropdown */}
               <div className="group relative">
-                <a
-                  href="tienda.html?categoria=accesorios"
+                <Link
+                  to="/tienda?categoria=accesorios"
                   className="flex items-center gap-1 px-4 py-2 text-gray-700 font-medium transition-all duration-300"
                 >
                   <span className="relative z-10">Accesorios Inteligentes</span>
@@ -210,12 +211,12 @@ const Header = () => {
                     />
                   </svg>
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0FA6D1] group-hover:w-full transition-all duration-300"></span>
-                </a>
+                </Link>
                 <div className="absolute left-0 mt-2 w-[500px] bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
                   <div className="p-6">
                     <div className="grid grid-cols-3 gap-3">
-                      <a
-                        href="tienda.html?categoria=accesorios&subcategoria=Bombillos"
+                      <Link
+                        to="/tienda?categoria=accesorios&subcategoria=Bombillos"
                         className="flex flex-col items-center p-3 rounded-lg hover:bg-[#0FA6D1]/5 transition-all group/item"
                       >
                         <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mb-2 group-hover/item:scale-110 transition-transform">
@@ -233,9 +234,9 @@ const Header = () => {
                         <div className="text-xs text-gray-500 text-center">
                           LED RGB
                         </div>
-                      </a>
-                      <a
-                        href="tienda.html?categoria=accesorios&subcategoria=Tomacorrientes"
+                      </Link>
+                      <Link
+                        to="/tienda?categoria=accesorios&subcategoria=Tomacorrientes"
                         className="flex flex-col items-center p-3 rounded-lg hover:bg-[#0FA6D1]/5 transition-all group/item"
                       >
                         <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-2 group-hover/item:scale-110 transition-transform">
@@ -253,9 +254,9 @@ const Header = () => {
                         <div className="text-xs text-gray-500 text-center">
                           WiFi
                         </div>
-                      </a>
-                      <a
-                        href="tienda.html?categoria=accesorios&subcategoria=Apagadores"
+                      </Link>
+                      <Link
+                        to="/tienda?categoria=accesorios&subcategoria=Apagadores"
                         className="flex flex-col items-center p-3 rounded-lg hover:bg-[#0FA6D1]/5 transition-all group/item"
                       >
                         <div className="w-16 h-16 bg-gradient-to-br from-[#94D6EA] to-[#4DE2E5] rounded-xl flex items-center justify-center mb-2 group-hover/item:scale-110 transition-transform">
@@ -273,9 +274,9 @@ const Header = () => {
                         <div className="text-xs text-gray-500 text-center">
                           Touch
                         </div>
-                      </a>
-                      <a
-                        href="tienda.html?categoria=accesorios&subcategoria=Cintas LED"
+                      </Link>
+                      <Link
+                        to="/tienda?categoria=accesorios&subcategoria=Cintas LED"
                         className="flex flex-col items-center p-3 rounded-lg hover:bg-[#0FA6D1]/5 transition-all group/item"
                       >
                         <div className="w-16 h-16 bg-gradient-to-br from-[#4DE2E5] to-[#0FA6D1] rounded-xl flex items-center justify-center mb-2 group-hover/item:scale-110 transition-transform">
@@ -299,9 +300,9 @@ const Header = () => {
                         <div className="text-xs text-gray-500 text-center">
                           RGB
                         </div>
-                      </a>
-                      <a
-                        href="tienda.html?categoria=accesorios&subcategoria=Cerraduras"
+                      </Link>
+                      <Link
+                        to="/tienda?categoria=accesorios&subcategoria=Cerraduras"
                         className="flex flex-col items-center p-3 rounded-lg hover:bg-[#0FA6D1]/5 transition-all group/item"
                       >
                         <div className="w-16 h-16 bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl flex items-center justify-center mb-2 group-hover/item:scale-110 transition-transform">
@@ -319,9 +320,9 @@ const Header = () => {
                         <div className="text-xs text-gray-500 text-center">
                           Huella
                         </div>
-                      </a>
-                      <a
-                        href="tienda.html?categoria=accesorios&subcategoria=Cámaras"
+                      </Link>
+                      <Link
+                        to="/tienda?categoria=accesorios&subcategoria=Cámaras"
                         className="flex flex-col items-center p-3 rounded-lg hover:bg-[#0FA6D1]/5 transition-all group/item"
                       >
                         <div className="w-16 h-16 bg-gradient-to-br from-[#0FA6D1] to-[#0d8bb5] rounded-xl flex items-center justify-center mb-2 group-hover/item:scale-110 transition-transform">
@@ -345,32 +346,32 @@ const Header = () => {
                         <div className="text-xs text-gray-500 text-center">
                           Seguridad
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <a
-                href="about.html"
+              <Link
+                to="/about"
                 className="group relative px-4 py-2 text-gray-700 font-medium transition-all duration-300"
               >
                 <span className="relative z-10">Sobre nosotros</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0FA6D1] group-hover:w-full transition-all duration-300"></span>
-              </a>
-              <a
-                href="contacto.html"
+              </Link>
+              <Link
+                to="/contacto"
                 className="group relative px-4 py-2 text-gray-700 font-medium transition-all duration-300"
               >
                 <span className="relative z-10">Contacto</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0FA6D1] group-hover:w-full transition-all duration-300"></span>
-              </a>
+              </Link>
             </div>
 
             {/* Desktop CTA Icons */}
             <div className="hidden lg:flex items-center gap-2">
-              <a
-                href="login.html"
+              <Link
+                to="/login"
                 className="p-2.5 text-gray-700 hover:text-primary-600 hover:bg-gray-100 rounded-lg transition-all duration-300"
                 aria-label="Iniciar sesión"
               >
@@ -387,9 +388,9 @@ const Header = () => {
                     d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                   />
                 </svg>
-              </a>
-              <a
-                href="carrito.html"
+              </Link>
+              <Link
+                to="/carrito"
                 className="p-2.5 text-gray-700 hover:text-primary-600 hover:bg-gray-100 rounded-lg transition-all duration-300 relative group"
                 aria-label="Carrito"
               >
@@ -413,13 +414,13 @@ const Header = () => {
                     </span>
                   )}
                 </div>
-              </a>
+              </Link>
             </div>
 
             {/* Mobile Right Section */}
             <div className="flex lg:hidden items-center gap-1">
-              <a
-                href="login.html"
+              <Link
+                to="/login"
                 className="p-2 text-gray-700 hover:text-primary-600 transition-all duration-300"
                 aria-label="Iniciar sesión"
               >
@@ -436,9 +437,9 @@ const Header = () => {
                     d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                   />
                 </svg>
-              </a>
-              <a
-                href="carrito.html"
+              </Link>
+              <Link
+                to="/carrito"
                 className="p-2 text-gray-700 hover:text-primary-600 transition-all duration-300 relative group"
                 aria-label="Carrito"
               >
@@ -462,7 +463,7 @@ const Header = () => {
                     </span>
                   )}
                 </div>
-              </a>
+              </Link>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="p-2 text-gray-700 hover:text-primary-600 transition-all duration-300 ml-1"
@@ -499,8 +500,8 @@ const Header = () => {
             <div className="lg:hidden mt-4 pb-4 animate-slide-up">
               {!mobileSubmenu ? (
                 <div className="space-y-1.5">
-                  <a
-                    href="index.html"
+                  <Link
+                    to="/"
                     className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:text-primary-600 bg-white hover:bg-gray-50 font-medium rounded-xl transition-all duration-300 shadow-sm hover:shadow-md"
                   >
                     <div className="w-9 h-9 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -519,7 +520,7 @@ const Header = () => {
                       </svg>
                     </div>
                     <span>Inicio</span>
-                  </a>
+                  </Link>
 
                   <button
                     onClick={() => setMobileSubmenu("altavoces")}
@@ -638,8 +639,8 @@ const Header = () => {
                     </svg>
                   </button>
 
-                  <a
-                    href="about.html"
+                  <Link
+                    to="/about"
                     className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:text-primary-600 bg-white hover:bg-gray-50 font-medium rounded-xl transition-all duration-300 shadow-sm hover:shadow-md"
                   >
                     <div className="w-9 h-9 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -658,10 +659,10 @@ const Header = () => {
                       </svg>
                     </div>
                     <span>Sobre nosotros</span>
-                  </a>
+                  </Link>
 
-                  <a
-                    href="contacto.html"
+                  <Link
+                    to="/contacto"
                     className="flex items-center gap-3 px-4 py-3 text-gray-800 hover:text-primary-600 bg-white hover:bg-gray-50 font-medium rounded-xl transition-all duration-300 shadow-sm hover:shadow-md"
                   >
                     <div className="w-9 h-9 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -680,7 +681,7 @@ const Header = () => {
                       </svg>
                     </div>
                     <span>Contacto</span>
-                  </a>
+                  </Link>
                 </div>
               ) : (
                 <div className="space-y-3">
@@ -721,8 +722,8 @@ const Header = () => {
                   <div className="space-y-2">
                     {mobileSubmenu === "altavoces" && (
                       <>
-                        <a
-                          href="tienda.html?categoria=altavoces&marca=Amazon"
+                        <Link
+                          to="/tienda?categoria=altavoces&marca=Amazon"
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -742,9 +743,9 @@ const Header = () => {
                               Echo, Echo Dot, Echo Show
                             </div>
                           </div>
-                        </a>
-                        <a
-                          href="tienda.html?categoria=altavoces&marca=Google"
+                        </Link>
+                        <Link
+                          to="/tienda?categoria=altavoces&marca=Google"
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -764,14 +765,14 @@ const Header = () => {
                               Nest Audio, Nest Mini
                             </div>
                           </div>
-                        </a>
+                        </Link>
                       </>
                     )}
 
                     {mobileSubmenu === "streaming" && (
                       <>
-                        <a
-                          href="tienda.html?categoria=streaming&marca=Amazon"
+                        <Link
+                          to="/tienda?categoria=streaming&marca=Amazon"
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -791,9 +792,9 @@ const Header = () => {
                               Fire TV Stick, Fire TV Cube
                             </div>
                           </div>
-                        </a>
-                        <a
-                          href="tienda.html?categoria=streaming&marca=Google"
+                        </Link>
+                        <Link
+                          to="/tienda?categoria=streaming&marca=Google"
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -813,14 +814,14 @@ const Header = () => {
                               Chromecast con Google TV
                             </div>
                           </div>
-                        </a>
+                        </Link>
                       </>
                     )}
 
                     {mobileSubmenu === "accesorios" && (
                       <>
-                        <a
-                          href="tienda.html?categoria=accesorios&subcategoria=Bombillos"
+                        <Link
+                          to="/tienda?categoria=accesorios&subcategoria=Bombillos"
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -840,9 +841,9 @@ const Header = () => {
                               LED RGB, Blanco ajustable
                             </div>
                           </div>
-                        </a>
-                        <a
-                          href="tienda.html?categoria=accesorios&subcategoria=Tomacorrientes"
+                        </Link>
+                        <Link
+                          to="/tienda?categoria=accesorios&subcategoria=Tomacorrientes"
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -862,9 +863,9 @@ const Header = () => {
                               Control remoto, WiFi
                             </div>
                           </div>
-                        </a>
-                        <a
-                          href="tienda.html?categoria=accesorios&subcategoria=Apagadores"
+                        </Link>
+                        <Link
+                          to="/tienda?categoria=accesorios&subcategoria=Apagadores"
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-accent-400 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -884,9 +885,9 @@ const Header = () => {
                               Touch, Control por voz
                             </div>
                           </div>
-                        </a>
-                        <a
-                          href="tienda.html?categoria=accesorios&subcategoria=Cintas LED"
+                        </Link>
+                        <Link
+                          to="/tienda?categoria=accesorios&subcategoria=Cintas LED"
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-accent-400 to-accent-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -912,9 +913,9 @@ const Header = () => {
                               RGB, Música sincronizada
                             </div>
                           </div>
-                        </a>
-                        <a
-                          href="tienda.html?categoria=accesorios&subcategoria=Cerraduras"
+                        </Link>
+                        <Link
+                          to="/tienda?categoria=accesorios&subcategoria=Cerraduras"
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -934,9 +935,9 @@ const Header = () => {
                               Huella, PIN, App
                             </div>
                           </div>
-                        </a>
-                        <a
-                          href="tienda.html?categoria=accesorios&subcategoria=Cámaras"
+                        </Link>
+                        <Link
+                          to="/tienda?categoria=accesorios&subcategoria=Cámaras"
                           className="flex items-center gap-4 px-4 py-3 bg-white hover:bg-primary-50 rounded-xl transition-all shadow-sm"
                         >
                           <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -962,7 +963,7 @@ const Header = () => {
                               Seguridad
                             </div>
                           </div>
-                        </a>
+                        </Link>
                       </>
                     )}
                   </div>

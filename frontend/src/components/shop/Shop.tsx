@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { products } from "../../data/products";
 import ProductCard from "./ProductCard";
 import ProductFilters from "./ProductFilters";
@@ -15,6 +16,7 @@ type SortOption =
 type ViewMode = "grid-2" | "grid-3" | "grid-4" | "list";
 
 const Shop = () => {
+  const [searchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
@@ -27,12 +29,15 @@ const Shop = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const itemsPerPage = 12;
 
-  // Get filters from URL params
+  // Get filters from URL params - React Router way
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
+    // Reset filters first
+    setSelectedCategories([]);
+    setSelectedBrands([]);
+    setSelectedSubcategory("");
 
     // Category filter
-    const categoria = params.get("categoria");
+    const categoria = searchParams.get("categoria");
     if (categoria) {
       const categoriaMap: Record<string, string> = {
         altavoces: "Altavoces Inteligentes",
@@ -46,17 +51,20 @@ const Shop = () => {
     }
 
     // Brand filter
-    const marca = params.get("marca");
+    const marca = searchParams.get("marca");
     if (marca) {
       setSelectedBrands([marca]);
     }
 
     // Subcategory filter
-    const subcategoria = params.get("subcategoria");
+    const subcategoria = searchParams.get("subcategoria");
     if (subcategoria) {
       setSelectedSubcategory(subcategoria);
     }
-  }, []);
+
+    // Reset to first page when filters change
+    setCurrentPage(1);
+  }, [searchParams]);
 
   // Filter and sort products
   const filteredAndSortedProducts = useMemo(() => {
