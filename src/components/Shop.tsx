@@ -138,11 +138,11 @@ const Shop = () => {
 
     const getGridClass = () => {
         switch (viewMode) {
-            case 'grid-2': return 'grid-cols-1 md:grid-cols-2';
-            case 'grid-3': return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
-            case 'grid-4': return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4';
+            case 'grid-2': return 'grid-cols-2 lg:grid-cols-2';
+            case 'grid-3': return 'grid-cols-2 lg:grid-cols-3';
+            case 'grid-4': return 'grid-cols-2 lg:grid-cols-3 xl:grid-cols-4';
             case 'list': return 'grid-cols-1';
-            default: return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
+            default: return 'grid-cols-2 lg:grid-cols-3';
         }
     };
 
@@ -154,46 +154,45 @@ const Shop = () => {
                     isOpen={!!selectedProduct}
                     onClose={() => setSelectedProduct(null)}
                 />
-                {/* Search and Controls Bar */}
-                <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-6 mb-8">
-                    <div className="flex flex-col lg:flex-row gap-4 items-stretch lg:items-center">
-                        {/* Search */}
-                        <div className="flex-1">
-                            <div className="relative group">
-                                <input
-                                    type="text"
-                                    value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
-                                    placeholder="Buscar productos por nombre, marca o descripción..."
-                                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0FA6D1] focus:border-[#0FA6D1] transition-all text-gray-700 placeholder-gray-400"
-                                />
-                                <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400 group-focus-within:text-[#0FA6D1] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                </svg>
-                            </div>
-                        </div>
+                {/* Compact Search and Controls Bar */}
+                <div className="bg-white rounded-xl shadow-md border border-gray-100 p-3 sm:p-4 mb-6">
+                    {/* Search */}
+                    <div className="relative mb-2">
+                        <input
+                            type="text"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            placeholder="Buscar productos por nombre, marca..."
+                            className="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0FA6D1] focus:border-[#0FA6D1] transition-all text-sm"
+                        />
+                        <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
 
-                        {/* Sort */}
+                    {/* Controls Row */}
+                    <div className="flex items-center gap-2">
+                        {/* Sort Dropdown */}
                         <select
                             value={sortBy}
                             onChange={(e) => setSortBy(e.target.value as SortOption)}
-                            className="px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0FA6D1] focus:border-[#0FA6D1] bg-white text-gray-700 font-medium cursor-pointer transition-all hover:border-[#0FA6D1]/50"
+                            className="flex-1 px-3 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0FA6D1] focus:border-[#0FA6D1] bg-white text-sm font-medium cursor-pointer hover:border-[#0FA6D1] transition-all appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20stroke%3D%22%230FA6D1%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22M6%208l4%204%204-4%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1.5em_1.5em] bg-[right_0.5rem_center] bg-no-repeat pr-10"
                         >
                             <option value="default">⭐ Destacados</option>
-                            <option value="price-asc">💰 Precio: Menor a Mayor</option>
-                            <option value="price-desc">💎 Precio: Mayor a Menor</option>
-                            <option value="name-asc">🔤 Nombre: A-Z</option>
-                            <option value="name-desc">🔤 Nombre: Z-A</option>
+                            <option value="price-asc">💰 Menor precio</option>
+                            <option value="price-desc">💎 Mayor precio</option>
+                            <option value="name-asc">🔤 A-Z</option>
+                            <option value="name-desc">🔤 Z-A</option>
                         </select>
 
-                        {/* View Mode - Desktop */}
-                        <div className="hidden lg:flex items-center gap-2 bg-gray-100 rounded-xl p-1.5">
+                        {/* View Mode Toggle */}
+                        <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
                             <button
                                 onClick={() => setViewMode('grid-2')}
-                                className={`p-3 rounded-lg transition-all ${viewMode === 'grid-2' ? 'bg-white shadow-md text-[#0FA6D1]' : 'hover:bg-gray-200 text-gray-600'}`}
-                                title="2 columnas"
+                                className={`p-2 rounded-md transition-all ${viewMode === 'grid-2' ? 'bg-white shadow-sm text-[#0FA6D1]' : 'text-gray-600'}`}
+                                title="Cuadrícula"
                             >
-                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                     <rect x="3" y="3" width="8" height="8" rx="1" />
                                     <rect x="13" y="3" width="8" height="8" rx="1" />
                                     <rect x="3" y="13" width="8" height="8" rx="1" />
@@ -201,51 +200,87 @@ const Shop = () => {
                                 </svg>
                             </button>
                             <button
-                                onClick={() => setViewMode('grid-3')}
-                                className={`p-3 rounded-lg transition-all ${viewMode === 'grid-3' ? 'bg-white shadow-md text-[#0FA6D1]' : 'hover:bg-gray-200 text-gray-600'}`}
-                                title="3 columnas"
+                                onClick={() => setViewMode('list')}
+                                className={`p-2 rounded-md transition-all ${viewMode === 'list' ? 'bg-white shadow-sm text-[#0FA6D1]' : 'text-gray-600'}`}
+                                title="Lista"
                             >
-                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <rect x="2" y="3" width="6" height="6" rx="1" />
-                                    <rect x="9" y="3" width="6" height="6" rx="1" />
-                                    <rect x="16" y="3" width="6" height="6" rx="1" />
-                                    <rect x="2" y="10" width="6" height="6" rx="1" />
-                                    <rect x="9" y="10" width="6" height="6" rx="1" />
-                                    <rect x="16" y="10" width="6" height="6" rx="1" />
-                                </svg>
-                            </button>
-                            <button
-                                onClick={() => setViewMode('grid-4')}
-                                className={`p-3 rounded-lg transition-all ${viewMode === 'grid-4' ? 'bg-white shadow-md text-[#0FA6D1]' : 'hover:bg-gray-200 text-gray-600'}`}
-                                title="4 columnas"
-                            >
-                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <rect x="2" y="3" width="4" height="4" rx="0.5" />
-                                    <rect x="7" y="3" width="4" height="4" rx="0.5" />
-                                    <rect x="12" y="3" width="4" height="4" rx="0.5" />
-                                    <rect x="17" y="3" width="4" height="4" rx="0.5" />
-                                    <rect x="2" y="8" width="4" height="4" rx="0.5" />
-                                    <rect x="7" y="8" width="4" height="4" rx="0.5" />
-                                    <rect x="12" y="8" width="4" height="4" rx="0.5" />
-                                    <rect x="17" y="8" width="4" height="4" rx="0.5" />
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                                 </svg>
                             </button>
                         </div>
 
-                        {/* Mobile Filter Toggle */}
+                        {/* Filters Button */}
                         <button
                             onClick={() => setShowFilters(!showFilters)}
-                            className="lg:hidden px-6 py-4 bg-gradient-to-r from-[#0FA6D1] to-[#5EA4CF] text-white rounded-xl font-semibold flex items-center justify-center gap-2 hover:shadow-lg transition-all"
+                            className="lg:hidden px-3 py-2.5 bg-[#0FA6D1] text-white rounded-lg font-medium flex items-center gap-1.5 text-sm whitespace-nowrap"
                         >
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
                             </svg>
                             Filtros
                             {(selectedCategories.length + selectedBrands.length) > 0 && (
-                                <span className="bg-white text-[#0FA6D1] text-xs font-bold px-2 py-0.5 rounded-full">
+                                <span className="bg-white text-[#0FA6D1] text-xs font-bold px-1.5 py-0.5 rounded-full min-w-[18px] text-center">
                                     {selectedCategories.length + selectedBrands.length}
                                 </span>
                             )}
+                        </button>
+                    </div>
+                </div>
+
+                {/* Desktop View Mode (hidden on mobile) */}
+                <div className="hidden lg:flex items-center justify-end gap-2 mb-4">
+                    <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
+                        <button
+                            onClick={() => setViewMode('grid-2')}
+                            className={`p-2 rounded-md transition-all ${viewMode === 'grid-2' ? 'bg-white shadow-sm text-[#0FA6D1]' : 'text-gray-600'}`}
+                            title="2 columnas"
+                        >
+                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <rect x="3" y="3" width="8" height="8" rx="1" />
+                                <rect x="13" y="3" width="8" height="8" rx="1" />
+                                <rect x="3" y="13" width="8" height="8" rx="1" />
+                                <rect x="13" y="13" width="8" height="8" rx="1" />
+                            </svg>
+                        </button>
+                        <button
+                            onClick={() => setViewMode('grid-3')}
+                            className={`p-2 rounded-md transition-all ${viewMode === 'grid-3' ? 'bg-white shadow-sm text-[#0FA6D1]' : 'text-gray-600'}`}
+                            title="3 columnas"
+                        >
+                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <rect x="2" y="3" width="6" height="6" rx="1" />
+                                <rect x="9" y="3" width="6" height="6" rx="1" />
+                                <rect x="16" y="3" width="6" height="6" rx="1" />
+                                <rect x="2" y="10" width="6" height="6" rx="1" />
+                                <rect x="9" y="10" width="6" height="6" rx="1" />
+                                <rect x="16" y="10" width="6" height="6" rx="1" />
+                            </svg>
+                        </button>
+                        <button
+                            onClick={() => setViewMode('grid-4')}
+                            className={`p-2 rounded-md transition-all ${viewMode === 'grid-4' ? 'bg-white shadow-sm text-[#0FA6D1]' : 'text-gray-600'}`}
+                            title="4 columnas"
+                        >
+                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <rect x="2" y="3" width="4" height="4" rx="0.5" />
+                                <rect x="7" y="3" width="4" height="4" rx="0.5" />
+                                <rect x="12" y="3" width="4" height="4" rx="0.5" />
+                                <rect x="17" y="3" width="4" height="4" rx="0.5" />
+                                <rect x="2" y="8" width="4" height="4" rx="0.5" />
+                                <rect x="7" y="8" width="4" height="4" rx="0.5" />
+                                <rect x="12" y="8" width="4" height="4" rx="0.5" />
+                                <rect x="17" y="8" width="4" height="4" rx="0.5" />
+                            </svg>
+                        </button>
+                        <button
+                            onClick={() => setViewMode('list')}
+                            className={`p-2 rounded-md transition-all ${viewMode === 'list' ? 'bg-white shadow-sm text-[#0FA6D1]' : 'text-gray-600'}`}
+                            title="Lista"
+                        >
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
                         </button>
                     </div>
                 </div>

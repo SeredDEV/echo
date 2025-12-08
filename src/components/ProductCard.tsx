@@ -142,42 +142,42 @@ const ProductCard = ({ product, onClick }: ProductCardProps) => {
             </div>
 
             {/* Content */}
-            <div className="p-5">
+            <div className="p-4">
                 {/* Category & Brand */}
-                <div className="flex items-center justify-between mb-2">
-                    <p className="text-xs text-primary-600 font-bold uppercase tracking-wide">{product.categoria}</p>
-                    <p className="text-xs text-gray-500 font-semibold">{product.marca}</p>
+                <div className="flex items-center justify-between mb-1.5">
+                    <p className="text-[10px] text-[#0FA6D1] font-bold uppercase tracking-wide">{product.categoria}</p>
+                    <p className="text-[10px] text-gray-500 font-semibold">{product.marca}</p>
                 </div>
 
                 {/* Title */}
-                <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 min-h-[3rem] text-lg group-hover:text-primary-600 transition-colors">
+                <h3 className="font-bold text-gray-900 mb-1.5 line-clamp-2 text-sm leading-tight group-hover:text-[#0FA6D1] transition-colors min-h-[2.5rem]">
                     {product.nombre}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-gray-600 mb-4 h-12 overflow-hidden">
+                <p className="text-xs text-gray-600 mb-2 line-clamp-6 leading-relaxed min-h-[4.5rem]">
                     {product.descripcionCorta}
                 </p>
 
                 {/* Price */}
-                <div className="mb-4">
+                <div className="mb-2">
                     {product.precioOriginal && (
-                        <p className="text-sm text-gray-400 line-through mb-1">
+                        <p className="text-xs text-gray-400 line-through">
                             {formatPrice(product.precioOriginal)}
                         </p>
                     )}
-                    <p className="text-3xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+                    <p className="text-2xl font-bold text-[#0FA6D1]">
                         {formatPrice(product.precio)}
                     </p>
                 </div>
 
                 {/* Available Colors */}
                 {product.coloresDisponibles && product.coloresDisponibles.length > 0 && (
-                    <div className="mb-4">
-                        <p className="text-xs text-gray-500 font-semibold mb-2">
+                    <div className="mb-2">
+                        <p className="text-[10px] text-gray-500 font-medium mb-1.5">
                             Color: <span className="text-gray-900 font-bold">{selectedColor || product.coloresDisponibles[0]}</span>
                         </p>
-                        <div className="flex gap-2 flex-wrap">
+                        <div className="flex gap-1.5 flex-wrap">
                             {product.coloresDisponibles.map(color => {
                                 const isSelected = selectedColor === color;
                                 const colors = getColorClasses(color, isSelected);
@@ -188,7 +188,7 @@ const ProductCard = ({ product, onClick }: ProductCardProps) => {
                                             e.stopPropagation();
                                             setSelectedColor(color);
                                         }}
-                                        className={`group/color relative flex items-center justify-center p-0.5 rounded-full border-2 transition-all w-8 h-8 ${isSelected ? 'border-primary-600 scale-110' : 'border-transparent hover:border-gray-200'
+                                        className={`group/color relative flex items-center justify-center p-0.5 rounded-full border-2 transition-all w-6 h-6 ${isSelected ? 'border-[#0FA6D1] scale-110' : 'border-transparent hover:border-gray-200'
                                             }`}
                                         title={`Seleccionar color ${color}`}
                                     >
@@ -197,31 +197,28 @@ const ProductCard = ({ product, onClick }: ProductCardProps) => {
                                 );
                             })}
                         </div>
-                        {/* Alternative design matching user request: Text Badge with colored background? 
-                            The user image showed text badges. Let's make the badges THEMSELVES colored.
-                        */}
                     </div>
                 )}
 
                 {/* Stock */}
-                <div className="mb-4">
+                <div>
                     {product.stock > 10 ? (
-                        <div className="flex items-center gap-2 text-xs text-green-600 font-bold bg-green-50 px-3 py-2 rounded-lg">
-                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <div className="flex items-center gap-1.5 text-[10px] text-green-600 font-bold bg-green-50 px-2 py-1.5 rounded-md">
+                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                             </svg>
                             En stock
                         </div>
                     ) : product.stock > 0 ? (
-                        <div className="flex items-center gap-2 text-xs text-orange-600 font-bold bg-orange-50 px-3 py-2 rounded-lg">
-                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <div className="flex items-center gap-1.5 text-[10px] text-orange-600 font-bold bg-orange-50 px-2 py-1.5 rounded-md">
+                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                             </svg>
                             Últimas {product.stock} unidades
                         </div>
                     ) : (
-                        <div className="flex items-center gap-2 text-xs text-red-600 font-bold bg-red-50 px-3 py-2 rounded-lg">
-                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <div className="flex items-center gap-1.5 text-[10px] text-red-600 font-bold bg-red-50 px-2 py-1.5 rounded-md">
+                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                             </svg>
                             Agotado
