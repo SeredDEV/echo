@@ -64,7 +64,7 @@ const FloatingButtons = () => {
             {isChatOpen && (
                 <div className="fixed bottom-20 right-6 w-96 max-w-[calc(100vw-3rem)] h-[500px] max-h-[calc(100vh-8rem)] bg-white rounded-2xl shadow-2xl z-[60] flex flex-col animate-slide-up">
                     {/* Chat Header */}
-                    <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-t-2xl flex items-center justify-between">
+                    <div className="bg-gradient-to-r from-primary-600 to-accent-600 text-white p-4 rounded-t-2xl flex items-center justify-between">
                         <div className="flex items-center gap-3">
                             <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -96,7 +96,7 @@ const FloatingButtons = () => {
                                 <div className={`max-w-[80%] ${message.type === 'user' ? 'order-2' : 'order-1'}`}>
                                     <div
                                         className={`rounded-2xl px-4 py-2 ${message.type === 'user'
-                                            ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white'
+                                            ? 'bg-gradient-to-r from-primary-600 to-accent-600 text-white'
                                             : 'bg-white text-gray-800 shadow-sm'
                                             }`}
                                     >
@@ -116,12 +116,12 @@ const FloatingButtons = () => {
                                 value={inputMessage}
                                 onChange={(e) => setInputMessage(e.target.value)}
                                 placeholder="Escribe tu mensaje..."
-                                className="flex-1 px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm"
+                                className="flex-1 px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
                             />
                             <button
                                 type="submit"
                                 disabled={!inputMessage.trim()}
-                                className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-full transition-all duration-300 hover:scale-110 flex items-center justify-center"
+                                className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-full transition-all duration-300 hover:scale-110 flex items-center justify-center"
                             >
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
@@ -137,7 +137,7 @@ const FloatingButtons = () => {
                 {/* AI Assistant Button */}
                 <button
                     onClick={() => setIsChatOpen(!isChatOpen)}
-                    className="group relative w-14 h-14 bg-gradient-to-br from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center hover:scale-110"
+                    className="group relative w-14 h-14 bg-gradient-to-br from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center hover:scale-110"
                     aria-label="Asistente IA"
                 >
                     {/* Tooltip */}
@@ -159,7 +159,7 @@ const FloatingButtons = () => {
                     )}
 
                     {/* Pulse Animation */}
-                    {!isChatOpen && <span className="absolute inset-0 rounded-full bg-purple-400 animate-ping opacity-20"></span>}
+                    {!isChatOpen && <span className="absolute inset-0 rounded-full bg-primary-400 animate-ping opacity-20"></span>}
                 </button>
 
                 {/* WhatsApp Button */}
