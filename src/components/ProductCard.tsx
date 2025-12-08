@@ -157,17 +157,33 @@ const ProductCard = ({ product }: ProductCardProps) => {
                 {/* Available Colors */}
                 {product.coloresDisponibles && product.coloresDisponibles.length > 0 && (
                     <div className="mb-4">
-                        <p className="text-xs text-gray-500 font-semibold mb-2">Colores disponibles:</p>
-                        <div className="flex gap-1.5 flex-wrap">
-                            {product.coloresDisponibles.map(color => (
-                                <span
-                                    key={color}
-                                    className="text-xs px-2.5 py-1 bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-200 rounded-full text-gray-700 font-medium hover:border-primary-300 hover:bg-primary-50 transition-all"
-                                >
-                                    {color}
-                                </span>
-                            ))}
+                        <p className="text-xs text-gray-500 font-semibold mb-2">
+                            Color: <span className="text-gray-900 font-bold">{selectedColor || product.coloresDisponibles[0]}</span>
+                        </p>
+                        <div className="flex gap-2 flex-wrap">
+                            {product.coloresDisponibles.map(color => {
+                                const isSelected = selectedColor === color;
+                                const colors = getColorClasses(color, isSelected);
+                                return (
+                                    <button
+                                        key={color}
+                                        onClick={() => setSelectedColor(color)}
+                                        className={`group/color relative flex items-center justify-center p-1 rounded-full border-2 transition-all ${isSelected ? 'border-primary-600 scale-110' : 'border-transparent hover:border-gray-300'
+                                            }`}
+                                        title={`Seleccionar color ${color}`}
+                                    >
+                                        <div className={`w-6 h-6 rounded-full border border-black/10 shadow-sm ${colors.bg}`}></div>
+                                        <span className={`static ml-2 text-xs font-medium text-gray-600 ${isSelected ? 'text-gray-900 font-bold' : ''}`}>
+                                            {/* Optional: Remove explicit text if we just want bubbles, but user asked for "show color" AND "says name" usually implies keeping context */}
+                                            {/* User said "shows exact color not just says name". Let's show clearly. */}
+                                        </span>
+                                    </button>
+                                );
+                            })}
                         </div>
+                        {/* Alternative design matching user request: Text Badge with colored background? 
+                            The user image showed text badges. Let's make the badges THEMSELVES colored.
+                        */}
                     </div>
                 )}
 
