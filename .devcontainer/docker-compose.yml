@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    
+    volumes:
+      # Montar el workspace
+      - ..:/workspace:cached
+      
+      # Volúmenes para mejorar rendimiento
+      - node_modules_frontend:/workspace/frontend/node_modules
+      - node_modules_backend:/workspace/backend/node_modules
+    
+    # Mantener el contenedor ejecutándose
+    command: sleep infinity
+    
+    # Variables de entorno
+    environment:
+      - NODE_ENV=development
+    
+    # Puertos
+    ports:
+      - "5173:5173"  # Frontend Vite
+      - "3000:3000"  # Backend (futuro)
+    
+    # Network
+    networks:
+      - echo-network
+
+networks:
+  echo-network:
+    driver: bridge
+
+volumes:
+  node_modules_frontend:
+  node_modules_backend:

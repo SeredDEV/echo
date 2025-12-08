@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "preview:frontend": "cd frontend && npm run preview",
+    "dev:backend": "cd backend && npm run dev",
+    "install:all": "cd frontend && npm install && cd ../backend && npm install",
+    "clean": "rm -rf frontend/node_modules frontend/dist backend/node_modules backend/dist"
+  }
+}
