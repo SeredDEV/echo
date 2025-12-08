@@ -174,8 +174,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
                                     >
                                         <div className={`w-6 h-6 rounded-full border border-black/10 shadow-sm ${colors.bg}`}></div>
                                         <span className={`static ml-2 text-xs font-medium text-gray-600 ${isSelected ? 'text-gray-900 font-bold' : ''}`}>
-                                            {/* Optional: Remove explicit text if we just want bubbles, but user asked for "show color" AND "says name" usually implies keeping context */}
-                                            {/* User said "shows exact color not just says name". Let's show clearly. */}
+                                            {color}
                                         </span>
                                     </button>
                                 );
