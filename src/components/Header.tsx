@@ -57,13 +57,13 @@ const Header = () => {
                                     <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                     </svg>
-                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-accent-600 group-hover:w-full transition-all duration-300"></span>
+                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0FA6D1] group-hover:w-full transition-all duration-300"></span>
                                 </a>
                                 <div className="absolute left-0 mt-2 w-[400px] bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
                                     <div className="p-6">
                                         <div className="grid grid-cols-2 gap-4">
-                                            <a href="tienda.html?categoria=altavoces&marca=Amazon" className="flex flex-col items-center p-4 rounded-lg hover:bg-primary-50 transition-all group/item">
-                                                <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-3 group-hover/item:scale-110 transition-transform">
+                                            <a href="tienda.html?categoria=altavoces&marca=Amazon" className="flex flex-col items-center p-4 rounded-lg hover:bg-[#0FA6D1]/5 transition-all group/item">
+                                                <div className="w-20 h-20 bg-gradient-to-br from-[#0FA6D1] to-[#5EA4CF] rounded-2xl flex items-center justify-center mb-3 group-hover/item:scale-110 transition-transform">
                                                     <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
                                                         <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
                                                     </svg>

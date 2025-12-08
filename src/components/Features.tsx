@@ -57,30 +57,30 @@ const Features = () => {
                 </div>
 
                 {/* Statistics Section */}
-                <div className="mt-20 gradient-bg rounded-3xl p-12 text-white">
+                <div className="mt-20 bg-gradient-to-r from-[#0d8bb5] to-[#0FA6D1] rounded-3xl p-12 text-white shadow-2xl">
                     <div className="text-center mb-12">
                         <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">
                             Estadísticas de nuestros clientes
                         </h3>
-                        <p className="text-white/90">*Basado en más de 3000+ compras en nuestra tienda</p>
+                        <p className="text-white">*Basado en más de 3000+ compras en nuestra tienda</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="text-center glass-effect rounded-2xl p-8">
+                        <div className="text-center bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all">
                             <div className="text-5xl md:text-6xl font-bold mb-3">97%</div>
-                            <p className="text-white/90">
+                            <p className="text-white">
                                 El 97% de nuestros clientes vuelven a comprar con nosotros.
                             </p>
                         </div>
-                        <div className="text-center glass-effect rounded-2xl p-8">
+                        <div className="text-center bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all">
                             <div className="text-5xl md:text-6xl font-bold mb-3">96%</div>
-                            <p className="text-white/90">
+                            <p className="text-white">
                                 El 96% de nuestros clientes califican su experiencia de compra como excelente.
                             </p>
                         </div>
-                        <div className="text-center glass-effect rounded-2xl p-8">
+                        <div className="text-center bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all">
                             <div className="text-5xl md:text-6xl font-bold mb-3">96%</div>
-                            <p className="text-white/90">
+                            <p className="text-white">
                                 El 96% de nuestras entregas se realizan dentro del tiempo prometido.
                             </p>
                         </div>
