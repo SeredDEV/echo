@@ -3,9 +3,9 @@ import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: "/echo/",
+  base: mode === "production" ? "/echo/" : "/",
   publicDir: resolve(__dirname, "public"),
   resolve: {
     alias: {
@@ -24,4 +24,4 @@ export default defineConfig({
     outDir: resolve(__dirname, "dist"),
     emptyOutDir: true,
   },
-});
+}));
