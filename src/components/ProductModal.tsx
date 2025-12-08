@@ -88,7 +88,7 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
                                         onMouseEnter={() => item.type === 'image' && setActiveMediaIndex(index)}
                                         onClick={() => setActiveMediaIndex(index)}
                                         className={`relative flex-shrink-0 w-16 h-16 rounded-lg border-2 bg-white overflow-hidden transition-all group ${index === activeMediaIndex
-                                            ? 'border-primary-600 ring-2 ring-primary-100 ring-offset-1'
+                                            ? 'border-[#0FA6D1] ring-2 ring-[#0FA6D1]/20 ring-offset-1'
                                             : 'border-transparent hover:border-gray-300'
                                             }`}
                                     >
@@ -136,7 +136,7 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
                     {/* Right Column: Info & Actions */}
                     <div className="p-6 md:p-8 flex flex-col h-full bg-white overflow-y-auto">
                         <div className="">
-                            <span className="text-primary-600 font-bold uppercase text-xs tracking-wider bg-primary-50 px-3 py-1 rounded-full mb-3 inline-block">
+                            <span className="text-[#0FA6D1] font-bold uppercase text-xs tracking-wider bg-[#0FA6D1]/10 px-3 py-1 rounded-full mb-3 inline-block">
                                 {product.categoria} • {product.marca}
                             </span>
 
@@ -172,7 +172,7 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
                             {product.coloresDisponibles && product.coloresDisponibles.length > 0 && (
                                 <div className="mb-6">
                                     <h3 className="text-sm font-semibold text-gray-900 mb-3 block">
-                                        Color seleccionado: <span className="text-primary-600 font-bold">{selectedColor}</span>
+                                        Color seleccionado: <span className="text-[#0FA6D1] font-bold">{selectedColor}</span>
                                     </h3>
                                     <div className="flex flex-wrap gap-3">
                                         {product.coloresDisponibles.map(color => {
@@ -200,7 +200,7 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
                                                     key={color}
                                                     onClick={() => setSelectedColor(color)}
                                                     className={`group relative w-12 h-12 rounded-full flex items-center justify-center transition-all ${isSelected
-                                                        ? 'ring-2 ring-primary-600 ring-offset-2 scale-105'
+                                                        ? 'ring-2 ring-[#0FA6D1] ring-offset-2 scale-105'
                                                         : 'hover:ring-2 hover:ring-gray-300 hover:ring-offset-1'
                                                         }`}
                                                     title={color}
@@ -239,7 +239,7 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
                                             <button
                                                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
                                                 disabled={quantity <= 1 || product.stock === 0}
-                                                className="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-primary-600 hover:bg-white rounded-lg transition-all disabled:opacity-30 disabled:hover:bg-transparent"
+                                                className="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-[#0FA6D1] hover:bg-white rounded-lg transition-all disabled:opacity-30 disabled:hover:bg-transparent"
                                             >
                                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
@@ -251,7 +251,7 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
                                             <button
                                                 onClick={() => setQuantity(Math.min(product.stock, quantity + 1))}
                                                 disabled={quantity >= product.stock || product.stock === 0}
-                                                className="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-primary-600 hover:bg-white rounded-lg transition-all disabled:opacity-30 disabled:hover:bg-transparent"
+                                                className="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-[#0FA6D1] hover:bg-white rounded-lg transition-all disabled:opacity-30 disabled:hover:bg-transparent"
                                             >
                                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -267,7 +267,7 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
                                             addToCart(product, selectedColor, quantity);
                                             onClose();
                                         }}
-                                        className="flex-1 bg-gradient-to-r from-primary-600 to-accent-600 text-white font-bold py-4 rounded-xl shadow-xl hover:shadow-2xl hover:scale-[1.01] active:scale-[0.99] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 group"
+                                        className="flex-1 bg-gradient-to-r from-[#0FA6D1] to-[#5EA4CF] hover:from-[#0d8bb5] hover:to-[#4d8fb8] text-white font-bold py-4 rounded-xl shadow-xl hover:shadow-2xl hover:scale-[1.01] active:scale-[0.99] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 group"
                                     >
                                         <svg className="w-5 h-5 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
@@ -298,7 +298,7 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
                         {product.especificaciones && (
                             <div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                                    <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-5 h-5 text-[#0FA6D1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                                     </svg>
                                     Características del producto
@@ -341,7 +341,7 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
 
                                         return (
                                             <div key={key} className="bg-gray-50 rounded-xl p-4 border border-gray-100 flex flex-col gap-2 hover:bg-white hover:shadow-md transition-all">
-                                                <div className="flex items-center gap-2 text-primary-600 mb-1">
+                                                <div className="flex items-center gap-2 text-[#0FA6D1] mb-1">
                                                     {getIcon(key)}
                                                     <span className="font-bold text-xs uppercase tracking-wider">{key}</span>
                                                 </div>
