@@ -101,8 +101,15 @@ const ProductCarousel = () => {
     }, [activeIndex]);
 
     return (
-        <section className="py-12 md:py-20 bg-white">
-            <div className="container mx-auto px-4">
+        <section className="relative py-12 md:py-20 bg-white">
+            {/* Wave Divider Top */}
+            <div className="absolute top-0 left-0 right-0 z-10">
+                <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+                    <path d="M0 120L60 110C120 100 240 80 360 73.3C480 67 600 73 720 76.7C840 80 960 80 1080 73.3C1200 67 1320 53 1380 46.7L1440 40V0H1380C1320 0 1200 0 1080 0C960 0 840 0 720 0C600 0 480 0 360 0C240 0 120 0 60 0H0V120Z" fill="#f9fafb" />
+                </svg>
+            </div>
+
+            <div className="container mx-auto px-4 relative z-20">
                 <div className="text-center mb-8 md:mb-12">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
                         Tu hogar, siempre a tu alcance
@@ -247,6 +254,13 @@ const ProductCarousel = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            {/* Wave Divider Bottom */}
+            <div className="absolute bottom-0 left-0 right-0 z-10">
+                <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+                    <path d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z" fill="#f9fafb" />
+                </svg>
             </div>
         </section>
     );

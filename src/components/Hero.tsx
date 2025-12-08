@@ -54,7 +54,7 @@ const Hero = () => {
                     <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-black mb-6 animate-fade-in drop-shadow-2xl text-shadow-lg">
                         Bienvenido al Futuro de tu Hogar
                     </h2>
-                    <p className="text-xl md:text-2xl mb-8 text-white drop-shadow-lg animate-slide-up">
+                    <p className="text-xl md:text-2xl mb-8 text-white drop-shadow-lg animate-slide-up max-w-3xl mx-auto">
                         Descubre la tecnología del futuro en Echo Tecnología en Casa.
                         Encuentra asistentes de voz, dispositivos de domótica y más para hacer tu vida más fácil.
                     </p>
@@ -68,7 +68,7 @@ const Hero = () => {
                     </div>
 
                     {/* Stats */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 animate-slide-up">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 animate-slide-up max-w-3xl mx-auto">
                         <div className="glass-effect rounded-2xl p-6 backdrop-blur-md bg-white/20 border border-white/30">
                             <div className="text-4xl font-bold mb-2">97%</div>
                             <div className="text-sm text-white/90">Clientes satisfechos</div>
