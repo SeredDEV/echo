@@ -8,7 +8,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product, onClick }: ProductCardProps) => {
-    const { addToCart } = useCart();
+    // const { addToCart } = useCart(); // Unused
     const [selectedColor, setSelectedColor] = useState<string | null>(
         product.coloresDisponibles?.[0] || null
     );

@@ -300,7 +300,7 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
                                     Características del producto
                                 </h3>
                                 <div className="grid md:grid-cols-2 gap-4">
-                                    {Object.entries(product.especificaciones).map(([key, value], index) => {
+                                    {Object.entries(product.especificaciones).map(([key, value]) => {
                                         // Smart Icon Mapping
                                         const getIcon = (k: string) => {
                                             k = k.toLowerCase();

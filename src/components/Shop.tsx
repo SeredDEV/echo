@@ -57,7 +57,7 @@ const Shop = () => {
         let filtered = products.filter(product => {
             // Search filter
             const matchesSearch = product.nombre.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                product.descripcion.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                product.descripcionCorta.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 product.marca.toLowerCase().includes(searchQuery.toLowerCase());
 
             // Category filter
