@@ -1,0 +1,105 @@
+const API_URL = "http://localhost:3000/api/auth";
+
+interface RegisterData {
+  email: string;
+  password: string;
+  full_name: string;
+  phone?: string;
+}
+
+interface LoginData {
+  email: string;
+  password: string;
+}
+
+interface AuthResponse {
+  success: boolean;
+  data?: any;
+  error?: string;
+}
+
+export const authService = {
+  async register(data: RegisterData): Promise<AuthResponse> {
+    try {
+      const response = await fetch(`${API_URL}/register`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Error al registrarse");
+      }
+
+      return result;
+    } catch (error) {
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : "Error desconocido",
+      };
+    }
+  },
+
+  async login(data: LoginData): Promise<AuthResponse> {
+    try {
+      const response = await fetch(`${API_URL}/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Error al iniciar sesión");
+      }
+
+      // Guardar token en localStorage
+      if (result.data?.session?.access_token) {
+        localStorage.setItem("access_token", result.data.session.access_token);
+      }
+
+      return result;
+    } catch (error) {
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : "Error desconocido",
+      };
+    }
+  },
+
+  async logout(): Promise<AuthResponse> {
+    try {
+      const response = await fetch(`${API_URL}/logout`, {
+        method: "POST",
+      });
+
+      const result = await response.json();
+
+      // Limpiar token
+      localStorage.removeItem("access_token");
+
+      return result;
+    } catch (error) {
+      localStorage.removeItem("access_token");
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : "Error desconocido",
+      };
+    }
+  },
+
+  getToken(): string | null {
+    return localStorage.getItem("access_token");
+  },
+
+  isAuthenticated(): boolean {
+    return !!this.getToken();
+  },
+};

@@ -3,6 +3,17 @@ import { supabase, supabaseAdmin } from "../../../config/supabase";
 export const authService = {
   // Registrar usuario
   async register(email: string, password: string, userData: any) {
+    // Verificar si el email ya existe en profiles
+    const { data: existingProfile } = await supabase
+      .from("profiles")
+      .select("email")
+      .eq("email", email)
+      .single();
+
+    if (existingProfile) {
+      throw new Error("User already registered");
+    }
+
     const { data, error } = await supabase.auth.signUp({
       email,
       password,

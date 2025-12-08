@@ -1,6 +1,66 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState, FormEvent } from "react";
+import { authService } from "../services/authService";
 
 const Register = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    full_name: "",
+    email: "",
+    phone: "",
+    password: "",
+    confirmPassword: "",
+  });
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setError("");
+
+    // Validar contraseñas
+    if (formData.password !== formData.confirmPassword) {
+      setError("Las contraseñas no coinciden");
+      return;
+    }
+
+    if (formData.password.length < 6) {
+      setError("La contraseña debe tener al menos 6 caracteres");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const result = await authService.register({
+        email: formData.email,
+        password: formData.password,
+        full_name: formData.full_name,
+        phone: formData.phone || undefined,
+      });
+
+      if (result.success) {
+        // Redirigir al login después del registro exitoso
+        navigate("/login", {
+          state: { message: "Registro exitoso. Por favor inicia sesión." },
+        });
+      } else {
+        setError(result.error || "Error al registrarse");
+      }
+    } catch (err) {
+      setError("Error al conectar con el servidor");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="relative py-20 bg-gray-50 min-h-[80vh] flex items-center justify-center">
       {/* Wave Divider Top */}
@@ -40,14 +100,23 @@ const Register = () => {
             <p className="text-gray-600 mt-2">Regístrate para comenzar</p>
           </div>
 
-          <form className="space-y-4">
+          {error && (
+            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-4">
+              {error}
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
                 Nombre completo
               </label>
               <input
                 type="text"
+                name="full_name"
                 required
+                value={formData.full_name}
+                onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
                 placeholder="Tu nombre"
               />
@@ -59,7 +128,10 @@ const Register = () => {
               </label>
               <input
                 type="email"
+                name="email"
                 required
+                value={formData.email}
+                onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
                 placeholder="tu@email.com"
               />
@@ -67,10 +139,13 @@ const Register = () => {
 
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Teléfono
+                Teléfono (opcional)
               </label>
               <input
                 type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
                 placeholder="+57 300 123 4567"
               />
@@ -82,7 +157,10 @@ const Register = () => {
               </label>
               <input
                 type="password"
+                name="password"
                 required
+                value={formData.password}
+                onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
                 placeholder="••••••••"
               />
@@ -94,7 +172,10 @@ const Register = () => {
               </label>
               <input
                 type="password"
+                name="confirmPassword"
                 required
+                value={formData.confirmPassword}
+                onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
                 placeholder="••••••••"
               />
@@ -115,9 +196,10 @@ const Register = () => {
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:shadow-lg"
+              disabled={loading}
+              className="w-full bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Crear cuenta
+              {loading ? "Creando cuenta..." : "Crear cuenta"}
             </button>
           </form>
 

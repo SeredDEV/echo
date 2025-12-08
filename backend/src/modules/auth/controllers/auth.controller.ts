@@ -9,7 +9,21 @@ export const authController = {
       const data = await authService.register(email, password, userData);
       res.status(201).json({ success: true, data });
     } catch (error) {
-      res.status(500).json({ success: false, error: (error as Error).message });
+      const errorMessage = (error as Error).message;
+
+      // Verificar si es un error de email duplicado
+      if (
+        errorMessage.includes("already registered") ||
+        errorMessage.includes("already exists") ||
+        errorMessage.includes("User already registered")
+      ) {
+        return res.status(409).json({
+          success: false,
+          error: "Este correo electrónico ya está registrado",
+        });
+      }
+
+      res.status(500).json({ success: false, error: errorMessage });
     }
   },
 
