@@ -1,11 +1,13 @@
 import { Product } from '../data/products';
 import { useState } from 'react';
+import { useCart } from '../context/CartContext';
 
 interface ProductCardProps {
     product: Product;
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
+    const { addToCart } = useCart();
     const [selectedColor, setSelectedColor] = useState<string | null>(
         product.coloresDisponibles?.[0] || null
     );
@@ -222,7 +224,8 @@ const ProductCard = ({ product }: ProductCardProps) => {
                 {/* Add to Cart Button */}
                 <button
                     disabled={product.stock === 0}
-                    className="w-full bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 disabled:from-gray-300 disabled:to-gray-400 text-white font-bold py-4 rounded-xl transition-all duration-300 hover:shadow-xl disabled:cursor-not-allowed flex items-center justify-center gap-2 group/btn"
+                    onClick={() => addToCart(product, selectedColor)}
+                    className="w-full bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 disabled:from-gray-300 disabled:to-gray-400 text-white font-bold py-4 rounded-xl transition-all duration-300 hover:shadow-xl disabled:cursor-not-allowed flex items-center justify-center gap-2 group/btn active:scale-95"
                 >
                     <svg className="w-5 h-5 group-hover/btn:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />

@@ -2,6 +2,8 @@ import { useState, useMemo, useEffect } from 'react';
 import { products } from '../data/products';
 import ProductCard from './ProductCard';
 import ProductFilters from './ProductFilters';
+import ProductModal from './ProductModal';
+import { Product } from '../data/products';
 
 type SortOption = 'default' | 'price-asc' | 'price-desc' | 'name-asc' | 'name-desc';
 type ViewMode = 'grid-2' | 'grid-3' | 'grid-4' | 'list';
@@ -16,6 +18,7 @@ const Shop = () => {
     const [viewMode, setViewMode] = useState<ViewMode>('grid-3');
     const [currentPage, setCurrentPage] = useState(1);
     const [showFilters, setShowFilters] = useState(false);
+    const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
     const itemsPerPage = 12;
 
     // Get filters from URL params
@@ -146,6 +149,11 @@ const Shop = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
             <div className="container mx-auto px-4 py-12">
+                <ProductModal
+                    product={selectedProduct}
+                    isOpen={!!selectedProduct}
+                    onClose={() => setSelectedProduct(null)}
+                />
                 {/* Elegant Header */}
                 <div className="mb-12 text-center">
                     <h1 className="text-5xl font-bold bg-gradient-to-r from-cyan-600 via-teal-600 to-blue-600 bg-clip-text text-transparent mb-4">
@@ -323,7 +331,11 @@ const Shop = () => {
                             <>
                                 <div className={`grid ${getGridClass()} gap-6 mb-12`}>
                                     {paginatedProducts.map(product => (
-                                        <ProductCard key={product.id} product={product} />
+                                        <ProductCard
+                                            key={product.id}
+                                            product={product}
+                                            onClick={() => setSelectedProduct(product)}
+                                        />
                                     ))}
                                 </div>
 

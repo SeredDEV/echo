@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import { CartProvider } from './context/CartContext';
 import Header from './components/Header';
 import Shop from './components/Shop';
 import Footer from './components/Footer';
@@ -8,9 +9,11 @@ import FloatingButtons from './components/FloatingButtons';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <Header />
-        <Shop />
-        <Footer />
-        <FloatingButtons />
+        <CartProvider>
+            <Header />
+            <Shop />
+            <Footer />
+            <FloatingButtons />
+        </CartProvider>
     </React.StrictMode>
 );
