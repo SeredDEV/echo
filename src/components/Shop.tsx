@@ -148,7 +148,7 @@ const Shop = () => {
             <div className="container mx-auto px-4 py-12">
                 {/* Elegant Header */}
                 <div className="mb-12 text-center">
-                    <h1 className="text-5xl font-bold bg-gradient-to-r from-primary-600 via-accent-600 to-primary-600 bg-clip-text text-transparent mb-4">
+                    <h1 className="text-5xl font-bold bg-gradient-to-r from-cyan-600 via-teal-600 to-blue-600 bg-clip-text text-transparent mb-4">
                         Nuestra Tienda
                     </h1>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
