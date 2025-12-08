@@ -9,6 +9,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
     const [selectedColor, setSelectedColor] = useState<string | null>(
         product.coloresDisponibles?.[0] || null
     );
+    const [isFavorite, setIsFavorite] = useState(false);
 
     const descuento = product.precioOriginal
         ? Math.round(((product.precioOriginal - product.precio) / product.precioOriginal) * 100)
@@ -117,8 +118,17 @@ const ProductCard = ({ product }: ProductCardProps) => {
                 </div>
 
                 {/* Favorite Button */}
-                <button className="absolute top-4 right-4 w-10 h-10 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-red-50 hover:scale-110 shadow-lg">
-                    <svg className="w-5 h-5 text-gray-700 hover:text-red-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button
+                    onClick={() => setIsFavorite(!isFavorite)}
+                    className={`absolute top-4 right-4 w-10 h-10 backdrop-blur-sm rounded-full flex items-center justify-center transition-all shadow-lg hover:scale-110 z-10 ${isFavorite ? 'bg-red-50 opacity-100' : 'bg-white/95 opacity-0 group-hover:opacity-100 hover:bg-red-50'
+                        }`}
+                >
+                    <svg
+                        className={`w-5 h-5 transition-colors ${isFavorite ? 'text-red-500 fill-red-500' : 'text-gray-700 hover:text-red-500'}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                 </button>
