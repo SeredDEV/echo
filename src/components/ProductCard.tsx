@@ -82,6 +82,23 @@ const ProductCard = ({ product }: ProductCardProps) => {
                     </p>
                 </div>
 
+                {/* Available Colors */}
+                {product.coloresDisponibles && product.coloresDisponibles.length > 0 && (
+                    <div className="mb-4">
+                        <p className="text-xs text-gray-500 font-semibold mb-2">Colores disponibles:</p>
+                        <div className="flex gap-1.5 flex-wrap">
+                            {product.coloresDisponibles.map(color => (
+                                <span
+                                    key={color}
+                                    className="text-xs px-2.5 py-1 bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-200 rounded-full text-gray-700 font-medium hover:border-primary-300 hover:bg-primary-50 transition-all"
+                                >
+                                    {color}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
                 {/* Stock */}
                 <div className="mb-4">
                     {product.stock > 10 ? (

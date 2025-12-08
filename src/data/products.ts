@@ -10,6 +10,7 @@ export interface Product {
     descripcion: string;
     stock: number;
     destacado?: boolean;
+    coloresDisponibles?: string[]; // Colores disponibles del producto
 }
 
 // Force rebuild - timestamp: 2025-12-07T16:34:30 - UPDATED
@@ -26,7 +27,8 @@ export const products: Product[] = [
         imagen: 'https://m.media-amazon.com/images/I/71hNp8d9WvL._AC_SY879_.jpg',
         descripcion: 'Altavoz inteligente compacto con Alexa, sonido mejorado y control de hogar inteligente',
         stock: 15,
-        destacado: true
+        destacado: true,
+        coloresDisponibles: ['Negro', 'Blanco', 'Azul']
     },
     {
         id: 'alexa-echo-dot-max',
@@ -38,7 +40,8 @@ export const products: Product[] = [
         imagen: 'https://m.media-amazon.com/images/I/71L5oPwxV7L._AC_SY879_.jpg',
         descripcion: 'Echo Dot con audio mejorado, sensor de temperatura y luz ambiental, control de hogar inteligente con Alexa',
         stock: 12,
-        destacado: true
+        destacado: true,
+        coloresDisponibles: ['Negro', 'Blanco', 'Azul']
     },
     {
         id: 'alexa-echo-pop',
@@ -50,7 +53,8 @@ export const products: Product[] = [
         imagen: 'https://m.media-amazon.com/images/I/61V5FRUgX8L._AC_SX679_.jpg',
         descripcion: 'Altavoz inteligente compacto con Alexa, diseño moderno y sonido direccional frontal',
         stock: 25,
-        destacado: true
+        destacado: true,
+        coloresDisponibles: ['Negro', 'Blanco', 'Lavanda', 'Verde Azulado']
     },
     {
         id: 'alexa-echo-show-8',
@@ -60,7 +64,8 @@ export const products: Product[] = [
         marca: 'Amazon',
         imagen: 'https://m.media-amazon.com/images/I/511tpdYUF5L._AC_SY879_.jpg',
         descripcion: 'Pantalla inteligente de 8" HD con Alexa, cámara de 13MP con auto-framing y audio espacial',
-        stock: 5
+        stock: 5,
+        coloresDisponibles: ['Negro', 'Blanco']
     },
     {
         id: 'alexa-echo-spot',
@@ -72,7 +77,8 @@ export const products: Product[] = [
         imagen: 'https://m.media-amazon.com/images/I/71-DxWvydgL._AC_SY879_.jpg',
         descripcion: 'Reloj despertador inteligente con pantalla táctil de 2.83", Alexa integrado y audio de alta definición',
         stock: 10,
-        destacado: true
+        destacado: true,
+        coloresDisponibles: ['Negro', 'Blanco', 'Azul']
     },
     {
         id: 'alexa-echo-show-5',
@@ -84,7 +90,8 @@ export const products: Product[] = [
         imagen: 'https://m.media-amazon.com/images/I/61ejdlU79CL._AC_SX679_.jpg',
         descripcion: 'Pantalla inteligente compacta de 5.5" con Alexa, cámara de 2MP y control de hogar inteligente',
         stock: 14,
-        destacado: true
+        destacado: true,
+        coloresDisponibles: ['Negro', 'Blanco', 'Azul']
     },
     {
         id: 'alexa-echo-show-11',
@@ -96,7 +103,8 @@ export const products: Product[] = [
         imagen: 'https://m.media-amazon.com/images/I/61CJ-NSuTxL._AC_SL1500_.jpg',
         descripcion: 'Pantalla inteligente premium de 10.95" Full HD con cámara de 13MP, auto-framing y audio espacial de alta calidad',
         stock: 6,
-        destacado: true
+        destacado: true,
+        coloresDisponibles: ['Negro', 'Blanco']
     },
     {
         id: 'alexa-echo-show-15',
@@ -108,7 +116,8 @@ export const products: Product[] = [
         imagen: 'https://m.media-amazon.com/images/I/61xQl81iYQL._AC_SY879_.jpg',
         descripcion: 'Pantalla inteligente de 15.6" Full HD con orientación ajustable, cámara de 13MP y audio premium para toda la familia',
         stock: 4,
-        destacado: true
+        destacado: true,
+        coloresDisponibles: ['Negro', 'Blanco']
     },
     {
         id: 'alexa-echo-show-21',
@@ -132,7 +141,8 @@ export const products: Product[] = [
         imagen: 'https://m.media-amazon.com/images/I/71TeLBggnwL._AC_SX679_.jpg',
         descripcion: 'Altavoz inteligente compacto con Google Assistant, sonido mejorado y control por voz',
         stock: 20,
-        destacado: true
+        destacado: true,
+        coloresDisponibles: ['Negro', 'Gris Tiza', 'Coral', 'Azul Cielo']
     },
     {
         id: 'google-nest-audio',
@@ -142,7 +152,8 @@ export const products: Product[] = [
         marca: 'Google',
         imagen: 'https://m.media-amazon.com/images/I/41Puf30CmvL._AC_.jpg',
         descripcion: 'Altavoz inteligente con sonido potente, woofer y tweeter, Google Assistant integrado',
-        stock: 12
+        stock: 12,
+        coloresDisponibles: ['Negro', 'Gris Tiza', 'Azul Cielo', 'Rosa Arena', 'Salvia']
     },
     {
         id: 'alexa-echo-studio',
