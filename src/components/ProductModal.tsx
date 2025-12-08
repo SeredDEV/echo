@@ -56,8 +56,6 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
 
     const activeMedia = media[activeMediaIndex];
 
-    const quantityOptions = Array.from({ length: Math.min(6, product.stock) }, (_, i) => i + 1);
-
     return (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
             {/* Backdrop */}
@@ -236,23 +234,29 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
 
                                 <div className="flex gap-3">
                                     {/* Quantity Selector - Clean & Simple */}
-                                    <div className="w-24">
-                                        <div className="relative">
-                                            <select
-                                                value={quantity}
-                                                onChange={(e) => setQuantity(Number(e.target.value))}
-                                                className="w-full appearance-none bg-gray-50 border border-gray-200 text-gray-900 py-3.5 pl-4 pr-8 rounded-xl font-bold focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-primary-500 cursor-pointer transition-all"
-                                                disabled={product.stock === 0}
+                                    <div className="w-32">
+                                        <div className="flex items-center justify-between bg-gray-50 rounded-xl border border-gray-200 p-1">
+                                            <button
+                                                onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                                                disabled={quantity <= 1 || product.stock === 0}
+                                                className="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-primary-600 hover:bg-white rounded-lg transition-all disabled:opacity-30 disabled:hover:bg-transparent"
                                             >
-                                                {quantityOptions.map(num => (
-                                                    <option key={num} value={num}>
-                                                        {num}
-                                                    </option>
-                                                ))}
-                                            </select>
-                                            <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none text-gray-500">
-                                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-                                            </div>
+                                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
+                                                </svg>
+                                            </button>
+                                            <span className="font-bold text-gray-900 text-lg w-8 text-center select-none">
+                                                {quantity}
+                                            </span>
+                                            <button
+                                                onClick={() => setQuantity(Math.min(product.stock, quantity + 1))}
+                                                disabled={quantity >= product.stock || product.stock === 0}
+                                                className="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-primary-600 hover:bg-white rounded-lg transition-all disabled:opacity-30 disabled:hover:bg-transparent"
+                                            >
+                                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                                                </svg>
+                                            </button>
                                         </div>
                                     </div>
 
