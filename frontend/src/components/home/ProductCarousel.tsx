@@ -35,7 +35,9 @@ const carouselData: CarouselItem[] = [
       "Cámaras de seguridad, termostatos inteligentes y más para un hogar conectado.",
     ],
     videos: [
-      getAssetUrl("assets/video/carrusel/google-nest/bf8cb84a-c9d6-4e88-b36a-5b4405c7686a.mp4"),
+      getAssetUrl(
+        "assets/video/carrusel/google-nest/bf8cb84a-c9d6-4e88-b36a-5b4405c7686a.mp4"
+      ),
       getAssetUrl("assets/video/carrusel/google-nest/nestmini.mp4"),
     ],
     buttonLabel: "Google Nest",
@@ -59,7 +61,9 @@ const carouselData: CarouselItem[] = [
       "Disfruta de acceso rápido a tus dispositivos inteligentes compatibles con el widget de favoritos.",
       "Ve lo que está pasando en casa y administra tus dispositivos desde cualquier lugar.",
     ],
-    videos: [getAssetUrl("assets/video/carrusel/google-chromecast/chromecast.mp4")],
+    videos: [
+      getAssetUrl("assets/video/carrusel/google-chromecast/chromecast.mp4"),
+    ],
     buttonLabel: "Google Chromecast",
   },
   {
@@ -71,7 +75,9 @@ const carouselData: CarouselItem[] = [
       "Crea ambientes personalizados con millones de colores disponibles.",
     ],
     videos: [
-      getAssetUrl("assets/video/carrusel/bombillas-RGB/f2cdd04dbf114786998e1647945ace50.HD-1080p-7.2Mbps-45550478.mp4"),
+      getAssetUrl(
+        "assets/video/carrusel/bombillas-RGB/f2cdd04dbf114786998e1647945ace50.HD-1080p-7.2Mbps-45550478.mp4"
+      ),
     ],
     buttonLabel: "Bombillas RGB",
   },
