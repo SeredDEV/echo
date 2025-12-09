@@ -167,4 +167,33 @@ export const authService = {
       };
     }
   },
+
+  async getProfile(): Promise<AuthResponse> {
+    try {
+      const token = this.getToken();
+      if (!token) {
+        throw new Error("No autenticado");
+      }
+
+      const response = await fetch(`${API_URL}/profile`, {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Error al obtener perfil");
+      }
+
+      return result;
+    } catch (error) {
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : "Error desconocido",
+      };
+    }
+  },
 };

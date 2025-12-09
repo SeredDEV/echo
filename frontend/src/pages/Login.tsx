@@ -49,7 +49,16 @@ const Login = () => {
 
       if (result.success) {
         // Redirigir a la página principal o dashboard
-        navigate("/");
+        // Verificar si es admin para redirigir al panel admin
+        const profileResult = await authService.getProfile();
+        if (
+          profileResult.success &&
+          profileResult.data?.profile?.role === "admin"
+        ) {
+          navigate("/admin");
+        } else {
+          navigate("/");
+        }
       } else {
         setError(result.error || "Error al iniciar sesión");
       }
